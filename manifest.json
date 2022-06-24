@@ -1,0 +1,1397 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/projects/jeremyansel-libnoiseshader/JeremyAnsel.LibNoiseShader/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.BuilderBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.BuilderBase.html",
+          "hash": "vB72fcjxOMrP7uW4stk0g54Gr8DHvfod+QGYN4T5ru4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.html",
+          "hash": "j2ZcZ34RwsHHTsG6nT/9R7GEXHUeq87wftmYWDKf18k="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.IBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.IBuilder.html",
+          "hash": "an1URcE9oNRAP8sreCVTj+Ybiurv/nXcxejEEn1WX0o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.html",
+          "hash": "l1HfSYUrs6Pw3D1BkV7wS3JK8C4hXl1uK8LcKC9EZEA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.html",
+          "hash": "mvjq8KKdm9/sEhaJWkrl/ovyxuGzisDu0NEOjfoYROc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Builders.html",
+          "hash": "b9hIC2nvoZJ35jLsK1vw/6CSnyEigHB861ce88ORZgw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.CSharpContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.CSharpContext.html",
+          "hash": "5qgN610hM4hNgRzZUgR0/BYf1UGK6bh/zyZeFNoL7Tw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Float3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Float3.html",
+          "hash": "dMfZ5Rk0sZH6osmQEwgoULC6b8cLZRUpc4F/YL1l7RU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.HlslContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.HlslContext.html",
+          "hash": "W1k5Kymze3UtC4aZXG8xbhJ0Ks8ubExj1JfkS9iz1lA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.CylinderFileBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.CylinderFileBuilder.html",
+          "hash": "H/8ZPAJmctK5csDc2gePbduN+XB7SMkhPbKxw9TD8xE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.FileBuilderBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.FileBuilderBase.html",
+          "hash": "mJ5QCc0NsQG3uVOr899lCJC2q0og8Hj1rAqTfewa53U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.IFileBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.IFileBuilder.html",
+          "hash": "QPb4mwnFlWKht3djtzQFXQa3gPoHA+qqdDxbbZlyMcA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.PlaneFileBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.PlaneFileBuilder.html",
+          "hash": "ZB3k4kDUN4us1IejfbIC/tNdkjOotJ99FQ0hkUft19Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.SphereFileBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.SphereFileBuilder.html",
+          "hash": "ac8dTu6kKUu7FDsoJtuEt0oIkC/TIxpLl/oqSzuJ+Fs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileBuilders.html",
+          "hash": "dmOhgztXwfmj6UmR5DK93MQOy/MBq2EC+i7ubEw+0HM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.AbsFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.AbsFileModule.html",
+          "hash": "AydHskiyz6Yn5rZSVE0k4UwdKTFuBdSvD1E4yGASjZ8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.AddFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.AddFileModule.html",
+          "hash": "0jxpArRM/zU+sXCMZi1knSUHWTg3Grov1bgLVFsAJHc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.BillowFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.BillowFileModule.html",
+          "hash": "jWpOJnuzG7QE69st/ZLZtX7rTQarUS5JlJ7jjK5AF04="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.BlendFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.BlendFileModule.html",
+          "hash": "rKs3GPaUJvFak1gv2J9wn9yq64FtRt7N9QLxXE6MnPI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.CacheFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.CacheFileModule.html",
+          "hash": "j0zVVvnkpyFwW5jCWhQQfjS1QClyrbcgY3sDYJjhv+w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.CheckerboardFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.CheckerboardFileModule.html",
+          "hash": "7BShB+jWnqhL014XNWcH5Zp0tv/HsYjoehh1ri1sWc4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.ClampFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.ClampFileModule.html",
+          "hash": "DGQADO10/lWO53E1tvP7AD9A2Hh/bH6toemTiahCsqc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.ConstantFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.ConstantFileModule.html",
+          "hash": "mOnsLGSglWPJq1FJODh/+/R650wrCYK8y9I0ZY+yj7Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.CurveFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.CurveFileModule.html",
+          "hash": "+vAsGFi0SC8Dyty8cFlWfROfnaDNPSiNrA/r4yTvWYg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.CylinderFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.CylinderFileModule.html",
+          "hash": "U9HPtQS/KaKzOLgEsI/VqKiNgFR0NlsPpQTPvpHOvbE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.DisplaceFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.DisplaceFileModule.html",
+          "hash": "pe2COGMTmkAk1TXbFVaKKbDzePh6G79AH9zjZTKHHKc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.ExponentFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.ExponentFileModule.html",
+          "hash": "bDW/NuNv0NAcwHVgCz0rK9oWm4nl7Yi9PxeXaR5YNX0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.FileModuleBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.FileModuleBase.html",
+          "hash": "yTQew0i0zH0kPyBa+AnsE3lmXl9/kgbEK7Kv+iyOYRs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.IFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.IFileModule.html",
+          "hash": "D4AI8j3cPqId/Xe168y77KneuFeLhMeeJji4jlhtarU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.InvertFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.InvertFileModule.html",
+          "hash": "/sdpnRu+fN0OABCXbJ0FKZwchVhq40+6ufYX0DyHxlM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.LineFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.LineFileModule.html",
+          "hash": "SW1sgGKFUyNqEYUUACeHf6D0AlUAAZJF4rgt395cj04="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.MaxFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.MaxFileModule.html",
+          "hash": "IOZnhS+CPJRoe3oA8sL7jlZZJwGFiBQhxITsUgllxbQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.MinFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.MinFileModule.html",
+          "hash": "R5vjVwgGPWeO194wQnJJbShurvAP8MGoWrwXuIdypu4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.MultiplyFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.MultiplyFileModule.html",
+          "hash": "yiodR3+2QyIZkzxNjTjTu4jOz6/jydaKXgVWEr2xc0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.PerlinFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.PerlinFileModule.html",
+          "hash": "E/EVeG/DlHMxLxbFPoHRjnOG52potkOBizVHMSpmN/I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.PowerFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.PowerFileModule.html",
+          "hash": "39QqGQsDs5Wqk83VGzqrhDkeiTaCnsYPii0by5uyfUk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.RidgedMultiFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.RidgedMultiFileModule.html",
+          "hash": "YEJP9NWSeqrC/J8fF1MZP8o12+UgG2JL7zraSS0Bhv0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.RotatePointFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.RotatePointFileModule.html",
+          "hash": "L5W0vC+gSks+xgUsiPinuk3w6Prs7UHWnsUk3crJ0NA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.ScaleBiasFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.ScaleBiasFileModule.html",
+          "hash": "C1WQDBcO3eSsfHEd7GRvr5l1b95zYMl/9S7QGhUhjUI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.ScalePointFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.ScalePointFileModule.html",
+          "hash": "ZdA3FKWZgz7DHZRbMNF0ZlLx+KKpiwart3gfU2ETbdU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.SelectorFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.SelectorFileModule.html",
+          "hash": "BrvyTPhD/LZT9juOgYroiz2mth2e5hXC/KInbEqtSEA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.SphereFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.SphereFileModule.html",
+          "hash": "QZ2NY5Tbxd5E0NVHt9Ce4LF1nYBEbBuB3uG2dDTywKI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.TerraceFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.TerraceFileModule.html",
+          "hash": "r7/NZIHTUuUS25E9bSRmTcsrbrzLiA0H5K/DZnen9DI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.TranslatePointFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.TranslatePointFileModule.html",
+          "hash": "XFxF/J6KHVvXVWx08e7UUK8wmYdReVH/YIulqciVvoc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.TurbulenceFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.TurbulenceFileModule.html",
+          "hash": "rNkwAR6+1QvS4/lSsByOPHrTs2KrMjP96u+sfKrqok4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.VoronoiFileModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.VoronoiFileModule.html",
+          "hash": "+vTUirvo3M3ATvTBhJGbJZAKb9IfjNfKi7B7sLV9l3E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileModules.html",
+          "hash": "raAH5qM4FZAvWUEmcywPL6jT1c8GMZFk9TK7FL8ekrI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.BlendFileRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.BlendFileRenderer.html",
+          "hash": "pZiIH2zAmOjE3iFXk7Ht6G93Fq/UHvNdCAYDaLqpX80="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.FileRendererBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.FileRendererBase.html",
+          "hash": "YGywciqRwBW/XtnaRrI+AlmHNhMCgpJwwbSpik+Lk0c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.IFileRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.IFileRenderer.html",
+          "hash": "gSJpyBP0oYNWjQkiFflk6h2+Jk0HaijdpRBQZmS+FIA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.ImageFileRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.ImageFileRenderer.html",
+          "hash": "MVwdngQvJ/RyL9STeFfZ0C9o7CyYVrrTQbAKyTATx60="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.NormalFileRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.NormalFileRenderer.html",
+          "hash": "+UkuZGM/RErhbkjyRnmsbJZ5VILZsEqKmmm7MnsLjnY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.FileRenderers.html",
+          "hash": "h/s0ei4bOqdHAotyT3iRiUZLVXJZWa6ofRJ2dSQ/m2o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.html",
+          "hash": "EC3kWOx75hrUYxzHFErCuoTd4272qbbWvuMAvBQRWi4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFileContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFileContext.html",
+          "hash": "hP+P4xudvuGb0KBHXw/NKUSlOaQ6q/qO63EpmbC6+5Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.html",
+          "hash": "szYY3DgNrK4u0+n1NFpUoECAUO3zxMP4Yy5NcZCaGUc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.html",
+          "hash": "/OOKSUWXlBD5q+i0CCN3xfN+Hcs5ayvtaAPGQo48UAw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.Models.html",
+          "hash": "hy/ZpLaF/1PfracN4qSO+qKqa2yFWWaogr9R5S172Nc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.IO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.IO.html",
+          "hash": "gBLQgYcNoAJtC5tCvi3lLe7xe1WVHYeS0lPTi23keE4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Interpolation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Interpolation.html",
+          "hash": "H1zW0oUnErDvVfKrCerDNd2q1PFRGOD0FNMb8DsnCwc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.LatLon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.LatLon.html",
+          "hash": "sPlaftkP505SvuBygTyO6EGhj1QLZTE4bfLrBFOOKp0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Maps.ColorMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Maps.ColorMap.html",
+          "hash": "U8+tnmiIux2+2ocOoQJWv2MsIfWNdahkUo0DC25FAkc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Maps.MapGenerator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Maps.MapGenerator.html",
+          "hash": "VKCeKL45mKjVUM/6+x/PV3y6h6PUAd5QPQbfNK2xoYY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Maps.ValueMap.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Maps.ValueMap.html",
+          "hash": "ievKhTIXG4CzCqu5tfNojECaF9WGcplHUKIj/6kMD54="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Maps.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Maps.html",
+          "hash": "F40q4k46AYfXj/Yim2Tx5YmiMmk383QESmHzkShxZq0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Models.CylinderModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Models.CylinderModel.html",
+          "hash": "BUWMu/QkHDCzpfu2Yk8V0pGyQH8t+uUNZwSJ5tUDnMQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Models.PlaneModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Models.PlaneModel.html",
+          "hash": "vu8yozBWBw2tWSdVHX7LybrCDUp7Gs+nJ5QdQ/4SXs0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Models.SphereModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Models.SphereModel.html",
+          "hash": "ZM1FKYWANhhmBzzZ/cUBAMt2WNaUhNMThyfobzInFGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Models.html",
+          "hash": "2mi1Vsk677HtXMaNw12SqgQigkaWcrDnA3Q0ijlO82s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.AbsModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.AbsModule.html",
+          "hash": "vtHi4wthpurR+5qyumGPKt+S1PSTAwpb4UenRnySDz4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.AddModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.AddModule.html",
+          "hash": "uNtgV8xDRM/Gc1TjXx/+beoQaYcP2QJRCI0to0V3aQQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.BillowModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.BillowModule.html",
+          "hash": "juXoxP0ZwGbDy5hvJBlbzQ6yDSPScEDMC3BlZLMmT5I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.BlendModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.BlendModule.html",
+          "hash": "SD5bb7UG4dOj6Ar01vMXAITYlmUnLxL0w21WzCxE5Ac="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.CacheModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.CacheModule.html",
+          "hash": "b+RW19JO7TlS610iCWTis4b7g5IYk7+Qb71IJwxjuyQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.CheckerboardModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.CheckerboardModule.html",
+          "hash": "z/YhetuRIg+rEe0OX39OJjp3lOEWNjh7Sub8Qfe832Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ClampModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ClampModule.html",
+          "hash": "mVOklb3sHqwHCW640QbAVzonbhk4XCPTe3HqGoRkfk8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ConstantModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ConstantModule.html",
+          "hash": "mhCQFC5YWObospR087vP23KoOVg+UbgKFJbCCgbmg0M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.CurveModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.CurveModule.html",
+          "hash": "nYyhIoYlTwSk3CPKDqwwnlXBf2kbIi/QhZH0cfjMo5U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.CylinderModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.CylinderModule.html",
+          "hash": "4bhBS3+vp6aYTb2UoOAznzNp3s1Agcgh5bB5t3SApok="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.DisplaceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.DisplaceModule.html",
+          "hash": "oV7Ag0yufaN+VEQ7fnDrgXhuy1MHsObrRxMwXnJ6Rx0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ExponentModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ExponentModule.html",
+          "hash": "39yHQOfm1NGAb6wzwOm5p9AKpJUUHWeTQ0BlC7RtCAs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.IModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.IModule.html",
+          "hash": "NGqqqpZT7eTA50oN3UbtDzJpFGP5Bek4IOcT+eGTPoA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.InvertModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.InvertModule.html",
+          "hash": "p31DmpQfaOaAEZaKL6HMOosX2EAIQb6yBh4iI0HeUQQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.LineModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.LineModule.html",
+          "hash": "+062fqRFH67A/3kCMxJ3yb0UA8YxXM/ByXREfgaT3/s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.MaxModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.MaxModule.html",
+          "hash": "TlGLvPoI5+oUKeDwt/RaCB0kSgG1Yw6pip8DaXJnckw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.MinModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.MinModule.html",
+          "hash": "TzyjcuJr8Du/AVtiP+kJDbRJCUNkuDxAGf2xtkSrjLo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ModuleBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ModuleBase.html",
+          "hash": "Q1gs7UfVlkhLQhLqhipErRp/YmuNli0pp2Z1qXGMlKg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.MultiplyModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.MultiplyModule.html",
+          "hash": "5pHXhZj9oD3VXfKY6S5d0APISfDxB7Z+2x/dKWf++CU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.PerlinModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.PerlinModule.html",
+          "hash": "98Q3km4goJfh7gmwD1WBWNGSTiAlEgpHWZQK0uBKyeg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.PowerModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.PowerModule.html",
+          "hash": "qlgPUXA/pkPGPXeH6f4sptH/JO36mPs6Xnp8vNBr/8c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.RidgedMultiModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.RidgedMultiModule.html",
+          "hash": "rJdnZ0dmI5vKqDKYzBl4PVAU2BnOP11DNyPSQef/3a0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.RotatePointModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.RotatePointModule.html",
+          "hash": "yeLb6sKlx+Ek1IWWPuzNdfjQKmy4WZsJmanxiFHU2gQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ScaleBiasModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ScaleBiasModule.html",
+          "hash": "FLjDlkQV8NoWjFDdwVt8V/uJPxUbSBZrdFsgVq3lgwI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ScalePointModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.ScalePointModule.html",
+          "hash": "RXPJuaft24bf3RbMeKcT4KQ+vdnNy4zD5Yiz+gBFCn8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.SelectorModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.SelectorModule.html",
+          "hash": "MXw2t/mJ3Eql3pU8fkq6ZvVN2bdAIpWSe2fomfRaaBs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.SphereModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.SphereModule.html",
+          "hash": "pKjrV4uMiIQqBKQfVMAfXeFyJ8U1sELNtSF0PJ78xA8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.TerraceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.TerraceModule.html",
+          "hash": "Gow3vmfpw7okJeE2NHGNK0BTjyFQYAWS0kCEz06axn4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.TranslatePointModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.TranslatePointModule.html",
+          "hash": "KeiJJCjCTMT+5wNytgtt0O9I9u6gHgUNzNI+TDemelU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.TurbulenceModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.TurbulenceModule.html",
+          "hash": "Jf6kEEu8bJ9IFV+ei/ZMLeHHAvjWexqzgyv7hNC0DV8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.VoronoiModule.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.VoronoiModule.html",
+          "hash": "txqxzmLU+etx9TXzI+lnpRdp0dGCG7KstCh3wG5z/Is="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Modules.html",
+          "hash": "SlxAUCAoH5bROJ815JGxVHk0mqi3kjEhfhZoM7NmOew="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Noise3D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Noise3D.html",
+          "hash": "0qtlvWg5rdR5Q/kfEIF8eU6RUgnnf84qjOTM8x0xb6w="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.BlendRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.BlendRenderer.html",
+          "hash": "sAzEGkL55pT52F3GqCRuPlmfT1uT6JhovlC8WNIsuzs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.IRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.IRenderer.html",
+          "hash": "YjyNKak7R8hr4kcKx61G6FrpINEHDQSYjWfIZEkORLc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.html",
+          "hash": "PQguHrYHKgFzi78CNtYzAuYA6wkZaYc7HgIL9xN70Mk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.html",
+          "hash": "1dUCvVoHb1rhhNoZV6aRFXBvS6708AUVSgTak+tWqMU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.RendererBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.RendererBase.html",
+          "hash": "wALDcGDyKqhLUdz2ZC/ZSciAPZ1bENQTDpwHBXgj1eU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.Renderers.html",
+          "hash": "VnlIFOMX4p0/Gy8F+KDlxWQL8LVD4R0QAGNzwfs6rRs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.LibNoiseShader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.LibNoiseShader.html",
+          "hash": "8jBNa2s6gVolDi9d9yfxz9BdSmtdSEy6tb6XiAzCTko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "jn35Sz7/KGaSQszmsaAv1+ML0ATTzYiWm+2z0L4GjeE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "ZeyY4Gbb+HLJBEdtsbctgEvdftf4Tv07aZrAJURNSkc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 2,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 109,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
