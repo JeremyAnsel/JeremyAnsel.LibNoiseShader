@@ -37,7 +37,7 @@ deploy:
     secure: 3685w/YC7MU+Icw7sjowHsdPmdFESwNkHEkNWFDxUL5tRGzcQJMZbWEIEgihxlPu
   skip_symbols: false
   on:
-    branch: master
+    branch: main
     DEPLOY: True
 
 after_deploy:
