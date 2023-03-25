@@ -5,10 +5,7 @@ VisualStudioVersion = 17.2.32526.322
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.LibNoiseShader", "JeremyAnsel.LibNoiseShader\JeremyAnsel.LibNoiseShader.csproj", "{3FA820ED-A0FA-436E-993D-87741A79D209}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "Documentation\Documentation.csproj", "{4CA831E3-4A55-420C-B107-0223429B5D25}"
-	ProjectSection(ProjectDependencies) = postProject
-		{3FA820ED-A0FA-436E-993D-87741A79D209} = {3FA820ED-A0FA-436E-993D-87741A79D209}
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documentation", "Documentation\Documentation.csproj", "{4CA831E3-4A55-420C-B107-0223429B5D25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
