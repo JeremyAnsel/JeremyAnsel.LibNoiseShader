@@ -16,17 +16,47 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return -this.GetSourceModule(0).GetValue(x, y, z);
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
+            return 1;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "return -{0}(x, y, z);", module0);
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlsl(HlslContext context)
+        {
+            this.GetSourceModule(0).EmitHlsl(context);
+            context.EmitFunction(this, false);
+        }
 
-            return sb.ToString();
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return false;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 1;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            body.AppendTabFormatLine(2, "result = -param0;");
         }
 
         public override string GetCSharpBody(CSharpContext context)

@@ -39,7 +39,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             int yInt = (int)Math.Floor(y);
             int zInt = (int)Math.Floor(z);
 
-            float minDist = float.MaxValue;
+            float minDist = 46340.0f * 46340.0f;
             float xCandidate = 0;
             float yCandidate = 0;
             float zCandidate = 0;
@@ -95,65 +95,103 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return value + (this.Displacement * this.noise.IntValue(xCandidateInt + seed, yCandidateInt + seed, zCandidateInt + seed));
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
+            return 0;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "float3 freq = float3(x, y, z) * {0};", this.Frequency);
-            sb.AppendTabFormatLine(1, "int xInt = (int)floor(freq.x);");
-            sb.AppendTabFormatLine(1, "int yInt = (int)floor(freq.y);");
-            sb.AppendTabFormatLine(1, "int zInt = (int)floor(freq.z);");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "float minDist = {0};", float.MaxValue);
-            sb.AppendTabFormatLine(1, "float xCandidate = 0;");
-            sb.AppendTabFormatLine(1, "float yCandidate = 0;");
-            sb.AppendTabFormatLine(1, "float zCandidate = 0;");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "[fastopt] for (int zCur = zInt - 2; zCur <= zInt + 2; zCur++)");
-            sb.AppendTabFormatLine(1, "{");
-            sb.AppendTabFormatLine(2, "[fastopt] for (int yCur = yInt - 2; yCur <= yInt + 2; yCur++)");
-            sb.AppendTabFormatLine(2, "{");
-            sb.AppendTabFormatLine(3, "[fastopt] for (int xCur = xInt - 2; xCur <= xInt + 2; xCur++)");
-            sb.AppendTabFormatLine(3, "{");
-            sb.AppendTabFormatLine(4, "float xPos = xCur + Noise3D_IntValue(int3(xCur, yCur, zCur) + {0} + 1);", this.SeedOffset);
-            sb.AppendTabFormatLine(4, "float yPos = yCur + Noise3D_IntValue(int3(xCur, yCur, zCur) + {0} + 2);", this.SeedOffset);
-            sb.AppendTabFormatLine(4, "float zPos = zCur + Noise3D_IntValue(int3(xCur, yCur, zCur) + {0} + 3);", this.SeedOffset);
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(4, "float xDist = xPos - freq.x;");
-            sb.AppendTabFormatLine(4, "float yDist = yPos - freq.y;");
-            sb.AppendTabFormatLine(4, "float zDist = zPos - freq.z;");
-            sb.AppendTabFormatLine(4, "float dist = xDist * xDist + yDist * yDist + zDist * zDist;");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(4, "[branch] if (dist < minDist)");
-            sb.AppendTabFormatLine(4, "{");
-            sb.AppendTabFormatLine(5, "minDist = dist;");
-            sb.AppendTabFormatLine(5, "xCandidate = xPos;");
-            sb.AppendTabFormatLine(5, "yCandidate = yPos;");
-            sb.AppendTabFormatLine(5, "zCandidate = zPos;");
-            sb.AppendTabFormatLine(4, "}");
-            sb.AppendTabFormatLine(3, "}");
-            sb.AppendTabFormatLine(2, "}");
-            sb.AppendTabFormatLine(1, "}");
-            sb.AppendTabFormatLine();
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            context.EmitSettings(this);
+            context.EmitFunction(this, false);
+        }
 
-            if (this.IsDistanceApplied)
-            {
-                sb.AppendTabFormatLine(1, "float value = sqrt(minDist) * sqrt(3.0f) - 1.0f;");
-                sb.AppendTabFormatLine();
-            }
-            else
-            {
-                sb.AppendTabFormatLine(1, "float value = 0.0f;");
-                sb.AppendTabFormatLine();
-            }
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            string key = nameof(VoronoiModule);
 
-            sb.AppendTabFormatLine(1, "int3 candidateInt = (int3)floor(float3(xCandidate, yCandidate, zCandidate));");
-            sb.AppendTabFormatLine(1, "return value + ({0} * Noise3D_IntValue(candidateInt + {1}));", this.Displacement, this.SeedOffset);
-            sb.AppendTabFormatLine("}");
+            header.AppendTabFormatLine("bool {0}_IsDistanceApplied = false;", key);
+            header.AppendTabFormatLine("float {0}_Displacement = 1.0f;", key);
+            header.AppendTabFormatLine("float {0}_Frequency = 1.0f;", key);
+            header.AppendTabFormatLine("int {0}_SeedOffset = 0;", key);
+        }
 
-            return sb.ToString();
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(VoronoiModule);
+
+            body.AppendTabFormatLine(2, "{0}_IsDistanceApplied = {1};", key, this.IsDistanceApplied ? "true" : "false");
+            body.AppendTabFormatLine(2, "{0}_Displacement = {1};", key, this.Displacement);
+            body.AppendTabFormatLine(2, "{0}_Frequency = {1};", key, this.Frequency);
+            body.AppendTabFormatLine(2, "{0}_SeedOffset = {1};", key, this.SeedOffset);
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 0;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            string key = nameof(VoronoiModule);
+
+            body.AppendTabFormatLine(2, "float3 freq = p * {0}_Frequency;", key);
+            body.AppendTabFormatLine(2, "int3 xyz = (int3)floor(freq);");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "float minDist = {0};", 46340.0f * 46340.0f);
+            body.AppendTabFormatLine(2, "float3 candidate = 0;");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "[fastopt] for (int zCur = xyz.z - 2; zCur <= xyz.z + 2; zCur++)");
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "[fastopt] for (int yCur = xyz.y - 2; yCur <= xyz.y + 2; yCur++)");
+            body.AppendTabFormatLine(3, "{");
+            body.AppendTabFormatLine(4, "[fastopt] for (int xCur = xyz.x - 2; xCur <= xyz.x + 2; xCur++)");
+            body.AppendTabFormatLine(4, "{");
+            body.AppendTabFormatLine(5, "int3 cur = int3(xCur, yCur, zCur);");
+            body.AppendTabFormatLine(5, "float3 pos;");
+            body.AppendTabFormatLine(5, "pos.x = xCur + Noise3D_IntValue(cur + {0}_SeedOffset + 1);", key);
+            body.AppendTabFormatLine(5, "pos.y = yCur + Noise3D_IntValue(cur + {0}_SeedOffset + 2);", key);
+            body.AppendTabFormatLine(5, "pos.z = zCur + Noise3D_IntValue(cur + {0}_SeedOffset + 3);", key);
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(5, "float3 d = pos - freq;");
+            body.AppendTabFormatLine(5, "float dist = dot(d, d);");
+            body.AppendTabFormatLine();
+            //body.AppendTabFormatLine(5, "[branch] if (dist < minDist)");
+            body.AppendTabFormatLine(5, "if (dist < minDist)");
+            body.AppendTabFormatLine(5, "{");
+            body.AppendTabFormatLine(6, "minDist = dist;");
+            body.AppendTabFormatLine(6, "candidate = pos;");
+            body.AppendTabFormatLine(5, "}");
+            body.AppendTabFormatLine(4, "}");
+            body.AppendTabFormatLine(3, "}");
+            body.AppendTabFormatLine(2, "}");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "float value;");
+            body.AppendTabFormatLine(2, "if ({0}_IsDistanceApplied)", key);
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "value = sqrt(minDist) * sqrt(3.0f) - 1.0f;");
+            body.AppendTabFormatLine(2, "}");
+            body.AppendTabFormatLine(2, "else");
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "value = 0.0f;");
+            body.AppendTabFormatLine(2, "}");
+            body.AppendTabFormatLine(2, "int3 candidateInt = (int3)floor(candidate);");
+            body.AppendTabFormatLine(2, "result = value + ({0}_Displacement * Noise3D_IntValue(candidateInt + {0}_SeedOffset));", key);
         }
 
         public override string GetCSharpBody(CSharpContext context)

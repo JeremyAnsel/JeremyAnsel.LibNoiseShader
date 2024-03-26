@@ -6,6 +6,8 @@ namespace JeremyAnsel.LibNoiseShader.Builders
     {
         string Name { get; set; }
 
+        int Seed { get; set; }
+
         IModule GetSourceModule();
 
         void GenerateModuleContext(HlslContext context);

@@ -23,18 +23,58 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return (float)Math.Pow(Math.Abs(value * 0.5f + 0.5f), this.ExponentValue) * 2.0f - 1.0f;
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
+            return 1;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "float value = {0}(x, y, z) * 0.5f + 0.5f;", module0);
-            sb.AppendTabFormatLine(1, "return pow(value * sign(value), {0}) * 2.0f - 1.0f;", this.ExponentValue);
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            this.GetSourceModule(0).EmitHlsl(context);
+            context.EmitSettings(this);
+            context.EmitFunction(this, false);
+        }
 
-            return sb.ToString();
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            string key = nameof(ExponentModule);
+
+            header.AppendTabFormatLine("float {0}_ExponentValue = 1.0f;", key);
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(ExponentModule);
+
+            body.AppendTabFormatLine(2, "{0}_ExponentValue = {1};", key, this.ExponentValue);
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 1;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            string key = nameof(ExponentModule);
+
+            body.AppendTabFormatLine(2, "float value = param0 * 0.5f + 0.5f;");
+            body.AppendTabFormatLine(2, "result = pow(value * sign(value), {0}_ExponentValue) * 2.0f - 1.0f;", key);
         }
 
         public override string GetCSharpBody(CSharpContext context)

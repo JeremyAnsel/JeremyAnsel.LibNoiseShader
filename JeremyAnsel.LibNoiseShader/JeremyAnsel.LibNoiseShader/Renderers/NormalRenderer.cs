@@ -25,6 +25,12 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
 
         public override int RequiredSourceRendererCount => 0;
 
+        public override void SetSeed(int seed)
+        {
+            base.SetSeed(seed);
+            this.sourceBuilder.Seed = seed;
+        }
+
         public float BumpHeight { get; set; }
 
         public bool IsWrapEnabled { get; set; }

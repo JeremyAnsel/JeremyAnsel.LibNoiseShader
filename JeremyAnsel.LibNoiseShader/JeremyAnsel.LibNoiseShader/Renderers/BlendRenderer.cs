@@ -14,6 +14,11 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
 
         public override int RequiredSourceRendererCount => 2;
 
+        public override void SetSeed(int seed)
+        {
+            base.SetSeed(seed);
+        }
+
         public override Color GetColor(float x, float y, int width, int height)
         {
             Color rendererColor = this.GetSourceRenderer(0).GetColor(x, y, width, height);

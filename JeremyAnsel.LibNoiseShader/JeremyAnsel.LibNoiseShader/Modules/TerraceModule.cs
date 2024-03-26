@@ -125,66 +125,116 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return Interpolation.Linear(value0, value1, alpha);
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            if (this.ControlPoints.Count < TerraceModule.MinimumControlPointsCount)
+            return 1;
+        }
+
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            this.GetSourceModule(0).EmitHlsl(context);
+            context.EmitSettings(this);
+            context.EmitFunction(this, false);
+        }
+
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            if (this.ControlPoints.Count < MinimumControlPointsCount)
             {
                 this.MakePoints(MinimumControlPointsCount);
             }
 
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
+            string key = nameof(TerraceModule);
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "static const float controlPoints[{0}] =", this.ControlPoints.Count);
-            sb.AppendTabFormatLine(1, "{");
+            int maxPointsCount = context.GetTraverseValue<TerraceModule>(
+                this,
+                module => module.ControlPoints.Count,
+                (a, b) => Math.Max(a, b));
 
-            foreach (float point in this.ControlPoints)
+            header.AppendTabFormatLine("int {0}_ControlPoints_Count = {1};", key, maxPointsCount);
+
+            header.AppendTabFormatLine(
+                "float {0}_ControlPoints[{1}] = {{ {2} }};",
+                key,
+                maxPointsCount,
+                string.Concat(Enumerable.Repeat("0.0f,", maxPointsCount)));
+
+            header.AppendTabFormatLine("bool {0}_IsInverted = false;", key);
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(TerraceModule);
+
+            body.AppendTabFormatLine(2, "{0}_ControlPoints_Count = {1};", key, this.ControlPoints.Count);
+
+            for (int index = 0; index < this.ControlPoints.Count; index++)
             {
-                sb.AppendTabFormatLine(2, "{0},", point);
+                var point = this.ControlPoints.ElementAt(index);
+                body.AppendTabFormatLine(2, "{0}_ControlPoints[{1}] = {2};", key, index, point);
             }
 
-            sb.AppendTabFormatLine(1, "};");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "float sourceModuleValue = {0}(x, y, z);", module0);
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "int indexPos = 0;");
-            sb.AppendTabFormatLine(1, "[fastopt] for (; indexPos < {0}; indexPos++)", this.ControlPoints.Count);
-            sb.AppendTabFormatLine(1, "{");
-            sb.AppendTabFormatLine(2, "if (sourceModuleValue < controlPoints[indexPos])");
-            sb.AppendTabFormatLine(2, "{");
-            sb.AppendTabFormatLine(3, "break;");
-            sb.AppendTabFormatLine(2, "}");
-            sb.AppendTabFormatLine(1, "}");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "int index0 = clamp( indexPos - 1, 0, {0} );", this.ControlPoints.Count - 1);
-            sb.AppendTabFormatLine(1, "int index1 = clamp( indexPos, 0, {0} );", this.ControlPoints.Count - 1);
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "if (index0 == index1)");
-            sb.AppendTabFormatLine(1, "{");
-            sb.AppendTabFormatLine(2, "return controlPoints[index1];");
-            sb.AppendTabFormatLine(1, "}");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "float value0 = controlPoints[index0];");
-            sb.AppendTabFormatLine(1, "float value1 = controlPoints[index1];");
-            sb.AppendTabFormatLine(1, "float alpha = (sourceModuleValue - value0) / (value1 - value0);");
-            sb.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "{0}_IsInverted = {1};", key, this.IsInverted ? "true" : "false");
+        }
 
-            if (this.IsInverted)
-            {
-                sb.AppendTabFormatLine(1, "alpha = 1.0f - alpha;");
-                sb.AppendTabFormatLine(1, "float temp = value0;");
-                sb.AppendTabFormatLine(1, "value0 = value1;");
-                sb.AppendTabFormatLine(1, "value1 = temp;");
-                sb.AppendTabFormatLine();
-            }
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
 
-            sb.AppendTabFormatLine(1, "alpha *= alpha;");
-            sb.AppendTabFormatLine(1, "return Interpolation_Linear(value0, value1, alpha);");
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
 
-            return sb.ToString();
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 1;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            string key = nameof(TerraceModule);
+
+            body.AppendTabFormatLine(2, "float sourceModuleValue = param0;");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "int indexPos = 0;");
+            body.AppendTabFormatLine(2, "[fastopt] for (; indexPos < {0}_ControlPoints_Count; indexPos++)", key);
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "if (sourceModuleValue < {0}_ControlPoints[indexPos])", key);
+            body.AppendTabFormatLine(3, "{");
+            body.AppendTabFormatLine(4, "break;");
+            body.AppendTabFormatLine(3, "}");
+            body.AppendTabFormatLine(2, "}");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "int index0 = clamp( indexPos - 1, 0, {0}_ControlPoints_Count - 1 );", key);
+            body.AppendTabFormatLine(2, "int index1 = clamp( indexPos, 0, {0}_ControlPoints_Count - 1 );", key);
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "[branch] if (index0 == index1)");
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "result = {0}_ControlPoints[index1];", key);
+            body.AppendTabFormatLine(2, "}");
+            body.AppendTabFormatLine(2, "else");
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "float value0 = {0}_ControlPoints[index0];", key);
+            body.AppendTabFormatLine(3, "float value1 = {0}_ControlPoints[index1];", key);
+            body.AppendTabFormatLine(3, "float alpha = (sourceModuleValue - value0) / (value1 - value0);");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(3, "[branch] if ({0}_IsInverted)", key);
+            body.AppendTabFormatLine(3, "{");
+            body.AppendTabFormatLine(4, "alpha = 1.0f - alpha;");
+            body.AppendTabFormatLine(4, "float temp = value0;");
+            body.AppendTabFormatLine(4, "value0 = value1;");
+            body.AppendTabFormatLine(4, "value1 = temp;");
+            body.AppendTabFormatLine(3, "}");
+            body.AppendTabFormatLine(3, "alpha *= alpha;");
+            body.AppendTabFormatLine(3, "result = Interpolation_Linear(value0, value1, alpha);");
+            body.AppendTabFormatLine(2, "}");
         }
 
         public override string GetCSharpBody(CSharpContext context)

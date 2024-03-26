@@ -16,6 +16,14 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
 
         public abstract int RequiredSourceRendererCount { get; }
 
+        public virtual void SetSeed(int seed)
+        {
+            for (int i = 0; i < this.RequiredSourceRendererCount; i++)
+            {
+                this.GetSourceRenderer(i)?.SetSeed(seed);
+            }
+        }
+
         public IRenderer GetSourceRenderer(int index)
         {
             if (this.sourceRenderers is null)

@@ -47,13 +47,8 @@ namespace JeremyAnsel.LibNoiseShader.Maps
             return new ValueMap(width, height, buffer);
         }
 
-        public static ColorMap GenerateColorMapOnCpu(Noise3D noise, IRenderer renderer, int width, int height)
+        public static ColorMap GenerateColorMapOnCpu(IRenderer renderer, int width, int height)
         {
-            if (noise is null)
-            {
-                throw new ArgumentNullException(nameof(noise));
-            }
-
             if (renderer is null)
             {
                 throw new ArgumentNullException(nameof(renderer));

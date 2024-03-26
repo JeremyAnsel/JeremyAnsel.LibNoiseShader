@@ -8,12 +8,15 @@ namespace JeremyAnsel.LibNoiseShader.Builders
     {
         private readonly IModule source;
 
-        protected BuilderBase(IModule source)
+        protected BuilderBase(IModule source, int seed)
         {
             this.source = source ?? throw new ArgumentNullException(nameof(source));
+            this.Seed = seed;
         }
 
         public string Name { get; set; }
+
+        public int Seed { get; set; }
 
         public IModule GetSourceModule()
         {

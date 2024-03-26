@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Text;
 
 namespace JeremyAnsel.LibNoiseShader.Modules
@@ -11,7 +12,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         private readonly Noise3D noise;
 
-        private readonly float[] spectralWeights = new float[RidgedMultiModule.MaxOctave];
+        private readonly float[] spectralWeights = new float[MaxOctave];
 
         private int octaveCount;
 
@@ -136,50 +137,103 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return (value * 1.25f) - 1.0f;
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
+            return 0;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "static const float spectralWeights[{0}] =", this.spectralWeights.Length);
-            sb.AppendTabFormatLine(1, "{");
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            context.EmitSettings(this);
+            context.EmitFunction(this, false);
+        }
 
-            for (int i = 0; i < this.spectralWeights.Length; i++)
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            string key = nameof(RidgedMultiModule);
+
+            header.AppendTabFormatLine("float {0}_Frequency = 1.0f;", key);
+            header.AppendTabFormatLine("float {0}_Lacunarity = 2.0f;", key);
+            header.AppendTabFormatLine("float {0}_Offset = 1.0f;", key);
+            header.AppendTabFormatLine("float {0}_Gain = 2.0f;", key);
+            header.AppendTabFormatLine("float {0}_Exponent = 1.0f;", key);
+            header.AppendTabFormatLine("int {0}_OctaveCount = 6;", key);
+            header.AppendTabFormatLine("int {0}_SeedOffset = 0;", key);
+
+            header.AppendTabFormatLine(
+                "float {0}_SpectralWeights[{1}] = {{ {2} }};",
+                key,
+                MaxOctave,
+                string.Concat(Enumerable.Repeat("0.0f,", MaxOctave)));
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(RidgedMultiModule);
+
+            body.AppendTabFormatLine(2, "{0}_Frequency = {1};", key, this.Frequency);
+            body.AppendTabFormatLine(2, "{0}_Lacunarity = {1};", key, this.Lacunarity);
+            body.AppendTabFormatLine(2, "{0}_Offset = {1};", key, this.Offset);
+            body.AppendTabFormatLine(2, "{0}_Gain = {1};", key, this.Gain);
+            body.AppendTabFormatLine(2, "{0}_Exponent = {1};", key, this.Exponent);
+            body.AppendTabFormatLine(2, "{0}_OctaveCount = {1};", key, this.OctaveCount);
+            body.AppendTabFormatLine(2, "{0}_SeedOffset = {1};", key, this.SeedOffset);
+
+            for (int index = 0; index < this.OctaveCount; index++)
             {
-                sb.AppendTabFormatLine(2, "{0},", this.spectralWeights[i]);
+                body.AppendTabFormatLine(2, "{0}_SpectralWeights[{1}] = {2};", key, index, this.spectralWeights[index]);
             }
+        }
 
-            sb.AppendTabFormatLine(1, "};");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "float3 freq = float3(x, y, z) * {0};", this.Frequency);
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "float value = 0.0f;");
-            sb.AppendTabFormatLine(1, "float weight = 1.0f;");
-            sb.AppendTabFormatLine(1, "float offset = {0};", this.Offset);
-            sb.AppendTabFormatLine(1, "float gain = {0};", this.Gain);
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "[fastopt] for (int curOctave = 0; curOctave < {0}; curOctave++)", this.OctaveCount);
-            sb.AppendTabFormatLine(1, "{");
-            sb.AppendTabFormatLine(2, "int seed = ({0} + curOctave) & 0x7fffffff;", this.SeedOffset);
-            sb.AppendTabFormatLine(2, "float signal = Noise3D_GradientCoherent(freq + seed);");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(2, "signal = signal * sign(signal);");
-            sb.AppendTabFormatLine(2, "signal = offset - signal;");
-            sb.AppendTabFormatLine(2, "signal *= signal;");
-            sb.AppendTabFormatLine(2, "signal *= weight;");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(2, "weight = signal * gain;");
-            sb.AppendTabFormatLine(2, "weight = clamp(weight, 0.0f, 1.0f);");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(2, "value += signal * spectralWeights[curOctave];");
-            sb.AppendTabFormatLine(2, "freq *= {0};", this.Lacunarity);
-            sb.AppendTabFormatLine(1, "}");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "return value * 1.25f - 1.0f;");
-            sb.AppendTabFormatLine("}");
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
 
-            return sb.ToString();
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 0;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            string key = nameof(RidgedMultiModule);
+
+            body.AppendTabFormatLine(2, "float3 freq = p * {0}_Frequency;", key);
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "float value = 0.0f;");
+            body.AppendTabFormatLine(2, "float weight = 1.0f;");
+            body.AppendTabFormatLine(2, "float offset = {0}_Offset;", key);
+            body.AppendTabFormatLine(2, "float gain = {0}_Gain;", key);
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "[fastopt] for (int curOctave = 0; curOctave < {0}_OctaveCount; curOctave++)", key);
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "int seed = ({0}_SeedOffset + curOctave) & 0x7fffffff;", key);
+            body.AppendTabFormatLine(3, "float signal = Noise3D_GradientCoherent(freq + seed);");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(3, "signal = signal * sign(signal);");
+            body.AppendTabFormatLine(3, "signal = offset - signal;");
+            body.AppendTabFormatLine(3, "signal *= signal;");
+            body.AppendTabFormatLine(3, "signal *= weight;");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(3, "weight = signal * gain;");
+            body.AppendTabFormatLine(3, "weight = clamp(weight, 0.0f, 1.0f);");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(3, "value += signal * {0}_SpectralWeights[curOctave];", key);
+            body.AppendTabFormatLine(3, "freq *= {0}_Lacunarity;", key);
+            body.AppendTabFormatLine(2, "}");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "result = value * 1.25f - 1.0f;");
         }
 
         public override string GetCSharpBody(CSharpContext context)

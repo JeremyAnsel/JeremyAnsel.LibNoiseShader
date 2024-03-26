@@ -29,23 +29,63 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return 1.0f - (nearestDist * 4.0f);
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
+            return 0;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "float3 freq = float3(x, y, z) * {0};", this.Frequency);
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "float distFromCenter = sqrt( freq.x * freq.x + freq.y * freq.y + freq.z * freq.z );");
-            sb.AppendTabFormatLine(1, "float distFromSmallerSphere = distFromCenter - floor(distFromCenter);");
-            sb.AppendTabFormatLine(1, "float distFromLargerSphere = 1.0f - distFromSmallerSphere;");
-            sb.AppendTabFormatLine(1, "float nearestDist = min(distFromSmallerSphere, distFromLargerSphere);");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "return 1.0f - (nearestDist * 4.0f);");
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            context.EmitSettings(this);
+            context.EmitFunction(this, false);
+        }
 
-            return sb.ToString();
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            string key = nameof(SphereModule);
+
+            header.AppendTabFormatLine("float {0}_Frequency = 1.0f;", key);
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(SphereModule);
+
+            body.AppendTabFormatLine(2, "{0}_Frequency = {1};", key, this.Frequency);
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 0;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            string key = nameof(SphereModule);
+
+            body.AppendTabFormatLine(2, "float3 freq = p * {0}_Frequency;", key);
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "float distFromCenter = sqrt( freq.x * freq.x + freq.y * freq.y + freq.z * freq.z );");
+            body.AppendTabFormatLine(2, "float distFromSmallerSphere = distFromCenter - floor(distFromCenter);");
+            body.AppendTabFormatLine(2, "float distFromLargerSphere = 1.0f - distFromSmallerSphere;");
+            body.AppendTabFormatLine(2, "float nearestDist = min(distFromSmallerSphere, distFromLargerSphere);");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "return 1.0f - (nearestDist * 4.0f);");
         }
 
         public override string GetCSharpBody(CSharpContext context)

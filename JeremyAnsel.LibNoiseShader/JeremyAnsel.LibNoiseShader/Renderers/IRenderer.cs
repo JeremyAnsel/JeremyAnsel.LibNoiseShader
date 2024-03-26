@@ -8,6 +8,8 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
 
         int RequiredSourceRendererCount { get; }
 
+        void SetSeed(int seed);
+
         IRenderer GetSourceRenderer(int index);
 
         void GenerateModuleContext(HlslContext context);

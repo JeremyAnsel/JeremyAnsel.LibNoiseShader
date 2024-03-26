@@ -50,6 +50,10 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
+            x += this.noise.Seed;
+            y += this.noise.Seed;
+            z += this.noise.Seed;
+
             x *= this.Frequency;
             y *= this.Frequency;
             z *= this.Frequency;
@@ -75,32 +79,80 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return value;
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
+            return 0;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "float3 freq = float3(x, y, z) * {0};", this.Frequency);
-            sb.AppendTabFormatLine(1, "float curPersistence = 1.0f;");
-            sb.AppendTabFormatLine(1, "float value = 0.0f;");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "[fastopt] for (int curOctave = 0; curOctave < {0}; curOctave++)", this.OctaveCount);
-            sb.AppendTabFormatLine(1, "{");
-            sb.AppendTabFormatLine(2, "int seed = ({0} + curOctave) & 0x7fffffff;", this.SeedOffset);
-            sb.AppendTabFormatLine(2, "float signal = Noise3D_GradientCoherent(freq + seed);");
-            sb.AppendTabFormatLine(2, "signal = 2.0f * signal * sign(signal) - 1.0f;");
-            sb.AppendTabFormatLine(2, "value += signal * curPersistence;");
-            sb.AppendTabFormatLine(2, "freq *= {0};", this.Lacunarity);
-            sb.AppendTabFormatLine(2, "curPersistence *= {0};", this.Persistence);
-            sb.AppendTabFormatLine(1, "}");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "value += 0.5f;");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "return value;");
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            context.EmitSettings(this);
+            context.EmitFunction(this, false);
+        }
 
-            return sb.ToString();
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            string key = nameof(BillowModule);
+
+            header.AppendTabFormatLine("float {0}_Frequency = 1.0f;", key);
+            header.AppendTabFormatLine("float {0}_Lacunarity = 2.0f;", key);
+            header.AppendTabFormatLine("int {0}_OctaveCount = 6;", key);
+            header.AppendTabFormatLine("float {0}_Persistence = 0.5f;", key);
+            header.AppendTabFormatLine("int {0}_SeedOffset = 0;", key);
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(BillowModule);
+
+            body.AppendTabFormatLine(2, "{0}_Frequency = {1};", key, this.Frequency);
+            body.AppendTabFormatLine(2, "{0}_Lacunarity = {1};", key, this.Lacunarity);
+            body.AppendTabFormatLine(2, "{0}_OctaveCount = {1};", key, this.octaveCount);
+            body.AppendTabFormatLine(2, "{0}_Persistence = {1};", key, this.Persistence);
+            body.AppendTabFormatLine(2, "{0}_SeedOffset = {1};", key, this.SeedOffset);
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 0;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            string key = nameof(BillowModule);
+
+            body.AppendTabFormatLine(2, "float3 freq = p * {0}_Frequency;", key);
+            body.AppendTabFormatLine(2, "float curPersistence = 1.0f;");
+            body.AppendTabFormatLine(2, "float value = 0.0f;");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "[fastopt] for (int curOctave = 0; curOctave < {0}_OctaveCount; curOctave++)", key);
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "int seed = ({0}_SeedOffset + curOctave) & 0x7fffffff;", key);
+            body.AppendTabFormatLine(3, "float signal = Noise3D_GradientCoherent(freq + seed);");
+            body.AppendTabFormatLine(3, "signal = 2.0f * signal * sign(signal) - 1.0f;");
+            body.AppendTabFormatLine(3, "value += signal * curPersistence;");
+            body.AppendTabFormatLine(3, "freq *= {0}_Lacunarity;", key);
+            body.AppendTabFormatLine(3, "curPersistence *= {0}_Persistence;", key);
+            body.AppendTabFormatLine(2, "}");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "value += 0.5f;");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "result = value;");
         }
 
         public override string GetCSharpBody(CSharpContext context)

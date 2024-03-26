@@ -51,28 +51,71 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return value;
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
+            return 1;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "float p = x;");
-            sb.AppendTabFormatLine(1, "float3 endPoint = float3({0}, {1}, {2});", this.EndPointX, this.EndPointY, this.EndPointZ);
-            sb.AppendTabFormatLine(1, "float3 startPoint = float3({0}, {1}, {2});", this.StartPointX, this.StartPointY, this.StartPointZ);
-            sb.AppendTabFormatLine(1, "float3 newXYZ = (endPoint - startPoint) * p + startPoint;");
-            sb.AppendTabFormatLine(1, "float value = {0}(newXYZ.x, newXYZ.y, newXYZ.z);", module0);
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            context.EmitCoords(this, 0, false);
+            this.GetSourceModule(0).EmitHlsl(context);
+            context.EmitSettings(this);
+            context.EmitFunction(this, true);
+        }
 
-            if (this.Attenuate)
-            {
-                sb.AppendTabFormatLine(1, "value = p * (1.0f - p) * 4 * value;");
-            }
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            string key = nameof(LineModule);
 
-            sb.AppendTabFormatLine(1, "return value;");
-            sb.AppendTabFormatLine("}");
+            header.AppendTabFormatLine("bool {0}_Attenuate = true;", key);
+            header.AppendTabFormatLine("float3 {0}_StartPoint = float3(0.0f, 0.0f, 0.0f);", key);
+            header.AppendTabFormatLine("float3 {0}_EndPoint = float3(1.0f, 1.0f, 1.0f);", key);
+        }
 
-            return sb.ToString();
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(LineModule);
+
+            body.AppendTabFormatLine(2, "{0}_Attenuate = {1};", key, this.Attenuate ? "true" : "false");
+            body.AppendTabFormatLine(2, "{0}_StartPoint = float3({1}, {2}, {3});", key, this.StartPointX, this.StartPointY, this.StartPointZ);
+            body.AppendTabFormatLine(2, "{0}_EndPoint = float3({1}, {2}, {3});", key, this.EndPointX, this.EndPointY, this.EndPointZ);
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return true;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+            body.AppendTabFormatLine(2, "float point = coords.x;");
+            body.AppendTabFormatLine(2, "float3 endPoint = float3({0}, {1}, {2});", this.EndPointX, this.EndPointY, this.EndPointZ);
+            body.AppendTabFormatLine(2, "float3 startPoint = float3({0}, {1}, {2});", this.StartPointX, this.StartPointY, this.StartPointZ);
+            body.AppendTabFormatLine(2, "coords = (endPoint - startPoint) * point + startPoint;");
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 1;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            string key = nameof(LineModule);
+
+            body.AppendTabFormatLine(2, "float value = param0;");
+            body.AppendTabFormatLine(2, "if ({0}_Attenuate)", key);
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "value = p.x * (1.0f - p.x) * 4 * value;");
+            body.AppendTabFormatLine(2, "}");
+            body.AppendTabFormatLine(2, "result = value;");
         }
 
         public override string GetCSharpBody(CSharpContext context)

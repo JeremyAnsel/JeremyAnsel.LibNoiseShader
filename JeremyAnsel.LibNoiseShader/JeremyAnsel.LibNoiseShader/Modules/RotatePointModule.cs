@@ -77,44 +77,6 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override int RequiredSourceModuleCount => 1;
 
-        public override float GetValue(float x, float y, float z)
-        {
-            float nx = (this.matrixX1 * x) + (this.matrixY1 * y) + (this.matrixZ1 * z);
-            float ny = (this.matrixX2 * x) + (this.matrixY2 * y) + (this.matrixZ2 * z);
-            float nz = (this.matrixX3 * x) + (this.matrixY3 * y) + (this.matrixZ3 * z);
-
-            return this.GetSourceModule(0).GetValue(nx, ny, nz);
-        }
-
-        public override string GetHlslBody(HlslContext context)
-        {
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
-
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "float nx = ({0} * x) + ({1} * y) + ({2} * z);", this.matrixX1, this.matrixY1, this.matrixZ1);
-            sb.AppendTabFormatLine(1, "float ny = ({0} * x) + ({1} * y) + ({2} * z);", this.matrixX2, this.matrixY2, this.matrixZ2);
-            sb.AppendTabFormatLine(1, "float nz = ({0} * x) + ({1} * y) + ({2} * z);", this.matrixX3, this.matrixY3, this.matrixZ3);
-            sb.AppendTabFormatLine(1, "return {0}(nx, ny, nz);", module0);
-            sb.AppendTabFormatLine("}");
-
-            return sb.ToString();
-        }
-
-        public override string GetCSharpBody(CSharpContext context)
-        {
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
-            string name = context.GetModuleName(this);
-            string type = context.GetModuleType(this);
-
-            sb.AppendTabFormatLine("{0} {1} = new({2});", type, name, module0);
-            sb.AppendTabFormatLine("{0}.SetAngles({1}, {2}, {3});", name, this.AngleX, this.AngleY, this.AngleZ);
-
-            return sb.ToString();
-        }
-
         public void SetAngles(float angleX, float angleY, float angleZ)
         {
             this.angleX = angleX;
@@ -141,6 +103,92 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             this.matrixX3 = -sinY * cosX;
             this.matrixY3 = sinX;
             this.matrixZ3 = cosY * cosX;
+        }
+
+        public override float GetValue(float x, float y, float z)
+        {
+            float nx = (this.matrixX1 * x) + (this.matrixY1 * y) + (this.matrixZ1 * z);
+            float ny = (this.matrixX2 * x) + (this.matrixY2 * y) + (this.matrixZ2 * z);
+            float nz = (this.matrixX3 * x) + (this.matrixY3 * y) + (this.matrixZ3 * z);
+
+            return this.GetSourceModule(0).GetValue(nx, ny, nz);
+        }
+
+        public override int EmitHlslMaxDepth()
+        {
+            return 1;
+        }
+
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            context.EmitCoords(this, 0, false);
+            this.GetSourceModule(0).EmitHlsl(context);
+            context.EmitSettings(this);
+            context.EmitFunction(this, true);
+        }
+
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            string key = nameof(RotatePointModule);
+
+            header.AppendTabFormatLine("float3x3 {0}_RotateMatrix = (float3x3)0;", key);
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(RotatePointModule);
+
+            body.AppendTabFormatLine(
+                2,
+                "{0}_RotateMatrix = float3x3( {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8}, {9} );",
+                key,
+                this.matrixX1, this.matrixY1, this.matrixZ1,
+                this.matrixX2, this.matrixY2, this.matrixZ2,
+                this.matrixX3, this.matrixY3, this.matrixZ3);
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return true;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+            body.AppendTabFormatLine(
+                2,
+                "coords = mul( float3x3( {0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}, {8} ), coords);",
+                this.matrixX1, this.matrixY1, this.matrixZ1,
+                this.matrixX2, this.matrixY2, this.matrixZ2,
+                this.matrixX3, this.matrixY3, this.matrixZ3);
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 1;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            body.AppendTabFormatLine(2, "result = param0;");
+        }
+
+        public override string GetCSharpBody(CSharpContext context)
+        {
+            var sb = new StringBuilder();
+            string module0 = context.GetModuleName(this.GetSourceModule(0));
+            string name = context.GetModuleName(this);
+            string type = context.GetModuleType(this);
+
+            sb.AppendTabFormatLine("{0} {1} = new({2});", type, name, module0);
+            sb.AppendTabFormatLine("{0}.SetAngles({1}, {2}, {3});", name, this.AngleX, this.AngleY, this.AngleZ);
+
+            return sb.ToString();
         }
     }
 }

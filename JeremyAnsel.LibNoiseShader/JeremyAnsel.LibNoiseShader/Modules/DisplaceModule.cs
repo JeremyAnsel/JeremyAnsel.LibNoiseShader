@@ -23,24 +23,60 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return this.GetSourceModule(0).GetValue(displaceX, displaceY, displaceZ);
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
-            string displaceXModule = context.GetModuleName(this.GetSourceModule(1));
-            string displaceYModule = context.GetModuleName(this.GetSourceModule(2));
-            string displaceZModule = context.GetModuleName(this.GetSourceModule(3));
+            return 4;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "float displaceX = x + {0}(x, y, z);", displaceXModule);
-            sb.AppendTabFormatLine(1, "float displaceY = y + {0}(x, y, z);", displaceYModule);
-            sb.AppendTabFormatLine(1, "float displaceZ = z + {0}(x, y, z);", displaceZModule);
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "return {0}(displaceX, displaceY, displaceZ);", module0);
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            this.GetSourceModule(1).EmitHlsl(context);
+            this.GetSourceModule(2).EmitHlsl(context);
+            this.GetSourceModule(3).EmitHlsl(context);
+            context.EmitCoords(this, 0, false);
+            this.GetSourceModule(0).EmitHlsl(context);
+            context.EmitFunction(this, true);
+        }
 
-            return sb.ToString();
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return false;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return true;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+            body.AppendTabFormatLine(2, "modules_results_index -= 3;");
+            body.AppendTabFormatLine(2, "float param0 = modules_results[modules_results_index];");
+            body.AppendTabFormatLine(2, "float param1 = modules_results[modules_results_index + 1];");
+            body.AppendTabFormatLine(2, "float param2 = modules_results[modules_results_index + 2];");
+            body.AppendTabFormatLine(2, "float displaceX = coords.x + param0;");
+            body.AppendTabFormatLine(2, "float displaceY = coords.y + param1;");
+            body.AppendTabFormatLine(2, "float displaceZ = coords.z + param2;");
+            body.AppendTabFormatLine(2, "coords = float3(displaceX, displaceY, displaceZ);");
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 1;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            body.AppendTabFormatLine(2, "return param0;");
         }
 
         public override string GetCSharpBody(CSharpContext context)

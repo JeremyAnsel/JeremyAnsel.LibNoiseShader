@@ -19,18 +19,46 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return Math.Abs(module0.GetValue(x, y, z));
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
+            return 1;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "float value0 = {0}(x, y, z);", module0);
-            sb.AppendTabFormatLine(1, "return value0 * sign(value0);");
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitFunction(this, false);
+        }
 
-            return sb.ToString();
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return false;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 0;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            body.AppendTabFormatLine(2, "result = param0 * sign(param0);");
         }
 
         public override string GetCSharpBody(CSharpContext context)

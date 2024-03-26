@@ -22,22 +22,50 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return Interpolation.Linear(v0, v1, alpha);
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
-            string module1 = context.GetModuleName(this.GetSourceModule(1));
-            string controlModule = context.GetModuleName(this.GetSourceModule(2));
+            return 3;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "float v0 = {0}(x, y, z);", module0);
-            sb.AppendTabFormatLine(1, "float v1 = {0}(x, y, z);", module1);
-            sb.AppendTabFormatLine(1, "float alpha = {0}(x, y, z) * 0.5f + 0.5f;", controlModule);
-            sb.AppendTabFormatLine(1, "return Interpolation_Linear( v0, v1, alpha );");
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlsl(HlslContext context)
+        {
+            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(1).EmitHlsl(context);
+            this.GetSourceModule(2).EmitHlsl(context);
+            context.EmitFunction(this, false);
+        }
 
-            return sb.ToString();
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return false;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 3;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            body.AppendTabFormatLine(2, "float alpha = param2 * 0.5f + 0.5f;");
+            body.AppendTabFormatLine(2, "result = Interpolation_Linear( param0, param1, alpha );");
         }
 
         public override string GetCSharpBody(CSharpContext context)

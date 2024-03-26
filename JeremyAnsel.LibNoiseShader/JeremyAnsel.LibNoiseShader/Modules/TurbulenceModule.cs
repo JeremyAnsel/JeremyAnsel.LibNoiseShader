@@ -117,38 +117,108 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return this.GetSourceModule(0).GetValue(distortX, distortY, distortZ);
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
-            string distortXModule = context.GetModuleName(this.distortXModule);
-            string distortYModule = context.GetModuleName(this.distortYModule);
-            string distortZModule = context.GetModuleName(this.distortZModule);
+            return 4;
+        }
 
-            sb.AppendTabFormatLine(this.distortXModule.GetHlslBody(context));
-            sb.AppendTabFormatLine(this.distortYModule.GetHlslBody(context));
-            sb.AppendTabFormatLine(this.distortZModule.GetHlslBody(context));
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this.distortXModule);
+            context.EmitHeader(this.distortYModule);
+            context.EmitHeader(this.distortZModule);
+            context.EmitHeader(this);
+            context.EmitCoords(this, 0, false);
+            context.EmitSettings(this.distortXModule);
+            context.EmitFunction(this.distortXModule, true);
+            context.EmitCoords(this, 1, false);
+            context.EmitSettings(this.distortYModule);
+            context.EmitFunction(this.distortYModule, true);
+            context.EmitCoords(this, 2, false);
+            context.EmitSettings(this.distortZModule);
+            context.EmitFunction(this.distortZModule, true);
+            context.EmitCoords(this, 3, false);
+            this.GetSourceModule(0).EmitHlsl(context);
+            context.EmitSettings(this);
+            context.EmitFunction(this, true);
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "float x0 = x + (12414.0f / 65536.0f);");
-            sb.AppendTabFormatLine(1, "float y0 = y + (65124.0f / 65536.0f);");
-            sb.AppendTabFormatLine(1, "float z0 = z + (31337.0f / 65536.0f);");
-            sb.AppendTabFormatLine(1, "float x1 = x + (26519.0f / 65536.0f);");
-            sb.AppendTabFormatLine(1, "float y1 = y + (18128.0f / 65536.0f);");
-            sb.AppendTabFormatLine(1, "float z1 = z + (60493.0f / 65536.0f);");
-            sb.AppendTabFormatLine(1, "float x2 = x + (53820.0f / 65536.0f);");
-            sb.AppendTabFormatLine(1, "float y2 = y + (11213.0f / 65536.0f);");
-            sb.AppendTabFormatLine(1, "float z2 = z + (44845.0f / 65536.0f);");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "float distortX = x + {0}(x0, y0, z0) * {1};", distortXModule, this.Power);
-            sb.AppendTabFormatLine(1, "float distortY = y + {0}(x1, y1, z1) * {1};", distortYModule, this.Power);
-            sb.AppendTabFormatLine(1, "float distortZ = z + {0}(x2, y2, z2) * {1};", distortZModule, this.Power);
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "return {0}(distortX, distortY, distortZ);", module0);
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            string key = nameof(TurbulenceModule);
 
-            return sb.ToString();
+            header.AppendTabFormatLine("float {0}_Frequency = 1.0f;", key);
+            header.AppendTabFormatLine("float {0}_Power = 1.0f;", key);
+            header.AppendTabFormatLine("int {0}_Roughness = 3;", key);
+            header.AppendTabFormatLine("int {0}_SeedOffset = 0;", key);
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(TurbulenceModule);
+
+            body.AppendTabFormatLine(2, "{0}_Frequency = {1};", key, this.Frequency);
+            body.AppendTabFormatLine(2, "{0}_Power = {1};", key, this.Power);
+            body.AppendTabFormatLine(2, "{0}_Roughness = {1};", key, this.Roughness);
+            body.AppendTabFormatLine(2, "{0}_SeedOffset = {1};", key, this.SeedOffset);
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return true;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+            switch (index)
+            {
+                case 0:
+                    body.AppendTabFormatLine(2, "float x0 = coords.x + (12414.0f / 65536.0f);");
+                    body.AppendTabFormatLine(2, "float y0 = coords.y + (65124.0f / 65536.0f);");
+                    body.AppendTabFormatLine(2, "float z0 = coords.z + (31337.0f / 65536.0f);");
+                    body.AppendTabFormatLine(2, "coords = float3(x0, y0, z0);");
+                    break;
+
+                case 1:
+                    body.AppendTabFormatLine(2, "float x1 = coords.x + (26519.0f / 65536.0f);");
+                    body.AppendTabFormatLine(2, "float y1 = coords.y + (18128.0f / 65536.0f);");
+                    body.AppendTabFormatLine(2, "float z1 = coords.z + (60493.0f / 65536.0f);");
+                    body.AppendTabFormatLine(2, "coords = float3(x1, y1, z1);");
+                    break;
+
+                case 2:
+                    body.AppendTabFormatLine(2, "float x2 = coords.x + (53820.0f / 65536.0f);");
+                    body.AppendTabFormatLine(2, "float y2 = coords.y + (11213.0f / 65536.0f);");
+                    body.AppendTabFormatLine(2, "float z2 = coords.z + (44845.0f / 65536.0f);");
+                    body.AppendTabFormatLine(2, "coords = float3(x2, y2, z2);");
+                    break;
+
+                case 3:
+                    body.AppendTabFormatLine(2, "modules_results_index -= 3;");
+                    body.AppendTabFormatLine(2, "float param0 = modules_results[modules_results_index];");
+                    body.AppendTabFormatLine(2, "float param1 = modules_results[modules_results_index + 1];");
+                    body.AppendTabFormatLine(2, "float param2 = modules_results[modules_results_index + 2];");
+                    body.AppendTabFormatLine(2, "float distortX = coords.x + param0 * {0};", this.Power);
+                    body.AppendTabFormatLine(2, "float distortY = coords.y + param1 * {0};", this.Power);
+                    body.AppendTabFormatLine(2, "float distortZ = coords.z + param2 * {0};", this.Power);
+                    body.AppendTabFormatLine(2, "coords = float3(distortX, distortY, distortZ);");
+                    break;
+            }
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 1;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            body.AppendTabFormatLine(2, "return param0;");
         }
 
         public override string GetCSharpBody(CSharpContext context)

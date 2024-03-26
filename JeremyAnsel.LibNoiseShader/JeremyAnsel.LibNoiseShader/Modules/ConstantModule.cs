@@ -18,16 +18,56 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return this.ConstantValue;
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
+            return 0;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "return {0};", this.ConstantValue);
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            context.EmitSettings(this);
+            context.EmitFunction(this, false);
+        }
 
-            return sb.ToString();
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            string key = nameof(ConstantModule);
+
+            header.AppendTabFormatLine("float {0}_ConstantValue = 0.0f;", key);
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(ConstantModule);
+
+            body.AppendTabFormatLine(2, "{0}_ConstantValue = {1};", key, this.ConstantValue);
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 0;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            string key = nameof(ConstantModule);
+
+            body.AppendTabFormatLine(2, "result = {0}_ConstantValue;", key);
         }
 
         public override string GetCSharpBody(CSharpContext context)

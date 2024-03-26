@@ -6,8 +6,8 @@ namespace JeremyAnsel.LibNoiseShader.Builders
 {
     public sealed class CylinderBuilder : BuilderBase
     {
-        public CylinderBuilder(IModule source)
-            : base(source)
+        public CylinderBuilder(IModule source, int seed)
+            : base(source, seed)
         {
             this.LowerAngleBound = -180f;
             this.UpperAngleBound = 180f;
@@ -15,8 +15,8 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             this.UpperHeightBound = 1.0f;
         }
 
-        public CylinderBuilder(IModule source, float lowerAngleBound, float upperAngleBound, float lowerHeightBound, float upperHeightBound)
-            : base(source)
+        public CylinderBuilder(IModule source, int seed, float lowerAngleBound, float upperAngleBound, float lowerHeightBound, float upperHeightBound)
+            : base(source, seed)
         {
             this.LowerAngleBound = lowerAngleBound;
             this.UpperAngleBound = upperAngleBound;
@@ -40,13 +40,14 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             float curAngle = this.LowerAngleBound + (x + 1.0f) * angleExtent / 2.0f;
             float curHeight = this.LowerHeightBound + (y + 1.0f) * heightExtent / 2.0f;
 
-            return this.GetSourceModule().GetValue(CylinderModel.GetCoords(curAngle, curHeight));
+            return this.GetSourceModule().GetValue(CylinderModel.GetCoords(curAngle, curHeight) + this.Seed);
         }
 
         public override string GetHlslBody(HlslContext context)
         {
             var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule());
+            //string module0 = context.GetModuleName(this.GetSourceModule());
+            string module0 = context.GetBuilderName(this) + "_Module";
 
             sb.AppendTabFormatLine(context.GetBuilderFunctionDefinition(this));
             sb.AppendTabFormatLine("{");
@@ -54,7 +55,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             sb.AppendTabFormatLine(1, "float heightExtent = {0} - {1};", this.UpperHeightBound, this.LowerHeightBound);
             sb.AppendTabFormatLine(1, "float curAngle = {0} + (x + 1.0f) * angleExtent / 2.0f;", this.LowerAngleBound);
             sb.AppendTabFormatLine(1, "float curHeight = {0} + (y + 1.0f) * heightExtent / 2.0f;", this.LowerHeightBound);
-            sb.AppendTabFormatLine(1, "float3 coords = Model_Cylinder(curAngle, curHeight);");
+            sb.AppendTabFormatLine(1, "float3 coords = Model_Cylinder(curAngle, curHeight) + {0};", this.Seed);
             sb.AppendTabFormatLine(1, "return {0}( coords.x, coords.y, coords.z );", module0);
             sb.AppendTabFormatLine("}");
 
@@ -69,10 +70,11 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             string type = context.GetBuilderType(this);
 
             sb.AppendTabFormatLine(
-                "{0} {1} = new({2}, {3}, {4}, {5}, {6});",
+                "{0} {1} = new({2}, {3}, {4}, {5}, {6}, {7});",
                 type,
                 name,
                 module0,
+                this.Seed,
                 this.LowerAngleBound,
                 this.UpperAngleBound,
                 this.LowerHeightBound,

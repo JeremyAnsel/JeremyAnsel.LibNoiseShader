@@ -19,6 +19,13 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override int RequiredSourceModuleCount => 1;
 
+        public void SetTranslate(float translateX, float translateY, float translateZ)
+        {
+            this.TranslateX = translateX;
+            this.TranslateY = translateY;
+            this.TranslateZ = translateZ;
+        }
+
         public override float GetValue(float x, float y, float z)
         {
             x += this.TranslateX;
@@ -28,17 +35,57 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return this.GetSourceModule(0).GetValue(x, y, z);
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
+            return 1;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "return {0}(x + {1}, y + {2}, z + {3});", module0, this.TranslateX, this.TranslateY, this.TranslateZ);
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            context.EmitCoords(this, 0, false);
+            this.GetSourceModule(0).EmitHlsl(context);
+            context.EmitSettings(this);
+            context.EmitFunction(this, true);
+        }
 
-            return sb.ToString();
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            string key = nameof(TranslatePointModule);
+
+            header.AppendTabFormatLine("float3 {0}_Translate = float3(0.0f, 0.0f, 0.0f);", key);
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(TranslatePointModule);
+
+            body.AppendTabFormatLine(2, "{0}_Translate = float3({1}, {2}, {3});", key, this.TranslateX, this.TranslateY, this.TranslateZ);
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return true;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+            body.AppendTabFormatLine(2, "coords = coords + float3({0}, {1}, {2});", this.TranslateX, this.TranslateY, this.TranslateZ);
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 1;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            body.AppendTabFormatLine(2, "result = param0;");
         }
 
         public override string GetCSharpBody(CSharpContext context)
@@ -52,13 +99,6 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             sb.AppendTabFormatLine("{0}.SetTranslate({1}, {2}, {3});", name, this.TranslateX, this.TranslateY, this.TranslateZ);
 
             return sb.ToString();
-        }
-
-        public void SetTranslate(float translateX, float translateY, float translateZ)
-        {
-            this.TranslateX = translateX;
-            this.TranslateY = translateY;
-            this.TranslateZ = translateZ;
         }
     }
 }

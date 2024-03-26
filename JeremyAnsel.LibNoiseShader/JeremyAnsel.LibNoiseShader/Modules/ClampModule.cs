@@ -29,17 +29,59 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return value;
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
         {
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
+            return 1;
+        }
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "return clamp( {0}(x, y, z), {1}, {2} );", module0, this.LowerBound, this.UpperBound);
-            sb.AppendTabFormatLine("}");
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            this.GetSourceModule(0).EmitHlsl(context);
+            context.EmitSettings(this);
+            context.EmitFunction(this, false);
+        }
 
-            return sb.ToString();
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
+        {
+            string key = nameof(ClampModule);
+
+            header.AppendTabFormatLine("float {0}_LowerBound = -1.0f;", key);
+            header.AppendTabFormatLine("float {0}_UpperBound = 1.0f;", key);
+        }
+
+        public override bool HasHlslSettings()
+        {
+            return true;
+        }
+
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(ClampModule);
+
+            body.AppendTabFormatLine(2, "{0}_LowerBound = {1};", key, this.LowerBound);
+            body.AppendTabFormatLine(2, "{0}_UpperBound = {1};", key, this.UpperBound);
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 1;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            string key = nameof(ClampModule);
+
+            body.AppendTabFormatLine(2, "result = clamp( param0, {0}_LowerBound, {0}_UpperBound );", key);
         }
 
         public override string GetCSharpBody(CSharpContext context)

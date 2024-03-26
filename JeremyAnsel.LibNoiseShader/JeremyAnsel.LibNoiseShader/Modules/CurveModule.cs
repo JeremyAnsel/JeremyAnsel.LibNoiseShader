@@ -33,6 +33,21 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             this.ControlPoints.Add(1.0f, 1.0f);
         }
 
+        public void SetControlPoints(IEnumerable<KeyValuePair<float, float>> controlPoints)
+        {
+            if (controlPoints is null)
+            {
+                throw new ArgumentNullException(nameof(controlPoints));
+            }
+
+            this.ControlPoints.Clear();
+
+            foreach (KeyValuePair<float, float> controlPoint in controlPoints)
+            {
+                this.ControlPoints.Add(controlPoint);
+            }
+        }
+
         public override float GetValue(float x, float y, float z)
         {
             if (this.ControlPoints.Count < 4)
@@ -84,72 +99,110 @@ namespace JeremyAnsel.LibNoiseShader.Modules
                 alpha);
         }
 
-        public override string GetHlslBody(HlslContext context)
+        public override int EmitHlslMaxDepth()
+        {
+            return 1;
+        }
+
+        public override void EmitHlsl(HlslContext context)
+        {
+            context.EmitHeader(this);
+            this.GetSourceModule(0).EmitHlsl(context);
+            context.EmitSettings(this);
+            context.EmitFunction(this, false);
+        }
+
+        public override void EmitHlslHeader(HlslContext context, StringBuilder header)
         {
             if (this.ControlPoints.Count < 4)
             {
                 SetDefaultPoints();
             }
 
-            var sb = new StringBuilder();
-            string module0 = context.GetModuleName(this.GetSourceModule(0));
+            string key = nameof(CurveModule);
 
-            sb.AppendTabFormatLine(context.GetModuleFunctionDefinition(this));
-            sb.AppendTabFormatLine("{");
-            sb.AppendTabFormatLine(1, "static const float2 controlPoints[{0}] =", this.ControlPoints.Count);
-            sb.AppendTabFormatLine(1, "{");
+            int maxPointsCount = context.GetTraverseValue<CurveModule>(
+                this,
+                module => module.ControlPoints.Count,
+                (a, b) => Math.Max(a, b));
 
-            foreach (KeyValuePair<float, float> point in this.ControlPoints)
+            header.AppendTabFormatLine("int {0}_ControlPoints_Count = {1};", key, maxPointsCount);
+
+            header.AppendTabFormatLine("float2 {0}_ControlPoints[{1}] =", key, maxPointsCount);
+            header.AppendTabFormatLine("{");
+
+            for (int index = 0; index < maxPointsCount; index++)
             {
-                sb.AppendTabFormatLine(2, "{{ {0}, {1} }},", point.Key, point.Value);
+                header.AppendTabFormatLine("{{ 0.0f, 0.0f }},");
             }
 
-            sb.AppendTabFormatLine(1, "};");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "float sourceModuleValue = {0}(x, y, z);", module0);
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "int indexPos = 0;");
-            sb.AppendTabFormatLine(1, "[fastopt] for (; indexPos < {0}; indexPos++)", this.ControlPoints.Count);
-            sb.AppendTabFormatLine(1, "{");
-            sb.AppendTabFormatLine(2, "if (sourceModuleValue < controlPoints[indexPos].x)");
-            sb.AppendTabFormatLine(2, "{");
-            sb.AppendTabFormatLine(3, "break;");
-            sb.AppendTabFormatLine(2, "}");
-            sb.AppendTabFormatLine(1, "}");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "int index0 = clamp( indexPos - 2, 0, {0} );", this.ControlPoints.Count - 1);
-            sb.AppendTabFormatLine(1, "int index1 = clamp( indexPos - 1, 0, {0} );", this.ControlPoints.Count - 1);
-            sb.AppendTabFormatLine(1, "int index2 = clamp( indexPos, 0, {0} );", this.ControlPoints.Count - 1);
-            sb.AppendTabFormatLine(1, "int index3 = clamp( indexPos + 1, 0, {0} );", this.ControlPoints.Count - 1);
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "if (index1 == index2)");
-            sb.AppendTabFormatLine(1, "{");
-            sb.AppendTabFormatLine(2, "return controlPoints[index1].y;");
-            sb.AppendTabFormatLine(1, "}");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "float input0 = controlPoints[index1].x;");
-            sb.AppendTabFormatLine(1, "float input1 = controlPoints[index2].x;");
-            sb.AppendTabFormatLine(1, "float alpha = (sourceModuleValue - input0) / (input1 - input0);");
-            sb.AppendTabFormatLine();
-            sb.AppendTabFormatLine(1, "return Interpolation_Cubic( controlPoints[index0].y, controlPoints[index1].y, controlPoints[index2].y, controlPoints[index3].y, alpha );");
-            sb.AppendTabFormatLine("}");
-
-            return sb.ToString();
+            header.AppendTabFormatLine("};");
         }
 
-        public void SetControlPoints(IEnumerable<KeyValuePair<float, float>> controlPoints)
+        public override bool HasHlslSettings()
         {
-            if (controlPoints is null)
-            {
-                throw new ArgumentNullException(nameof(controlPoints));
-            }
+            return true;
+        }
 
-            this.ControlPoints.Clear();
+        public override void EmitHlslSettings(StringBuilder body)
+        {
+            string key = nameof(CurveModule);
 
-            foreach (KeyValuePair<float, float> controlPoint in controlPoints)
+            body.AppendTabFormatLine(2, "{0}_ControlPoints_Count = {1};", key, this.ControlPoints.Count);
+
+            for (int index = 0; index < this.ControlPoints.Count; index++)
             {
-                this.ControlPoints.Add(controlPoint);
+                var point = this.ControlPoints.ElementAt(index);
+                body.AppendTabFormatLine(2, "{0}_ControlPoints[{1}] = float2({2}, {3});", key, index, point.Key, point.Value);
             }
+        }
+
+        public override bool HasHlslCoords(int index)
+        {
+            return false;
+        }
+
+        public override void EmitHlslCoords(StringBuilder body, int index)
+        {
+        }
+
+        public override int GetHlslFunctionParametersCount()
+        {
+            return 1;
+        }
+
+        public override void EmitHlslFunction(StringBuilder body)
+        {
+            string key = nameof(CurveModule);
+
+            body.AppendTabFormatLine(2, "float sourceModuleValue = param0;");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "int indexPos = 0;");
+            body.AppendTabFormatLine(2, "[fastopt] for (; indexPos < {0}_ControlPoints_Count; indexPos++)", key);
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "if (sourceModuleValue < {0}_ControlPoints[indexPos].x)", key);
+            body.AppendTabFormatLine(3, "{");
+            body.AppendTabFormatLine(4, "break;");
+            body.AppendTabFormatLine(3, "}");
+            body.AppendTabFormatLine(2, "}");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "int index0 = clamp( indexPos - 2, 0, {0}_ControlPoints_Count - 1 );", key);
+            body.AppendTabFormatLine(2, "int index1 = clamp( indexPos - 1, 0, {0}_ControlPoints_Count - 1 );", key);
+            body.AppendTabFormatLine(2, "int index2 = clamp( indexPos, 0, {0}_ControlPoints_Count - 1 );", key);
+            body.AppendTabFormatLine(2, "int index3 = clamp( indexPos + 1, 0, {0}_ControlPoints_Count - 1 );", key);
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(2, "if (index1 == index2)");
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "result = {0}_ControlPoints[index1].y;", key);
+            body.AppendTabFormatLine(2, "}");
+            body.AppendTabFormatLine(2, "else");
+            body.AppendTabFormatLine(2, "{");
+            body.AppendTabFormatLine(3, "float input0 = {0}_ControlPoints[index1].x;", key);
+            body.AppendTabFormatLine(3, "float input1 = {0}_ControlPoints[index2].x;", key);
+            body.AppendTabFormatLine(3, "float alpha = (sourceModuleValue - input0) / (input1 - input0);");
+            body.AppendTabFormatLine();
+            body.AppendTabFormatLine(3, "result = Interpolation_Cubic( {0}_ControlPoints[index0].y, {0}_ControlPoints[index1].y, {0}_ControlPoints[index2].y, {0}_ControlPoints[index3].y, alpha );", key);
+            body.AppendTabFormatLine(2, "}");
         }
 
         public override string GetCSharpBody(CSharpContext context)

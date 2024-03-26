@@ -646,7 +646,8 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             BuildModule(noise, context, m.Source);
 
             var builder = new CylinderBuilder(
-                context.GetModule(m.Source))
+                context.GetModule(m.Source),
+                noise.Seed)
             {
                 Name = m.Name,
                 LowerAngleBound = m.LowerAngleBound,
@@ -663,7 +664,8 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             BuildModule(noise, context, m.Source);
 
             var builder = new PlaneBuilder(
-                context.GetModule(m.Source))
+                context.GetModule(m.Source),
+                noise.Seed)
             {
                 Name = m.Name,
                 IsSeamless = m.IsSeamless,
@@ -681,7 +683,8 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             BuildModule(noise, context, m.Source);
 
             var builder = new SphereBuilder(
-                context.GetModule(m.Source))
+                context.GetModule(m.Source),
+                noise.Seed)
             {
                 Name = m.Name,
                 SouthLatBound = m.SouthLatBound,

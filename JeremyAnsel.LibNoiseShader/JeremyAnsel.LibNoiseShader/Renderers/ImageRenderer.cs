@@ -87,6 +87,12 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
 
         public override int RequiredSourceRendererCount => 0;
 
+        public override void SetSeed(int seed)
+        {
+            base.SetSeed(seed);
+            this.sourceBuilder.Seed = seed;
+        }
+
         public bool IsWrapEnabled { get; set; }
 
         public bool IsLightEnabled { get; set; }
