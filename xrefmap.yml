@@ -823,19 +823,6 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.LibNoiseShader.Float3.Floor
   nameWithType: Float3.Floor
-- uid: JeremyAnsel.LibNoiseShader.Float3.Frac(JeremyAnsel.LibNoiseShader.Float3)
-  name: Frac(Float3)
-  href: api/JeremyAnsel.LibNoiseShader.Float3.html#JeremyAnsel_LibNoiseShader_Float3_Frac_JeremyAnsel_LibNoiseShader_Float3_
-  commentId: M:JeremyAnsel.LibNoiseShader.Float3.Frac(JeremyAnsel.LibNoiseShader.Float3)
-  fullName: JeremyAnsel.LibNoiseShader.Float3.Frac(JeremyAnsel.LibNoiseShader.Float3)
-  nameWithType: Float3.Frac(Float3)
-- uid: JeremyAnsel.LibNoiseShader.Float3.Frac*
-  name: Frac
-  href: api/JeremyAnsel.LibNoiseShader.Float3.html#JeremyAnsel_LibNoiseShader_Float3_Frac_
-  commentId: Overload:JeremyAnsel.LibNoiseShader.Float3.Frac
-  isSpec: "True"
-  fullName: JeremyAnsel.LibNoiseShader.Float3.Frac
-  nameWithType: Float3.Frac
 - uid: JeremyAnsel.LibNoiseShader.Float3.GetHashCode
   name: GetHashCode()
   href: api/JeremyAnsel.LibNoiseShader.Float3.html#JeremyAnsel_LibNoiseShader_Float3_GetHashCode
@@ -1173,19 +1160,6 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.LibNoiseShader.Float4.Floor
   nameWithType: Float4.Floor
-- uid: JeremyAnsel.LibNoiseShader.Float4.Frac(JeremyAnsel.LibNoiseShader.Float4)
-  name: Frac(Float4)
-  href: api/JeremyAnsel.LibNoiseShader.Float4.html#JeremyAnsel_LibNoiseShader_Float4_Frac_JeremyAnsel_LibNoiseShader_Float4_
-  commentId: M:JeremyAnsel.LibNoiseShader.Float4.Frac(JeremyAnsel.LibNoiseShader.Float4)
-  fullName: JeremyAnsel.LibNoiseShader.Float4.Frac(JeremyAnsel.LibNoiseShader.Float4)
-  nameWithType: Float4.Frac(Float4)
-- uid: JeremyAnsel.LibNoiseShader.Float4.Frac*
-  name: Frac
-  href: api/JeremyAnsel.LibNoiseShader.Float4.html#JeremyAnsel_LibNoiseShader_Float4_Frac_
-  commentId: Overload:JeremyAnsel.LibNoiseShader.Float4.Frac
-  isSpec: "True"
-  fullName: JeremyAnsel.LibNoiseShader.Float4.Frac
-  nameWithType: Float4.Frac
 - uid: JeremyAnsel.LibNoiseShader.Float4.GetHashCode
   name: GetHashCode()
   href: api/JeremyAnsel.LibNoiseShader.Float4.html#JeremyAnsel_LibNoiseShader_Float4_GetHashCode
