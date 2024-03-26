@@ -42,7 +42,9 @@ float Noise3D_IntValue(int3 pi)
         private static Float3 GradientCoherentRand3(Float3 c)
         {
             float j = (float)Math.Sin(Float3.Dot(c, new Float3(17.0f, 59.4f, 15.0f)));
-            Float3 r = Float3.Frac(new Float3(262144.0f, 32768.0f, 2097152.0f) * new Float3(j, j, j));
+            Float3 r = new Float3(262144.0f, 32768.0f, 2097152.0f) * j;
+            r *= 1.0f / 262144.0f;
+            r -= Float3.Floor(r);
             return r - 0.5f;
         }
 
@@ -86,7 +88,9 @@ float Noise3D_IntValue(int3 pi)
 float3 Noise3D_GradientCoherent_rand3(float3 c)
 {
     float j = sin(dot(c, float3(17.0, 59.4, 15.0)));
-    float3 r = frac(float3(262144.0, 32768.0, 2097152.0) * float3(j, j, j));
+    float3 r = float3(262144.0, 32768.0, 2097152.0) * j;
+    r *= 1.0 / 262144.0;
+    r -= floor(r);
     return r - 0.5;
 }
 
@@ -109,7 +113,7 @@ float Noise3D_GradientCoherent(float3 p)
     w.y = dot(x1, x1);
     w.z = dot(x2, x2);
     w.w = dot(x3, x3);
-	 
+
     w = max(0.6 - w, 0.0);
 	 
     d.x = dot(Noise3D_GradientCoherent_rand3(s), x);

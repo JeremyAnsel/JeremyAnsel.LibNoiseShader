@@ -152,20 +152,12 @@ namespace JeremyAnsel.LibNoiseShader
             return left - right;
         }
 
-        public static Float3 Frac(Float3 x)
-        {
-            return new Float3(
-                x.X - (float)Math.Truncate(x.X),
-                x.Y - (float)Math.Truncate(x.Y),
-                x.Z - (float)Math.Truncate(x.Z));
-        }
-
         public static Float3 Step(Float3 y, Float3 x)
         {
             return new Float3(
-                y.X >= x.X ? 1 : 0,
-                y.Y >= x.Y ? 1 : 0,
-                y.Z >= x.Z ? 1 : 0);
+                x.X >= y.X ? 1 : 0,
+                x.Y >= y.Y ? 1 : 0,
+                x.Z >= y.Z ? 1 : 0);
         }
 
         public static Float3 Min(Float3 x, float y)

@@ -168,22 +168,13 @@ namespace JeremyAnsel.LibNoiseShader
             return left - right;
         }
 
-        public static Float4 Frac(Float4 x)
-        {
-            return new Float4(
-                x.X - (float)Math.Truncate(x.X),
-                x.Y - (float)Math.Truncate(x.Y),
-                x.Z - (float)Math.Truncate(x.Z),
-                x.W - (float)Math.Truncate(x.W));
-        }
-
         public static Float4 Step(Float4 y, Float4 x)
         {
             return new Float4(
-                y.X >= x.X ? 1 : 0,
-                y.Y >= x.Y ? 1 : 0,
-                y.Z >= x.Z ? 1 : 0,
-                y.W >= x.W ? 1 : 0);
+                x.X >= y.X ? 1 : 0,
+                x.Y >= y.Y ? 1 : 0,
+                x.Z >= y.Z ? 1 : 0,
+                x.W >= y.W ? 1 : 0);
         }
 
         public static Float4 Min(Float4 x, float y)
@@ -192,7 +183,7 @@ namespace JeremyAnsel.LibNoiseShader
                 Math.Min(x.X, y),
                 Math.Min(x.Y, y),
                 Math.Min(x.Z, y),
-                Math.Min(x.Z, y));
+                Math.Min(x.W, y));
         }
 
         public static Float4 Max(Float4 x, float y)
@@ -201,7 +192,7 @@ namespace JeremyAnsel.LibNoiseShader
                 Math.Max(x.X, y),
                 Math.Max(x.Y, y),
                 Math.Max(x.Z, y),
-                Math.Max(x.Z, y));
+                Math.Max(x.W, y));
         }
     }
 }
