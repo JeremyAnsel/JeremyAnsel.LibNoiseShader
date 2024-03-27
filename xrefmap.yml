@@ -164,6 +164,19 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.Seed
   nameWithType: BuilderBase.Seed
+- uid: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.SeedFloat
+  name: SeedFloat
+  href: api/JeremyAnsel.LibNoiseShader.Builders.BuilderBase.html#JeremyAnsel_LibNoiseShader_Builders_BuilderBase_SeedFloat
+  commentId: P:JeremyAnsel.LibNoiseShader.Builders.BuilderBase.SeedFloat
+  fullName: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.SeedFloat
+  nameWithType: BuilderBase.SeedFloat
+- uid: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.SeedFloat*
+  name: SeedFloat
+  href: api/JeremyAnsel.LibNoiseShader.Builders.BuilderBase.html#JeremyAnsel_LibNoiseShader_Builders_BuilderBase_SeedFloat_
+  commentId: Overload:JeremyAnsel.LibNoiseShader.Builders.BuilderBase.SeedFloat
+  isSpec: "True"
+  fullName: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.SeedFloat
+  nameWithType: BuilderBase.SeedFloat
 - uid: JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder
   name: CylinderBuilder
   href: api/JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.html
@@ -907,6 +920,19 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.LibNoiseShader.Float3.Subtract
   nameWithType: Float3.Subtract
+- uid: JeremyAnsel.LibNoiseShader.Float3.ToString
+  name: ToString()
+  href: api/JeremyAnsel.LibNoiseShader.Float3.html#JeremyAnsel_LibNoiseShader_Float3_ToString
+  commentId: M:JeremyAnsel.LibNoiseShader.Float3.ToString
+  fullName: JeremyAnsel.LibNoiseShader.Float3.ToString()
+  nameWithType: Float3.ToString()
+- uid: JeremyAnsel.LibNoiseShader.Float3.ToString*
+  name: ToString
+  href: api/JeremyAnsel.LibNoiseShader.Float3.html#JeremyAnsel_LibNoiseShader_Float3_ToString_
+  commentId: Overload:JeremyAnsel.LibNoiseShader.Float3.ToString
+  isSpec: "True"
+  fullName: JeremyAnsel.LibNoiseShader.Float3.ToString
+  nameWithType: Float3.ToString
 - uid: JeremyAnsel.LibNoiseShader.Float3.X
   name: X
   href: api/JeremyAnsel.LibNoiseShader.Float3.html#JeremyAnsel_LibNoiseShader_Float3_X
@@ -1244,6 +1270,19 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.LibNoiseShader.Float4.Subtract
   nameWithType: Float4.Subtract
+- uid: JeremyAnsel.LibNoiseShader.Float4.ToString
+  name: ToString()
+  href: api/JeremyAnsel.LibNoiseShader.Float4.html#JeremyAnsel_LibNoiseShader_Float4_ToString
+  commentId: M:JeremyAnsel.LibNoiseShader.Float4.ToString
+  fullName: JeremyAnsel.LibNoiseShader.Float4.ToString()
+  nameWithType: Float4.ToString()
+- uid: JeremyAnsel.LibNoiseShader.Float4.ToString*
+  name: ToString
+  href: api/JeremyAnsel.LibNoiseShader.Float4.html#JeremyAnsel_LibNoiseShader_Float4_ToString_
+  commentId: Overload:JeremyAnsel.LibNoiseShader.Float4.ToString
+  isSpec: "True"
+  fullName: JeremyAnsel.LibNoiseShader.Float4.ToString
+  nameWithType: Float4.ToString
 - uid: JeremyAnsel.LibNoiseShader.Float4.W
   name: W
   href: api/JeremyAnsel.LibNoiseShader.Float4.html#JeremyAnsel_LibNoiseShader_Float4_W
