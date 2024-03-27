@@ -50,10 +50,6 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
-            x += this.noise.Seed;
-            y += this.noise.Seed;
-            z += this.noise.Seed;
-
             x *= this.Frequency;
             y *= this.Frequency;
             z *= this.Frequency;
