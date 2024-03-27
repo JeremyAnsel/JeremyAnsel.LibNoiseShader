@@ -116,6 +116,11 @@ namespace JeremyAnsel.LibNoiseShader
             return x.X * y.X + x.Y * y.Y + x.Z * y.Z;
         }
 
+        public override string ToString()
+        {
+            return $"{X}; {Y}; {Z}";
+        }
+
         public override bool Equals(object obj)
         {
             return obj is Float3 @float && Equals(@float);

@@ -40,7 +40,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             float curLat = this.SouthLatBound + (y + 1.0f) * latExtent / 2.0f;
             float curLon = this.WestLonBound + (x + 1.0f) * lonExtent / 2.0f;
 
-            return this.GetSourceModule().GetValue(SphereModel.GetCoords(curLat, curLon) + this.Seed);
+            return this.GetSourceModule().GetValue(SphereModel.GetCoords(curLat, curLon) + this.SeedFloat);
         }
 
         public override string GetHlslBody(HlslContext context)
@@ -55,7 +55,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             sb.AppendTabFormatLine(1, "float lonExtent = {0} - {1};", this.EastLonBound, this.WestLonBound);
             sb.AppendTabFormatLine(1, "float curLat = {0} + (y + 1.0f) * latExtent / 2.0f;", this.SouthLatBound);
             sb.AppendTabFormatLine(1, "float curLon = {0} + (x + 1.0f) * lonExtent / 2.0f;", this.WestLonBound);
-            sb.AppendTabFormatLine(1, "float3 coords = Model_Sphere(curLat, curLon) + {0};", this.Seed);
+            sb.AppendTabFormatLine(1, "float3 coords = Model_Sphere(curLat, curLon) + {0};", this.SeedFloat);
             sb.AppendTabFormatLine(1, "return {0}( coords.x, coords.y, coords.z );", module0);
             sb.AppendTabFormatLine("}");
 

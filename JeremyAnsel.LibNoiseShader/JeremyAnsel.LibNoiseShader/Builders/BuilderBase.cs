@@ -18,6 +18,14 @@ namespace JeremyAnsel.LibNoiseShader.Builders
 
         public int Seed { get; set; }
 
+        public float SeedFloat
+        {
+            get
+            {
+                return this.Seed & 0xffff;
+            }
+        }
+
         public IModule GetSourceModule()
         {
             return this.source;

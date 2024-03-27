@@ -48,10 +48,10 @@ namespace JeremyAnsel.LibNoiseShader.Builders
 
             if (this.IsSeamless)
             {
-                float swValue = this.GetSourceModule().GetValue(PlaneModel.GetCoords(xCur, yCur) + this.Seed);
-                float seValue = this.GetSourceModule().GetValue(PlaneModel.GetCoords(xCur + xExtent, yCur) + this.Seed);
-                float nwValue = this.GetSourceModule().GetValue(PlaneModel.GetCoords(xCur, yCur + yExtent) + this.Seed);
-                float neValue = this.GetSourceModule().GetValue(PlaneModel.GetCoords(xCur + xExtent, yCur + yExtent) + this.Seed);
+                float swValue = this.GetSourceModule().GetValue(PlaneModel.GetCoords(xCur, yCur) + this.SeedFloat);
+                float seValue = this.GetSourceModule().GetValue(PlaneModel.GetCoords(xCur + xExtent, yCur) + this.SeedFloat);
+                float nwValue = this.GetSourceModule().GetValue(PlaneModel.GetCoords(xCur, yCur + yExtent) + this.SeedFloat);
+                float neValue = this.GetSourceModule().GetValue(PlaneModel.GetCoords(xCur + xExtent, yCur + yExtent) + this.SeedFloat);
 
                 float xBlend = 1.0f - ((xCur - this.LowerBoundX) / xExtent);
                 float yBlend = 1.0f - ((yCur - this.LowerBoundY) / yExtent);
@@ -62,7 +62,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             }
             else
             {
-                finalValue = this.GetSourceModule().GetValue(PlaneModel.GetCoords(xCur, yCur) + this.Seed);
+                finalValue = this.GetSourceModule().GetValue(PlaneModel.GetCoords(xCur, yCur) + this.SeedFloat);
             }
 
             return finalValue;
