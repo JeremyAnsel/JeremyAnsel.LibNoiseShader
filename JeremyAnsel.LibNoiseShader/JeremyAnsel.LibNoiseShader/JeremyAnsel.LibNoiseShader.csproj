@@ -18,6 +18,7 @@
     <Company>Jérémy Ansel</Company>
     <Copyright>Copyright © 2022 Jérémy Ansel</Copyright>
     <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageTags>Media Noise Shader LibNoise Perlin Voronoi DirectX HLSL CSharp</PackageTags>
     <PackageProjectUrl>https://github.com/JeremyAnsel/JeremyAnsel.LibNoiseShader</PackageProjectUrl>
     <EnableNETAnalyzers>true</EnableNETAnalyzers>
@@ -25,6 +26,10 @@
 
   <ItemGroup>
     <None Include="..\..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\..\README.md">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
