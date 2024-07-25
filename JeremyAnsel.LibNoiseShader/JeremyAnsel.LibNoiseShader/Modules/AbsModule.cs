@@ -5,7 +5,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public sealed class AbsModule : ModuleBase
     {
-        public AbsModule(IModule module0)
+        public AbsModule(IModule? module0)
         {
             this.SetSourceModule(0, module0);
         }
@@ -14,7 +14,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
-            IModule module0 = this.GetSourceModule(0);
+            IModule module0 = this.GetSourceModule(0)!;
 
             return Math.Abs(module0.GetValue(x, y, z));
         }

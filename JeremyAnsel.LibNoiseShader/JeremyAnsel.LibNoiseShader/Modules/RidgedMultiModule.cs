@@ -20,7 +20,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         private float exponent;
 
-        public RidgedMultiModule(Noise3D noise)
+        public RidgedMultiModule(Noise3D? noise)
         {
             this.noise = noise ?? throw new ArgumentNullException(nameof(noise));
 

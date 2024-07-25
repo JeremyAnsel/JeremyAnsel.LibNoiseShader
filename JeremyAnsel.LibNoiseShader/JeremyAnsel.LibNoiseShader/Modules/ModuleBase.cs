@@ -7,11 +7,11 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public abstract class ModuleBase : IModule
     {
-        private IModule[] sourceModules;
+        private IModule[]? sourceModules;
 
-        private string _name;
+        private string? _name;
 
-        public string Name
+        public string? Name
         {
             get => _name;
 
@@ -30,7 +30,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public abstract int RequiredSourceModuleCount { get; }
 
-        public IModule GetSourceModule(int index)
+        public IModule? GetSourceModule(int index)
         {
             if (this.sourceModules is null)
             {
@@ -40,7 +40,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             return this.sourceModules[index];
         }
 
-        protected void SetSourceModule(int index, IModule source)
+        protected void SetSourceModule(int index, IModule? source)
         {
             if (index < 0 || index >= this.RequiredSourceModuleCount)
             {
@@ -60,7 +60,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             this.sourceModules[index] = source;
         }
 
-        public virtual void GenerateModuleContext(HlslContext context)
+        public virtual void GenerateModuleContext(HlslContext? context)
         {
             if (context is null)
             {
@@ -73,7 +73,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             }
         }
 
-        public virtual void GenerateModuleContext(CSharpContext context)
+        public virtual void GenerateModuleContext(CSharpContext? context)
         {
             if (context is null)
             {
@@ -149,7 +149,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
             for (int i = 0; i < this.RequiredSourceModuleCount; i++)
             {
-                depth += this.GetSourceModule(i).EmitHlslMaxDepth();
+                depth += this.GetSourceModule(i)!.EmitHlslMaxDepth();
             }
 
             sb.AppendTabFormatLine("static const int modules_results_count = {0};", depth);

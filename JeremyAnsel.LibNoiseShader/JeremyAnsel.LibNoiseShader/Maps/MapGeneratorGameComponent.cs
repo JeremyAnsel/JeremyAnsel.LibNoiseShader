@@ -13,13 +13,13 @@ namespace JeremyAnsel.LibNoiseShader.Maps
 
         private readonly IRenderer renderer;
 
-        private DeviceResources deviceResources;
+        private DeviceResources? deviceResources;
 
-        private D3D11VertexShader vertexShader;
+        private D3D11VertexShader? vertexShader;
 
-        private D3D11PixelShader pixelShader;
+        private D3D11PixelShader? pixelShader;
 
-        public MapGeneratorGameComponent(Noise3D noise, IRenderer renderer)
+        public MapGeneratorGameComponent(Noise3D? noise, IRenderer? renderer)
         {
             this.noise = noise ?? throw new ArgumentNullException(nameof(noise));
             this.renderer = renderer ?? throw new ArgumentNullException(nameof(renderer));
@@ -115,13 +115,13 @@ float4 main(PixelShaderInput input) : SV_TARGET
         {
         }
 
-        public void Update(ITimer timer)
+        public void Update(ITimer? timer)
         {
         }
 
         public void Render()
         {
-            var context = this.deviceResources.D3DContext;
+            var context = this.deviceResources!.D3DContext;
 
             context.OutputMergerSetRenderTargets(new[] { this.deviceResources.D3DRenderTargetView }, null);
             //context.ClearRenderTargetView(this.deviceResources.D3DRenderTargetView, XMKnownColor.Black);

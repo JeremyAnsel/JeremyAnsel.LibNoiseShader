@@ -4,9 +4,9 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileRenderers
 {
     public sealed class BlendFileRenderer : FileRendererBase
     {
-        public IFileRenderer Input1 { get; set; }
+        public IFileRenderer? Input1 { get; set; }
 
-        public IFileRenderer Input2 { get; set; }
+        public IFileRenderer? Input2 { get; set; }
 
         public override void Read(BinaryReader reader, LibNoiseShaderFileContext context)
         {

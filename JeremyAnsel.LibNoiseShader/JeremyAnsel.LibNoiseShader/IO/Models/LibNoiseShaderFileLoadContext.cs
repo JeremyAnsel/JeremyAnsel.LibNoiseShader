@@ -29,14 +29,14 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return _modules[moduleFile];
         }
 
-        private IModule GetModule(IFileModule moduleFile)
+        private IModule? GetModule(IFileModule? moduleFile)
         {
             if (moduleFile is null)
             {
                 return null;
             }
 
-            if (!_modules.TryGetValue(moduleFile, out IModule module))
+            if (!_modules.TryGetValue(moduleFile, out IModule? module))
             {
                 return null;
             }
@@ -54,14 +54,14 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return _builders[builderFile];
         }
 
-        private IBuilder GetBuilder(IFileBuilder builderFile)
+        private IBuilder? GetBuilder(IFileBuilder? builderFile)
         {
             if (builderFile is null)
             {
                 return null;
             }
 
-            if (!_builders.TryGetValue(builderFile, out IBuilder builder))
+            if (!_builders.TryGetValue(builderFile, out IBuilder? builder))
             {
                 return null;
             }
@@ -79,14 +79,14 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return _renderers[rendererFile];
         }
 
-        private IRenderer GetRenderer(IFileRenderer rendererFile)
+        private IRenderer? GetRenderer(IFileRenderer? rendererFile)
         {
             if (rendererFile is null)
             {
                 return null;
             }
 
-            if (!_renderers.TryGetValue(rendererFile, out IRenderer renderer))
+            if (!_renderers.TryGetValue(rendererFile, out IRenderer? renderer))
             {
                 return null;
             }
@@ -94,7 +94,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return renderer;
         }
 
-        public static IModule LoadModule(IFileModule moduleFile, Noise3D noise)
+        public static IModule LoadModule(IFileModule? moduleFile, Noise3D? noise)
         {
             if (moduleFile is null)
             {
@@ -145,7 +145,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return module;
         }
 
-        private static void BuildModule(Noise3D noise, LibNoiseShaderFileLoadContext context, IFileModule moduleFile)
+        private static void BuildModule(Noise3D noise, LibNoiseShaderFileLoadContext context, IFileModule? moduleFile)
         {
             if (moduleFile is null)
             {
@@ -603,7 +603,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return module;
         }
 
-        public static IBuilder LoadBuilder(IFileBuilder builderFile, Noise3D noise)
+        public static IBuilder LoadBuilder(IFileBuilder? builderFile, Noise3D? noise)
         {
             if (builderFile is null)
             {
@@ -628,7 +628,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return builder;
         }
 
-        private static void BuildBuilder(Noise3D noise, LibNoiseShaderFileLoadContext context, IFileBuilder builderFile)
+        private static void BuildBuilder(Noise3D noise, LibNoiseShaderFileLoadContext context, IFileBuilder? builderFile)
         {
             if (builderFile is null)
             {
@@ -696,7 +696,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return builder;
         }
 
-        public static IRenderer LoadRenderer(IFileRenderer rendererFile, Noise3D noise)
+        public static IRenderer LoadRenderer(IFileRenderer? rendererFile, Noise3D? noise)
         {
             if (rendererFile is null)
             {
@@ -721,7 +721,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return renderer;
         }
 
-        private static void BuildRenderer(Noise3D noise, LibNoiseShaderFileLoadContext context, IFileRenderer rendererFile)
+        private static void BuildRenderer(Noise3D noise, LibNoiseShaderFileLoadContext context, IFileRenderer? rendererFile)
         {
             if (rendererFile is null)
             {

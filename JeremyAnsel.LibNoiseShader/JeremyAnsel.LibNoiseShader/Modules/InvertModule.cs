@@ -4,7 +4,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public sealed class InvertModule : ModuleBase
     {
-        public InvertModule(IModule module0)
+        public InvertModule(IModule? module0)
         {
             this.SetSourceModule(0, module0);
         }
@@ -13,7 +13,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
-            return -this.GetSourceModule(0).GetValue(x, y, z);
+            return -this.GetSourceModule(0)!.GetValue(x, y, z);
         }
 
         public override int EmitHlslMaxDepth()
@@ -23,7 +23,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override void EmitHlsl(HlslContext context)
         {
-            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
             context.EmitFunction(this, false);
         }
 

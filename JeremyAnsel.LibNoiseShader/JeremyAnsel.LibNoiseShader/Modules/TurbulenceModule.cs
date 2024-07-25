@@ -17,7 +17,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         private readonly PerlinModule distortZModule;
 
-        public TurbulenceModule(Noise3D noise, IModule module0)
+        public TurbulenceModule(Noise3D? noise, IModule? module0)
         {
             if (noise is null)
             {
@@ -114,7 +114,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
             // Retrieve the output value at the offsetted input value instead of the
             // original input value.
-            return this.GetSourceModule(0).GetValue(distortX, distortY, distortZ);
+            return this.GetSourceModule(0)!.GetValue(distortX, distortY, distortZ);
         }
 
         public override int EmitHlslMaxDepth()
@@ -138,7 +138,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             context.EmitSettings(this.distortZModule);
             context.EmitFunction(this.distortZModule, true);
             context.EmitCoords(this, 3, false);
-            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
             context.EmitSettings(this);
             context.EmitFunction(this, true);
         }

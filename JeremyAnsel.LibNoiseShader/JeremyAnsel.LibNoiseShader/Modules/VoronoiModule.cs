@@ -7,7 +7,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
     {
         private readonly Noise3D noise;
 
-        public VoronoiModule(Noise3D noise)
+        public VoronoiModule(Noise3D? noise)
         {
             this.noise = noise ?? throw new ArgumentNullException(nameof(noise));
 

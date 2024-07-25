@@ -4,7 +4,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public sealed class ScaleBiasModule : ModuleBase
     {
-        public ScaleBiasModule(IModule module0)
+        public ScaleBiasModule(IModule? module0)
         {
             this.SetSourceModule(0, module0);
 
@@ -20,7 +20,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
-            return this.GetSourceModule(0).GetValue(x, y, z) * this.Scale + this.Bias;
+            return this.GetSourceModule(0)!.GetValue(x, y, z) * this.Scale + this.Bias;
         }
 
         public override int EmitHlslMaxDepth()
@@ -31,7 +31,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
         public override void EmitHlsl(HlslContext context)
         {
             context.EmitHeader(this);
-            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
             context.EmitSettings(this);
             context.EmitFunction(this, false);
         }

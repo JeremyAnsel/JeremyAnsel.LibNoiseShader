@@ -4,7 +4,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public sealed class MultiplyModule : ModuleBase
     {
-        public MultiplyModule(IModule module0, IModule module1)
+        public MultiplyModule(IModule? module0, IModule? module1)
         {
             this.SetSourceModule(0, module0);
             this.SetSourceModule(1, module1);
@@ -14,7 +14,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
-            return this.GetSourceModule(0).GetValue(x, y, z) * this.GetSourceModule(1).GetValue(x, y, z);
+            return this.GetSourceModule(0)!.GetValue(x, y, z) * this.GetSourceModule(1)!.GetValue(x, y, z);
         }
 
         public override int EmitHlslMaxDepth()
@@ -24,8 +24,8 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override void EmitHlsl(HlslContext context)
         {
-            this.GetSourceModule(0).EmitHlsl(context);
-            this.GetSourceModule(1).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
+            this.GetSourceModule(1)!.EmitHlsl(context);
             context.EmitFunction(this, false);
         }
 

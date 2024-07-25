@@ -6,7 +6,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
 {
     public sealed class PlaneBuilder : BuilderBase
     {
-        public PlaneBuilder(IModule source, int seed)
+        public PlaneBuilder(IModule? source, int seed)
             : base(source, seed)
         {
             this.IsSeamless = false;
@@ -16,7 +16,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             this.UpperBoundY = 1.0f;
         }
 
-        public PlaneBuilder(IModule source, int seed, bool seamless, float lowerX, float upperX, float lowerY, float upperY)
+        public PlaneBuilder(IModule? source, int seed, bool seamless, float lowerX, float upperX, float lowerY, float upperY)
             : base(source, seed)
         {
             this.IsSeamless = seamless;

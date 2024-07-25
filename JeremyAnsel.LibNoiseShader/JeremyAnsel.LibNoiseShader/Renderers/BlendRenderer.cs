@@ -6,7 +6,7 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
 {
     public sealed class BlendRenderer : RendererBase
     {
-        public BlendRenderer(IRenderer renderer0, IRenderer renderer1)
+        public BlendRenderer(IRenderer? renderer0, IRenderer? renderer1)
         {
             this.SetSourceRenderer(0, renderer0);
             this.SetSourceRenderer(1, renderer1);
@@ -21,8 +21,8 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
 
         public override Color GetColor(float x, float y, int width, int height)
         {
-            Color rendererColor = this.GetSourceRenderer(0).GetColor(x, y, width, height);
-            Color backgroundColor = this.GetSourceRenderer(1).GetColor(x, y, width, height);
+            Color rendererColor = this.GetSourceRenderer(0)!.GetColor(x, y, width, height);
+            Color backgroundColor = this.GetSourceRenderer(1)!.GetColor(x, y, width, height);
 
             Color color = Color.FromArgb(
                 Math.Max(rendererColor.A, backgroundColor.A),
@@ -36,8 +36,8 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
         public override string GetHlslBody(HlslContext context)
         {
             var sb = new StringBuilder();
-            string renderer0 = context.GetRendererName(this.GetSourceRenderer(0));
-            string renderer1 = context.GetRendererName(this.GetSourceRenderer(1));
+            string renderer0 = context.GetRendererName(this.GetSourceRenderer(0)!);
+            string renderer1 = context.GetRendererName(this.GetSourceRenderer(1)!);
 
             sb.AppendTabFormatLine(context.GetRendererFunctionDefinition(this));
             sb.AppendTabFormatLine(0, "{");
@@ -56,8 +56,8 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
         public override string GetCSharpBody(CSharpContext context)
         {
             var sb = new StringBuilder();
-            string renderer0 = context.GetRendererName(this.GetSourceRenderer(0));
-            string renderer1 = context.GetRendererName(this.GetSourceRenderer(1));
+            string renderer0 = context.GetRendererName(this.GetSourceRenderer(0)!);
+            string renderer1 = context.GetRendererName(this.GetSourceRenderer(1)!);
             string name = context.GetRendererName(this);
             string type = context.GetRendererType(this);
 

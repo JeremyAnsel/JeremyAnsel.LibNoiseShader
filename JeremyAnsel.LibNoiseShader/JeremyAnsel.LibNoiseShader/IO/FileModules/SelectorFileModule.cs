@@ -10,11 +10,11 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileModules
 
         public float UpperBound { get; set; }
 
-        public IFileModule Input1 { get; set; }
+        public IFileModule? Input1 { get; set; }
 
-        public IFileModule Input2 { get; set; }
+        public IFileModule? Input2 { get; set; }
 
-        public IFileModule Control { get; set; }
+        public IFileModule? Control { get; set; }
 
         public override void Read(BinaryReader reader, LibNoiseShaderFileContext context)
         {

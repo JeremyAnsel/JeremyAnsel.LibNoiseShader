@@ -8,7 +8,7 @@ namespace JeremyAnsel.LibNoiseShader
     {
         public static readonly FloatNumberFormat Default = new();
 
-        public object GetFormat(Type formatType)
+        public object? GetFormat(Type? formatType)
         {
             if (formatType == typeof(ICustomFormatter))
             {
@@ -18,7 +18,7 @@ namespace JeremyAnsel.LibNoiseShader
             return null;
         }
 
-        public string Format(string fmt, object arg, IFormatProvider formatProvider)
+        public string Format(string? fmt, object? arg, IFormatProvider? formatProvider)
         {
             if (arg is float f)
             {
@@ -42,7 +42,7 @@ namespace JeremyAnsel.LibNoiseShader
             }
         }
 
-        private static string HandleOtherFormats(string format, object arg)
+        private static string HandleOtherFormats(string? format, object? arg)
         {
             if (arg is IFormattable formattable)
             {
@@ -51,7 +51,7 @@ namespace JeremyAnsel.LibNoiseShader
 
             if (arg != null)
             {
-                return arg.ToString();
+                return arg.ToString()!;
             }
 
             return string.Empty;

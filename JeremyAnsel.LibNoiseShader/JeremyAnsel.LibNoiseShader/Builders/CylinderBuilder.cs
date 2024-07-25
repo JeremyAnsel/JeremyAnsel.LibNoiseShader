@@ -6,7 +6,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
 {
     public sealed class CylinderBuilder : BuilderBase
     {
-        public CylinderBuilder(IModule source, int seed)
+        public CylinderBuilder(IModule? source, int seed)
             : base(source, seed)
         {
             this.LowerAngleBound = -180f;
@@ -15,7 +15,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             this.UpperHeightBound = 1.0f;
         }
 
-        public CylinderBuilder(IModule source, int seed, float lowerAngleBound, float upperAngleBound, float lowerHeightBound, float upperHeightBound)
+        public CylinderBuilder(IModule? source, int seed, float lowerAngleBound, float upperAngleBound, float lowerHeightBound, float upperHeightBound)
             : base(source, seed)
         {
             this.LowerAngleBound = lowerAngleBound;

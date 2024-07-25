@@ -4,15 +4,15 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public interface IModule
     {
-        string Name { get; set; }
+        string? Name { get; set; }
 
         int RequiredSourceModuleCount { get; }
 
-        IModule GetSourceModule(int index);
+        IModule? GetSourceModule(int index);
 
-        void GenerateModuleContext(HlslContext context);
+        void GenerateModuleContext(HlslContext? context);
 
-        void GenerateModuleContext(CSharpContext context);
+        void GenerateModuleContext(CSharpContext? context);
 
         float GetValue(float x, float y, float z);
 

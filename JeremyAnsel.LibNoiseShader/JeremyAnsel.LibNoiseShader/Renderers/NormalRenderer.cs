@@ -9,14 +9,14 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
     {
         private readonly IBuilder sourceBuilder;
 
-        public NormalRenderer(IBuilder builder)
+        public NormalRenderer(IBuilder? builder)
         {
             this.sourceBuilder = builder ?? throw new ArgumentNullException(nameof(builder));
             this.BumpHeight = 1.0f;
             this.IsWrapEnabled = false;
         }
 
-        public NormalRenderer(IBuilder builder, float bumpHeight, bool isWrapEnabled)
+        public NormalRenderer(IBuilder? builder, float bumpHeight, bool isWrapEnabled)
         {
             this.sourceBuilder = builder ?? throw new ArgumentNullException(nameof(builder));
             this.BumpHeight = bumpHeight;
@@ -40,18 +40,18 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
             return this.sourceBuilder;
         }
 
-        public override void GenerateModuleContext(HlslContext context)
+        public override void GenerateModuleContext(HlslContext? context)
         {
             base.GenerateModuleContext(context);
 
-            context.AddBuilder(this.GetSourceBuilder());
+            context!.AddBuilder(this.GetSourceBuilder());
         }
 
-        public override void GenerateModuleContext(CSharpContext context)
+        public override void GenerateModuleContext(CSharpContext? context)
         {
             base.GenerateModuleContext(context);
 
-            context.AddBuilder(this.GetSourceBuilder());
+            context!.AddBuilder(this.GetSourceBuilder());
         }
 
         public override Color GetColor(float x, float y, int width, int height)

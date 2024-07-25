@@ -4,7 +4,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public sealed class DisplaceModule : ModuleBase
     {
-        public DisplaceModule(IModule module0, IModule displaceXModule, IModule displaceYModule, IModule displaceZModule)
+        public DisplaceModule(IModule? module0, IModule? displaceXModule, IModule? displaceYModule, IModule? displaceZModule)
         {
             this.SetSourceModule(0, module0);
             this.SetSourceModule(1, displaceXModule);
@@ -16,11 +16,11 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
-            float displaceX = x + this.GetSourceModule(1).GetValue(x, y, z);
-            float displaceY = y + this.GetSourceModule(2).GetValue(x, y, z);
-            float displaceZ = z + this.GetSourceModule(3).GetValue(x, y, z);
+            float displaceX = x + this.GetSourceModule(1)!.GetValue(x, y, z);
+            float displaceY = y + this.GetSourceModule(2)!.GetValue(x, y, z);
+            float displaceZ = z + this.GetSourceModule(3)!.GetValue(x, y, z);
 
-            return this.GetSourceModule(0).GetValue(displaceX, displaceY, displaceZ);
+            return this.GetSourceModule(0)!.GetValue(displaceX, displaceY, displaceZ);
         }
 
         public override int EmitHlslMaxDepth()
@@ -31,11 +31,11 @@ namespace JeremyAnsel.LibNoiseShader.Modules
         public override void EmitHlsl(HlslContext context)
         {
             context.EmitHeader(this);
-            this.GetSourceModule(1).EmitHlsl(context);
-            this.GetSourceModule(2).EmitHlsl(context);
-            this.GetSourceModule(3).EmitHlsl(context);
+            this.GetSourceModule(1)!.EmitHlsl(context);
+            this.GetSourceModule(2)!.EmitHlsl(context);
+            this.GetSourceModule(3)!.EmitHlsl(context);
             context.EmitCoords(this, 0, false);
-            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
             context.EmitFunction(this, true);
         }
 

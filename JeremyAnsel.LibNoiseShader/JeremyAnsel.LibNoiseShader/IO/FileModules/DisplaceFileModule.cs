@@ -4,13 +4,13 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileModules
 {
     public sealed class DisplaceFileModule : FileModuleBase
     {
-        public IFileModule Input1 { get; set; }
+        public IFileModule? Input1 { get; set; }
 
-        public IFileModule DisplaceX { get; set; }
+        public IFileModule? DisplaceX { get; set; }
 
-        public IFileModule DisplaceY { get; set; }
+        public IFileModule? DisplaceY { get; set; }
 
-        public IFileModule DisplaceZ { get; set; }
+        public IFileModule? DisplaceZ { get; set; }
 
         public override void Read(BinaryReader reader, LibNoiseShaderFileContext context)
         {

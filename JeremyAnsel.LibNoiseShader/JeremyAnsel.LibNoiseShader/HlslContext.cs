@@ -49,7 +49,7 @@ namespace JeremyAnsel.LibNoiseShader
             return sb.ToString();
         }
 
-        private int GetOrAddObjectHeader(object obj, out bool isNew)
+        private int GetOrAddObjectHeader(object? obj, out bool isNew)
         {
             if (obj is null)
             {
@@ -66,7 +66,7 @@ namespace JeremyAnsel.LibNoiseShader
             return this._objectsHeader[obj];
         }
 
-        private int GetOrAddObjectBody(object obj, out bool isNew)
+        private int GetOrAddObjectBody(object? obj, out bool isNew)
         {
             if (obj is null)
             {
@@ -84,7 +84,7 @@ namespace JeremyAnsel.LibNoiseShader
         }
 
 
-        public int GetTraverseValue<T>(IModule root, Func<T, int> getValue, Func<int, int, int> combineValue) where T : IModule
+        public int GetTraverseValue<T>(IModule? root, Func<T, int>? getValue, Func<int, int, int>? combineValue) where T : IModule
         {
             if (root is null)
             {
@@ -114,7 +114,7 @@ namespace JeremyAnsel.LibNoiseShader
             return result;
         }
 
-        public string GetFullBody(IModule root)
+        public string GetFullBody(IModule? root)
         {
             if (root is null)
             {
@@ -239,7 +239,7 @@ namespace JeremyAnsel.LibNoiseShader
             this.Body.AppendTabFormatLine(1, "}");
         }
 
-        internal void AddModule(IModule module)
+        internal void AddModule(IModule? module)
         {
             if (module is null)
             {
@@ -253,7 +253,7 @@ namespace JeremyAnsel.LibNoiseShader
             }
         }
 
-        //internal string GetModuleName(IModule module)
+        //internal string GetModuleName(IModule? module)
         //{
         //    if (module is null)
         //    {
@@ -266,7 +266,7 @@ namespace JeremyAnsel.LibNoiseShader
         //    return string.Format(CultureInfo.InvariantCulture, "Module_{0}_{1}_{2}", index, module.GetType().Name, module.Name);
         //}
 
-        //internal string GetModuleFunctionDefinition(IModule module)
+        //internal string GetModuleFunctionDefinition(IModule? module)
         //{
         //    if (module is null)
         //    {
@@ -277,7 +277,7 @@ namespace JeremyAnsel.LibNoiseShader
         //    return string.Format(CultureInfo.InvariantCulture, "float {0}(float x, float y, float z)", name);
         //}
 
-        public string GetFullBody(IBuilder root)
+        public string GetFullBody(IBuilder? root)
         {
             if (root is null)
             {
@@ -307,7 +307,7 @@ namespace JeremyAnsel.LibNoiseShader
             return sb.ToString();
         }
 
-        internal void AddBuilder(IBuilder builder)
+        internal void AddBuilder(IBuilder? builder)
         {
             if (builder is null)
             {
@@ -321,7 +321,7 @@ namespace JeremyAnsel.LibNoiseShader
             }
         }
 
-        internal string GetBuilderName(IBuilder builder)
+        internal string GetBuilderName(IBuilder? builder)
         {
             if (builder is null)
             {
@@ -334,7 +334,7 @@ namespace JeremyAnsel.LibNoiseShader
             return string.Format(CultureInfo.InvariantCulture, "Builder_{0}_{1}_{2}", index, builder.GetType().Name, builder.Name);
         }
 
-        internal string GetBuilderFunctionDefinition(IBuilder builder)
+        internal string GetBuilderFunctionDefinition(IBuilder? builder)
         {
             if (builder is null)
             {
@@ -345,7 +345,7 @@ namespace JeremyAnsel.LibNoiseShader
             return string.Format(CultureInfo.InvariantCulture, "float {0}(float x, float y)", name);
         }
 
-        public string GetFullBody(IRenderer root)
+        public string GetFullBody(IRenderer? root)
         {
             if (root is null)
             {
@@ -385,7 +385,7 @@ namespace JeremyAnsel.LibNoiseShader
             return sb.ToString();
         }
 
-        internal void AddRenderer(IRenderer renderer)
+        internal void AddRenderer(IRenderer? renderer)
         {
             if (renderer is null)
             {
@@ -399,7 +399,7 @@ namespace JeremyAnsel.LibNoiseShader
             }
         }
 
-        internal string GetRendererName(IRenderer renderer)
+        internal string GetRendererName(IRenderer? renderer)
         {
             if (renderer is null)
             {
@@ -412,7 +412,7 @@ namespace JeremyAnsel.LibNoiseShader
             return string.Format(CultureInfo.InvariantCulture, "Renderer_{0}_{1}_{2}", index, renderer.GetType().Name, renderer.Name);
         }
 
-        internal string GetRendererFunctionDefinition(IRenderer renderer)
+        internal string GetRendererFunctionDefinition(IRenderer? renderer)
         {
             if (renderer is null)
             {

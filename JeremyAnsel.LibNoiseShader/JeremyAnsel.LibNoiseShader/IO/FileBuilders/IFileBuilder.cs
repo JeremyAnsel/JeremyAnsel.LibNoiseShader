@@ -4,7 +4,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileBuilders
 {
     public interface IFileBuilder
     {
-        string Name { get; set; }
+        string? Name { get; set; }
 
         double PositionX { get; set; }
 

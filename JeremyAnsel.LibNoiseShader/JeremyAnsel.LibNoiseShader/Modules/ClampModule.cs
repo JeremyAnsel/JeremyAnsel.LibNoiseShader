@@ -5,7 +5,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public sealed class ClampModule : ModuleBase
     {
-        public ClampModule(IModule module0)
+        public ClampModule(IModule? module0)
         {
             this.SetSourceModule(0, module0);
 
@@ -21,7 +21,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
-            float value = this.GetSourceModule(0).GetValue(x, y, z);
+            float value = this.GetSourceModule(0)!.GetValue(x, y, z);
 
             value = Math.Max(value, this.LowerBound);
             value = Math.Min(value, this.UpperBound);
@@ -37,7 +37,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
         public override void EmitHlsl(HlslContext context)
         {
             context.EmitHeader(this);
-            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
             context.EmitSettings(this);
             context.EmitFunction(this, false);
         }

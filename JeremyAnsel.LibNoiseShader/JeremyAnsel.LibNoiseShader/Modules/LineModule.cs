@@ -1,10 +1,11 @@
-﻿using System.Text;
+﻿using System.Reflection;
+using System.Text;
 
 namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public sealed class LineModule : ModuleBase
     {
-        public LineModule(IModule module0)
+        public LineModule(IModule? module0)
         {
             this.SetSourceModule(0, module0);
 
@@ -41,7 +42,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             float newy = (this.EndPointY - this.StartPointY) * p + this.StartPointY;
             float newz = (this.EndPointZ - this.StartPointZ) * p + this.StartPointZ;
 
-            float value = this.GetSourceModule(0).GetValue(newx, newy, newz);
+            float value = this.GetSourceModule(0)!.GetValue(newx, newy, newz);
 
             if (this.Attenuate)
             {
@@ -60,7 +61,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
         {
             context.EmitHeader(this);
             context.EmitCoords(this, 0, false);
-            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
             context.EmitSettings(this);
             context.EmitFunction(this, true);
         }

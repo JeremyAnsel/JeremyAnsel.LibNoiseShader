@@ -4,7 +4,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileModules
 {
     public interface IFileModule
     {
-        string Name { get; set; }
+        string? Name { get; set; }
 
         double PositionX { get; set; }
 

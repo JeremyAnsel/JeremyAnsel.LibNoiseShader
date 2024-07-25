@@ -4,7 +4,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public sealed class TranslatePointModule : ModuleBase
     {
-        public TranslatePointModule(IModule module0)
+        public TranslatePointModule(IModule? module0)
         {
             this.SetSourceModule(0, module0);
 
@@ -32,7 +32,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             y += this.TranslateY;
             z += this.TranslateZ;
 
-            return this.GetSourceModule(0).GetValue(x, y, z);
+            return this.GetSourceModule(0)!.GetValue(x, y, z);
         }
 
         public override int EmitHlslMaxDepth()
@@ -44,7 +44,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
         {
             context.EmitHeader(this);
             context.EmitCoords(this, 0, false);
-            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
             context.EmitSettings(this);
             context.EmitFunction(this, true);
         }

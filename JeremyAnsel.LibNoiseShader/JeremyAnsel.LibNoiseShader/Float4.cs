@@ -135,7 +135,7 @@ namespace JeremyAnsel.LibNoiseShader
             return $"{X}; {Y}; {Z}; {W}";
         }
 
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             return obj is Float4 @float && Equals(@float);
         }

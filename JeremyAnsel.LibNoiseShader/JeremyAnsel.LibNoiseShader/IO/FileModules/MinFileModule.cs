@@ -4,9 +4,9 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileModules
 {
     public sealed class MinFileModule : FileModuleBase
     {
-        public IFileModule Input1 { get; set; }
+        public IFileModule? Input1 { get; set; }
 
-        public IFileModule Input2 { get; set; }
+        public IFileModule? Input2 { get; set; }
 
         public override void Read(BinaryReader reader, LibNoiseShaderFileContext context)
         {

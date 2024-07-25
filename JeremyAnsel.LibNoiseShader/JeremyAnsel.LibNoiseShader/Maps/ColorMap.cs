@@ -8,7 +8,7 @@ namespace JeremyAnsel.LibNoiseShader.Maps
 {
     public sealed class ColorMap
     {
-        public ColorMap(int width, int height, byte[] data)
+        public ColorMap(int width, int height, byte[]? data)
         {
             if (width <= 0)
             {
@@ -48,26 +48,13 @@ namespace JeremyAnsel.LibNoiseShader.Maps
                 throw new ArgumentNullException(nameof(filename));
             }
 
-            ImageFormat format;
-
-            switch (Path.GetExtension(filename).ToLower())
+            ImageFormat format = Path.GetExtension(filename).ToLower() switch
             {
-                case ".bmp":
-                    format = ImageFormat.Bmp;
-                    break;
-
-                case ".png":
-                    format = ImageFormat.Png;
-                    break;
-
-                case ".jpg":
-                    format = ImageFormat.Jpeg;
-                    break;
-
-                default:
-                    throw new NotSupportedException();
-            }
-
+                ".bmp" => ImageFormat.Bmp,
+                ".png" => ImageFormat.Png,
+                ".jpg" => ImageFormat.Jpeg,
+                _ => throw new NotSupportedException(),
+            };
             var handle = GCHandle.Alloc(Data, GCHandleType.Pinned);
 
             try

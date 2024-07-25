@@ -4,7 +4,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public sealed class BlendModule : ModuleBase
     {
-        public BlendModule(IModule module0, IModule module1, IModule controlModule)
+        public BlendModule(IModule? module0, IModule? module1, IModule? controlModule)
         {
             this.SetSourceModule(0, module0);
             this.SetSourceModule(1, module1);
@@ -15,9 +15,9 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
-            float v0 = this.GetSourceModule(0).GetValue(x, y, z);
-            float v1 = this.GetSourceModule(1).GetValue(x, y, z);
-            float alpha = this.GetSourceModule(2).GetValue(x, y, z) * 0.5f + 0.5f;
+            float v0 = this.GetSourceModule(0)!.GetValue(x, y, z);
+            float v1 = this.GetSourceModule(1)!.GetValue(x, y, z);
+            float alpha = this.GetSourceModule(2)!.GetValue(x, y, z) * 0.5f + 0.5f;
 
             return Interpolation.Linear(v0, v1, alpha);
         }
@@ -29,9 +29,9 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override void EmitHlsl(HlslContext context)
         {
-            this.GetSourceModule(0).EmitHlsl(context);
-            this.GetSourceModule(1).EmitHlsl(context);
-            this.GetSourceModule(2).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
+            this.GetSourceModule(1)!.EmitHlsl(context);
+            this.GetSourceModule(2)!.EmitHlsl(context);
             context.EmitFunction(this, false);
         }
 

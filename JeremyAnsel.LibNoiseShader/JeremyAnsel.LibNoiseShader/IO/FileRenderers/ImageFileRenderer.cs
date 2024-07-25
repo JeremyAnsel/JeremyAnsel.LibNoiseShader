@@ -25,7 +25,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileRenderers
 
         public IDictionary<float, Color> GradientPoints { get; } = new SortedList<float, Color>();
 
-        public IFileBuilder Source { get; set; }
+        public IFileBuilder? Source { get; set; }
 
         public override void Read(BinaryReader reader, LibNoiseShaderFileContext context)
         {

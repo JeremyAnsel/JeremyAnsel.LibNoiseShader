@@ -13,7 +13,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         private int octaveCount;
 
-        public PerlinModule(Noise3D noise)
+        public PerlinModule(Noise3D? noise)
         {
             this.noise = noise ?? throw new ArgumentNullException(nameof(noise));
 

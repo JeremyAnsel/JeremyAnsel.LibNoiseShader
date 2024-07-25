@@ -47,7 +47,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return Load(file);
         }
 
-        public static LibNoiseShaderFile Load(Stream stream)
+        public static LibNoiseShaderFile Load(Stream? stream)
         {
             if (stream is null)
             {
@@ -159,7 +159,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             Write(file);
         }
 
-        public void Write(Stream stream)
+        public void Write(Stream? stream)
         {
             if (stream is null)
             {
@@ -196,7 +196,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             }
         }
 
-        public IFileModule GetFileModuleByName(string name)
+        public IFileModule? GetFileModuleByName(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
@@ -206,7 +206,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return Modules.FirstOrDefault(t => string.Equals(t.Name, name, StringComparison.OrdinalIgnoreCase));
         }
 
-        public IFileBuilder GetFileBuilderByName(string name)
+        public IFileBuilder? GetFileBuilderByName(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
@@ -216,7 +216,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return Builders.FirstOrDefault(t => string.Equals(t.Name, name, StringComparison.OrdinalIgnoreCase));
         }
 
-        public IFileRenderer GetFileRendererByName(string name)
+        public IFileRenderer? GetFileRendererByName(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
@@ -226,14 +226,14 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return Renderers.FirstOrDefault(t => string.Equals(t.Name, name, StringComparison.OrdinalIgnoreCase));
         }
 
-        public IModule GetModuleByName(string name)
+        public IModule? GetModuleByName(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
                 return null;
             }
 
-            IFileModule moduleFile = GetFileModuleByName(name);
+            IFileModule? moduleFile = GetFileModuleByName(name);
 
             if (moduleFile is null)
             {
@@ -244,14 +244,14 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return LibNoiseShaderFileLoadContext.LoadModule(moduleFile, noise);
         }
 
-        public IBuilder GetBuilderByName(string name)
+        public IBuilder? GetBuilderByName(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
                 return null;
             }
 
-            IFileBuilder builderFile = GetFileBuilderByName(name);
+            IFileBuilder? builderFile = GetFileBuilderByName(name);
 
             if (builderFile is null)
             {
@@ -262,14 +262,14 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return LibNoiseShaderFileLoadContext.LoadBuilder(builderFile, noise);
         }
 
-        public IRenderer GetRendererByName(string name)
+        public IRenderer? GetRendererByName(string name)
         {
             if (string.IsNullOrEmpty(name))
             {
                 return null;
             }
 
-            IFileRenderer rendererFile = GetFileRendererByName(name);
+            IFileRenderer? rendererFile = GetFileRendererByName(name);
 
             if (rendererFile is null)
             {
@@ -280,32 +280,32 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return LibNoiseShaderFileLoadContext.LoadRenderer(rendererFile, noise);
         }
 
-        public IFileModule GetMainFileModule()
+        public IFileModule? GetMainFileModule()
         {
             return GetFileModuleByName(MainModuleName);
         }
 
-        public IFileBuilder GetMainFileBuilder()
+        public IFileBuilder? GetMainFileBuilder()
         {
             return GetFileBuilderByName(MainBuilderName);
         }
 
-        public IFileRenderer GetMainFileRenderer()
+        public IFileRenderer? GetMainFileRenderer()
         {
             return GetFileRendererByName(MainRendererName);
         }
 
-        public IModule GetMainModule()
+        public IModule? GetMainModule()
         {
             return GetModuleByName(MainModuleName);
         }
 
-        public IBuilder GetMainBuilder()
+        public IBuilder? GetMainBuilder()
         {
             return GetBuilderByName(MainBuilderName);
         }
 
-        public IRenderer GetMainRenderer()
+        public IRenderer? GetMainRenderer()
         {
             return GetRendererByName(MainRendererName);
         }

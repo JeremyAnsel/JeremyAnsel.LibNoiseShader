@@ -12,7 +12,7 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
 
         private readonly IBuilder sourceBuilder;
 
-        public ImageRenderer(IBuilder builder)
+        public ImageRenderer(IBuilder? builder)
         {
             this.sourceBuilder = builder ?? throw new ArgumentNullException(nameof(builder));
             this.IsWrapEnabled = false;
@@ -28,7 +28,7 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
         }
 
         public ImageRenderer(
-            IBuilder builder,
+            IBuilder? builder,
             bool isWrapEnabled)
         {
             this.sourceBuilder = builder ?? throw new ArgumentNullException(nameof(builder));
@@ -45,7 +45,7 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
         }
 
         public ImageRenderer(
-            IBuilder builder,
+            IBuilder? builder,
             bool isWrapEnabled,
             bool isLightEnabled)
         {
@@ -63,7 +63,7 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
         }
 
         public ImageRenderer(
-            IBuilder builder,
+            IBuilder? builder,
             bool isWrapEnabled,
             float lightAzimuth,
             float lightBrightness,
@@ -163,7 +163,7 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
             return points;
         }
 
-        public void SetGradientPoints(IEnumerable<KeyValuePair<float, Color>> points)
+        public void SetGradientPoints(IEnumerable<KeyValuePair<float, Color>>? points)
         {
             if (points is null)
             {
@@ -183,18 +183,18 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
             return this.sourceBuilder;
         }
 
-        public override void GenerateModuleContext(HlslContext context)
+        public override void GenerateModuleContext(HlslContext? context)
         {
             base.GenerateModuleContext(context);
 
-            context.AddBuilder(this.GetSourceBuilder());
+            context!.AddBuilder(this.GetSourceBuilder());
         }
 
-        public override void GenerateModuleContext(CSharpContext context)
+        public override void GenerateModuleContext(CSharpContext? context)
         {
             base.GenerateModuleContext(context);
 
-            context.AddBuilder(this.GetSourceBuilder());
+            context!.AddBuilder(this.GetSourceBuilder());
         }
 
         public override Color GetColor(float x, float y, int width, int height)

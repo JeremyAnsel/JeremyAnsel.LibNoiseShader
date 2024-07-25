@@ -13,7 +13,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         private int octaveCount;
 
-        public BillowModule(Noise3D noise)
+        public BillowModule(Noise3D? noise)
         {
             this.noise = noise ?? throw new ArgumentNullException(nameof(noise));
 

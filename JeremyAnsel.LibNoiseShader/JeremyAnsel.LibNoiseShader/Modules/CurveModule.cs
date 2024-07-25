@@ -7,7 +7,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public sealed class CurveModule : ModuleBase
     {
-        public CurveModule(IModule module0)
+        public CurveModule(IModule? module0)
         {
             this.SetSourceModule(0, module0);
         }
@@ -56,7 +56,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             }
 
             // Get the output value from the source module.
-            float sourceModuleValue = this.GetSourceModule(0).GetValue(x, y, z);
+            float sourceModuleValue = this.GetSourceModule(0)!.GetValue(x, y, z);
 
             // Find the first element in the control point array that has an input value
             // larger than the output value from the source module.
@@ -107,7 +107,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
         public override void EmitHlsl(HlslContext context)
         {
             context.EmitHeader(this);
-            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
             context.EmitSettings(this);
             context.EmitFunction(this, false);
         }

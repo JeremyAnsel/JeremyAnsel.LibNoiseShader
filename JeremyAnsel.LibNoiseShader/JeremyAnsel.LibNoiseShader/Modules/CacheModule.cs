@@ -14,7 +14,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         private float cachedZ;
 
-        public CacheModule(IModule module0)
+        public CacheModule(IModule? module0)
         {
             this.isCached = false;
             this.SetSourceModule(0, module0);
@@ -24,7 +24,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
-            IModule module0 = this.GetSourceModule(0);
+            IModule module0 = this.GetSourceModule(0)!;
 
             if (!this.isCached || x != this.cachedX || y != this.cachedY || z != this.cachedZ)
             {
@@ -45,7 +45,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override void EmitHlsl(HlslContext context)
         {
-            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
             context.EmitFunction(this, false);
         }
 

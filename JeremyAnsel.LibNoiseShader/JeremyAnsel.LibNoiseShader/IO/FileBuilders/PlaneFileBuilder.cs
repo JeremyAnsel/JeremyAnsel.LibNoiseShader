@@ -15,7 +15,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileBuilders
 
         public float UpperBoundY { get; set; }
 
-        public IFileModule Source { get; set; }
+        public IFileModule? Source { get; set; }
 
         public override void Read(BinaryReader reader, LibNoiseShaderFileContext context)
         {

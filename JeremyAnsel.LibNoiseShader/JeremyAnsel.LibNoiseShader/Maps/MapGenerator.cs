@@ -11,7 +11,7 @@ namespace JeremyAnsel.LibNoiseShader.Maps
 {
     public static class MapGenerator
     {
-        public static ValueMap GenerateValueMap(IBuilder builder, int width, int height)
+        public static ValueMap GenerateValueMap(IBuilder? builder, int width, int height)
         {
             if (builder is null)
             {
@@ -47,7 +47,7 @@ namespace JeremyAnsel.LibNoiseShader.Maps
             return new ValueMap(width, height, buffer);
         }
 
-        public static ColorMap GenerateColorMapOnCpu(IRenderer renderer, int width, int height)
+        public static ColorMap GenerateColorMapOnCpu(IRenderer? renderer, int width, int height)
         {
             if (renderer is null)
             {
@@ -90,7 +90,7 @@ namespace JeremyAnsel.LibNoiseShader.Maps
             return new ColorMap(width, height, buffer);
         }
 
-        public static ColorMap GenerateColorMapOnGpu(Noise3D noise, IRenderer renderer, int width, int height)
+        public static ColorMap GenerateColorMapOnGpu(Noise3D? noise, IRenderer? renderer, int width, int height)
         {
             if (noise is null)
             {

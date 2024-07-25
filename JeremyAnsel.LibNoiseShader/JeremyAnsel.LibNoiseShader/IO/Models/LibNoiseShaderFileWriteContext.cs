@@ -28,14 +28,14 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return _modules[module];
         }
 
-        private IFileModule GetModule(IModule module)
+        private IFileModule? GetModule(IModule? module)
         {
             if (module is null)
             {
                 return null;
             }
 
-            if (!_modules.TryGetValue(module, out IFileModule moduleFile))
+            if (!_modules.TryGetValue(module, out IFileModule? moduleFile))
             {
                 return null;
             }
@@ -53,14 +53,14 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return _builders[builder];
         }
 
-        private IFileBuilder GetBuilder(IBuilder builder)
+        private IFileBuilder? GetBuilder(IBuilder? builder)
         {
             if (builder is null)
             {
                 return null;
             }
 
-            if (!_builders.TryGetValue(builder, out IFileBuilder builderFile))
+            if (!_builders.TryGetValue(builder, out IFileBuilder? builderFile))
             {
                 return null;
             }
@@ -78,14 +78,14 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return _renderers[renderer];
         }
 
-        private IFileRenderer GetRenderer(IRenderer renderer)
+        private IFileRenderer? GetRenderer(IRenderer? renderer)
         {
             if (renderer is null)
             {
                 return null;
             }
 
-            if (!_renderers.TryGetValue(renderer, out IFileRenderer rendererFile))
+            if (!_renderers.TryGetValue(renderer, out IFileRenderer? rendererFile))
             {
                 return null;
             }
@@ -93,7 +93,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return rendererFile;
         }
 
-        public static LibNoiseShaderFile BuildLibNoiseShaderFile(IModule module, Noise3D noise)
+        public static LibNoiseShaderFile BuildLibNoiseShaderFile(IModule? module, Noise3D? noise)
         {
             if (module is null)
             {
@@ -118,7 +118,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return file;
         }
 
-        public static LibNoiseShaderFile BuildLibNoiseShaderFile(IBuilder builder, Noise3D noise)
+        public static LibNoiseShaderFile BuildLibNoiseShaderFile(IBuilder? builder, Noise3D? noise)
         {
             if (builder is null)
             {
@@ -143,7 +143,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return file;
         }
 
-        public static LibNoiseShaderFile BuildLibNoiseShaderFile(IRenderer renderer, Noise3D noise)
+        public static LibNoiseShaderFile BuildLibNoiseShaderFile(IRenderer? renderer, Noise3D? noise)
         {
             if (renderer is null)
             {
@@ -168,14 +168,14 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return file;
         }
 
-        private static IFileModule BuildFileModule(LibNoiseShaderFile file, LibNoiseShaderFileWriteContext context, IModule module)
+        private static IFileModule? BuildFileModule(LibNoiseShaderFile file, LibNoiseShaderFileWriteContext context, IModule? module)
         {
             if (module is null)
             {
                 return null;
             }
 
-            IFileModule moduleFile = context.GetModule(module);
+            IFileModule? moduleFile = context.GetModule(module);
 
             if (moduleFile is not null)
             {
@@ -227,7 +227,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var module = new AbsFileModule
             {
                 Name = m.Name,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             return module;
@@ -238,8 +238,8 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var module = new AddFileModule
             {
                 Name = m.Name,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
-                Input2 = BuildFileModule(file, context, m.GetSourceModule(1)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
+                Input2 = BuildFileModule(file, context, m.GetSourceModule(1))!,
             };
 
             return module;
@@ -265,9 +265,9 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var module = new BlendFileModule
             {
                 Name = m.Name,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
-                Input2 = BuildFileModule(file, context, m.GetSourceModule(1)),
-                Control = BuildFileModule(file, context, m.GetSourceModule(2)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
+                Input2 = BuildFileModule(file, context, m.GetSourceModule(1))!,
+                Control = BuildFileModule(file, context, m.GetSourceModule(2))!,
             };
 
             return module;
@@ -278,7 +278,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var module = new CacheFileModule
             {
                 Name = m.Name,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             return module;
@@ -301,7 +301,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 Name = m.Name,
                 LowerBound = m.LowerBound,
                 UpperBound = m.UpperBound,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             return module;
@@ -323,7 +323,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var module = new CurveFileModule
             {
                 Name = m.Name,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             foreach (KeyValuePair<float, float> point in m.ControlPoints)
@@ -350,10 +350,10 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var module = new DisplaceFileModule
             {
                 Name = m.Name,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
-                DisplaceX = BuildFileModule(file, context, m.GetSourceModule(1)),
-                DisplaceY = BuildFileModule(file, context, m.GetSourceModule(2)),
-                DisplaceZ = BuildFileModule(file, context, m.GetSourceModule(3)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
+                DisplaceX = BuildFileModule(file, context, m.GetSourceModule(1))!,
+                DisplaceY = BuildFileModule(file, context, m.GetSourceModule(2))!,
+                DisplaceZ = BuildFileModule(file, context, m.GetSourceModule(3))!,
             };
 
             return module;
@@ -365,7 +365,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             {
                 Name = m.Name,
                 ExponentValue = m.ExponentValue,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             return module;
@@ -376,7 +376,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var module = new InvertFileModule
             {
                 Name = m.Name,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             return module;
@@ -394,7 +394,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 EndPointX = m.EndPointX,
                 EndPointY = m.EndPointY,
                 EndPointZ = m.EndPointZ,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             return module;
@@ -405,8 +405,8 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var module = new MaxFileModule
             {
                 Name = m.Name,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
-                Input2 = BuildFileModule(file, context, m.GetSourceModule(1)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
+                Input2 = BuildFileModule(file, context, m.GetSourceModule(1))!,
             };
 
             return module;
@@ -417,8 +417,8 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var module = new MinFileModule
             {
                 Name = m.Name,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
-                Input2 = BuildFileModule(file, context, m.GetSourceModule(1)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
+                Input2 = BuildFileModule(file, context, m.GetSourceModule(1))!,
             };
 
             return module;
@@ -429,8 +429,8 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var module = new MultiplyFileModule
             {
                 Name = m.Name,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
-                Input2 = BuildFileModule(file, context, m.GetSourceModule(1)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
+                Input2 = BuildFileModule(file, context, m.GetSourceModule(1))!,
             };
 
             return module;
@@ -456,8 +456,8 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var module = new PowerFileModule
             {
                 Name = m.Name,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
-                Input2 = BuildFileModule(file, context, m.GetSourceModule(1)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
+                Input2 = BuildFileModule(file, context, m.GetSourceModule(1))!,
             };
 
             return module;
@@ -488,7 +488,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 AngleX = m.AngleX,
                 AngleY = m.AngleY,
                 AngleZ = m.AngleZ,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             return module;
@@ -501,7 +501,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 Name = m.Name,
                 Bias = m.Bias,
                 Scale = m.Scale,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             return module;
@@ -515,7 +515,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 ScaleX = m.ScaleX,
                 ScaleY = m.ScaleY,
                 ScaleZ = m.ScaleZ,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             return module;
@@ -529,9 +529,9 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 EdgeFalloff = m.EdgeFalloff,
                 LowerBound = m.LowerBound,
                 UpperBound = m.UpperBound,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
-                Input2 = BuildFileModule(file, context, m.GetSourceModule(1)),
-                Control = BuildFileModule(file, context, m.GetSourceModule(2)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
+                Input2 = BuildFileModule(file, context, m.GetSourceModule(1))!,
+                Control = BuildFileModule(file, context, m.GetSourceModule(2))!,
             };
 
             return module;
@@ -554,7 +554,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             {
                 Name = m.Name,
                 IsInverted = m.IsInverted,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             foreach (float point in m.ControlPoints)
@@ -573,7 +573,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 TranslateX = m.TranslateX,
                 TranslateY = m.TranslateY,
                 TranslateZ = m.TranslateZ,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             return module;
@@ -588,7 +588,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 Power = m.Power,
                 Roughness = m.Roughness,
                 SeedOffset = m.SeedOffset,
-                Input1 = BuildFileModule(file, context, m.GetSourceModule(0)),
+                Input1 = BuildFileModule(file, context, m.GetSourceModule(0))!,
             };
 
             return module;
@@ -608,14 +608,14 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             return module;
         }
 
-        private static IFileBuilder BuildFileBuilder(LibNoiseShaderFile file, LibNoiseShaderFileWriteContext context, IBuilder builder)
+        private static IFileBuilder? BuildFileBuilder(LibNoiseShaderFile file, LibNoiseShaderFileWriteContext context, IBuilder? builder)
         {
             if (builder is null)
             {
                 return null;
             }
 
-            IFileBuilder builderFile = context.GetBuilder(builder);
+            IFileBuilder? builderFile = context.GetBuilder(builder);
 
             if (builderFile is not null)
             {
@@ -645,7 +645,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 LowerHeightBound = m.LowerHeightBound,
                 UpperAngleBound = m.UpperAngleBound,
                 UpperHeightBound = m.UpperHeightBound,
-                Source = BuildFileModule(file, context, m.GetSourceModule()),
+                Source = BuildFileModule(file, context, m.GetSourceModule())!,
             };
 
             return builder;
@@ -661,7 +661,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 UpperBoundX = m.UpperBoundX,
                 LowerBoundY = m.LowerBoundY,
                 UpperBoundY = m.UpperBoundY,
-                Source = BuildFileModule(file, context, m.GetSourceModule()),
+                Source = BuildFileModule(file, context, m.GetSourceModule())!,
             };
 
             return builder;
@@ -676,20 +676,20 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 NorthLatBound = m.NorthLatBound,
                 WestLonBound = m.WestLonBound,
                 EastLonBound = m.EastLonBound,
-                Source = BuildFileModule(file, context, m.GetSourceModule()),
+                Source = BuildFileModule(file, context, m.GetSourceModule())!,
             };
 
             return builder;
         }
 
-        private static IFileRenderer BuildFileRenderer(LibNoiseShaderFile file, LibNoiseShaderFileWriteContext context, IRenderer renderer)
+        private static IFileRenderer? BuildFileRenderer(LibNoiseShaderFile file, LibNoiseShaderFileWriteContext context, IRenderer? renderer)
         {
             if (renderer is null)
             {
                 return null;
             }
 
-            IFileRenderer rendererFile = context.GetRenderer(renderer);
+            IFileRenderer? rendererFile = context.GetRenderer(renderer);
 
             if (rendererFile is not null)
             {
@@ -715,8 +715,8 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var renderer = new BlendFileRenderer
             {
                 Name = m.Name,
-                Input1 = BuildFileRenderer(file, context, m.GetSourceRenderer(0)),
-                Input2 = BuildFileRenderer(file, context, m.GetSourceRenderer(1)),
+                Input1 = BuildFileRenderer(file, context, m.GetSourceRenderer(0))!,
+                Input2 = BuildFileRenderer(file, context, m.GetSourceRenderer(1))!,
             };
 
             return renderer;
@@ -735,7 +735,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
                 LightContrast = m.LightContrast,
                 LightElevation = m.LightElevation,
                 LightIntensity = m.LightIntensity,
-                Source = BuildFileBuilder(file, context, m.GetSourceBuilder()),
+                Source = BuildFileBuilder(file, context, m.GetSourceBuilder())!,
             };
 
             foreach (KeyValuePair<float, Color> point in m.GetGradient())
@@ -754,7 +754,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.Models
             var renderer = new NormalFileRenderer
             {
                 Name = m.Name,
-                Source = BuildFileBuilder(file, context, m.GetSourceBuilder()),
+                Source = BuildFileBuilder(file, context, m.GetSourceBuilder())!,
             };
 
             return renderer;

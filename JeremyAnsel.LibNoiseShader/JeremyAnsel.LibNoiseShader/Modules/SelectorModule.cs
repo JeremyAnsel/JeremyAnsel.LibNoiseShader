@@ -11,7 +11,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         private float upperBound;
 
-        public SelectorModule(IModule module0, IModule module1, IModule controlModule)
+        public SelectorModule(IModule? module0, IModule? module1, IModule? controlModule)
         {
             this.SetSourceModule(0, module0);
             this.SetSourceModule(1, module1);
@@ -74,7 +74,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
-            float controlValue = this.GetSourceModule(2).GetValue(x, y, z);
+            float controlValue = this.GetSourceModule(2)!.GetValue(x, y, z);
 
             if (this.EdgeFalloff > 0.0f)
             {
@@ -83,7 +83,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
                     // The output value from the control module is below the selector
                     // threshold; return the output value from the first source module.
 
-                    return this.GetSourceModule(0).GetValue(x, y, z);
+                    return this.GetSourceModule(0)!.GetValue(x, y, z);
                 }
                 else if (controlValue < (this.LowerBound + this.EdgeFalloff))
                 {
@@ -97,8 +97,8 @@ namespace JeremyAnsel.LibNoiseShader.Modules
                     float alpha = Interpolation.SCurve3((controlValue - lowerCurve) / (upperCurve - lowerCurve));
 
                     return Interpolation.Linear(
-                        this.GetSourceModule(0).GetValue(x, y, z),
-                        this.GetSourceModule(1).GetValue(x, y, z),
+                        this.GetSourceModule(0)!.GetValue(x, y, z),
+                        this.GetSourceModule(1)!.GetValue(x, y, z),
                         alpha);
                 }
                 else if (controlValue < (this.UpperBound - this.EdgeFalloff))
@@ -106,7 +106,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
                     // The output value from the control module is within the selector
                     // threshold; return the output value from the second source module.
 
-                    return this.GetSourceModule(1).GetValue(x, y, z);
+                    return this.GetSourceModule(1)!.GetValue(x, y, z);
                 }
                 else if (controlValue < (this.UpperBound + this.EdgeFalloff))
                 {
@@ -120,8 +120,8 @@ namespace JeremyAnsel.LibNoiseShader.Modules
                     float alpha = Interpolation.SCurve3((controlValue - lowerCurve) / (upperCurve - lowerCurve));
 
                     return Interpolation.Linear(
-                        this.GetSourceModule(1).GetValue(x, y, z),
-                        this.GetSourceModule(0).GetValue(x, y, z),
+                        this.GetSourceModule(1)!.GetValue(x, y, z),
+                        this.GetSourceModule(0)!.GetValue(x, y, z),
                         alpha);
                 }
                 else
@@ -129,18 +129,18 @@ namespace JeremyAnsel.LibNoiseShader.Modules
                     // Output value from the control module is above the selector threshold;
                     // return the output value from the first source module.
 
-                    return this.GetSourceModule(0).GetValue(x, y, z);
+                    return this.GetSourceModule(0)!.GetValue(x, y, z);
                 }
             }
             else
             {
                 if (controlValue < this.LowerBound || controlValue > this.UpperBound)
                 {
-                    return this.GetSourceModule(0).GetValue(x, y, z);
+                    return this.GetSourceModule(0)!.GetValue(x, y, z);
                 }
                 else
                 {
-                    return this.GetSourceModule(1).GetValue(x, y, z);
+                    return this.GetSourceModule(1)!.GetValue(x, y, z);
                 }
             }
         }
@@ -153,9 +153,9 @@ namespace JeremyAnsel.LibNoiseShader.Modules
         public override void EmitHlsl(HlslContext context)
         {
             context.EmitHeader(this);
-            this.GetSourceModule(0).EmitHlsl(context);
-            this.GetSourceModule(1).EmitHlsl(context);
-            this.GetSourceModule(2).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
+            this.GetSourceModule(1)!.EmitHlsl(context);
+            this.GetSourceModule(2)!.EmitHlsl(context);
             context.EmitSettings(this);
             context.EmitFunction(this, false);
         }

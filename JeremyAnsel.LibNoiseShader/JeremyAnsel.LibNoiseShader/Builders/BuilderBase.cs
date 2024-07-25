@@ -8,13 +8,13 @@ namespace JeremyAnsel.LibNoiseShader.Builders
     {
         private readonly IModule source;
 
-        protected BuilderBase(IModule source, int seed)
+        protected BuilderBase(IModule? source, int seed)
         {
             this.source = source ?? throw new ArgumentNullException(nameof(source));
             this.Seed = seed;
         }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         public int Seed { get; set; }
 
@@ -31,7 +31,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             return this.source;
         }
 
-        public virtual void GenerateModuleContext(HlslContext context)
+        public virtual void GenerateModuleContext(HlslContext? context)
         {
             if (context is null)
             {
@@ -41,7 +41,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             context.AddModule(this.GetSourceModule());
         }
 
-        public virtual void GenerateModuleContext(CSharpContext context)
+        public virtual void GenerateModuleContext(CSharpContext? context)
         {
             if (context is null)
             {

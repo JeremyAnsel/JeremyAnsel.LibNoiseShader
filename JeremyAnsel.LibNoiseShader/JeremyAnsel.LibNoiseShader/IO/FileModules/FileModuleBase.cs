@@ -5,7 +5,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileModules
 {
     public abstract class FileModuleBase : IFileModule
     {
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         public double PositionX { get; set; }
 

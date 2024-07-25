@@ -4,17 +4,17 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
 {
     public interface IRenderer
     {
-        string Name { get; set; }
+        string? Name { get; set; }
 
         int RequiredSourceRendererCount { get; }
 
         void SetSeed(int seed);
 
-        IRenderer GetSourceRenderer(int index);
+        IRenderer? GetSourceRenderer(int index);
 
-        void GenerateModuleContext(HlslContext context);
+        void GenerateModuleContext(HlslContext? context);
 
-        void GenerateModuleContext(CSharpContext context);
+        void GenerateModuleContext(CSharpContext? context);
 
         Color GetColor(float x, float y, int width, int height);
 

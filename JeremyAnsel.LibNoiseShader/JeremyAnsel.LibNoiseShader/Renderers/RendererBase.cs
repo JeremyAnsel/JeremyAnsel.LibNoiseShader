@@ -6,13 +6,13 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
 {
     public abstract class RendererBase : IRenderer
     {
-        private IRenderer[] sourceRenderers;
+        private IRenderer[]? sourceRenderers;
 
         protected RendererBase()
         {
         }
 
-        public string Name { get; set; }
+        public string? Name { get; set; }
 
         public abstract int RequiredSourceRendererCount { get; }
 
@@ -24,7 +24,7 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
             }
         }
 
-        public IRenderer GetSourceRenderer(int index)
+        public IRenderer? GetSourceRenderer(int index)
         {
             if (this.sourceRenderers is null)
             {
@@ -34,7 +34,7 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
             return this.sourceRenderers[index];
         }
 
-        protected void SetSourceRenderer(int index, IRenderer source)
+        protected void SetSourceRenderer(int index, IRenderer? source)
         {
             if (index < 0 || index >= this.RequiredSourceRendererCount)
             {
@@ -54,7 +54,7 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
             this.sourceRenderers[index] = source;
         }
 
-        public virtual void GenerateModuleContext(HlslContext context)
+        public virtual void GenerateModuleContext(HlslContext? context)
         {
             if (context is null)
             {
@@ -67,7 +67,7 @@ namespace JeremyAnsel.LibNoiseShader.Renderers
             }
         }
 
-        public virtual void GenerateModuleContext(CSharpContext context)
+        public virtual void GenerateModuleContext(CSharpContext? context)
         {
             if (context is null)
             {

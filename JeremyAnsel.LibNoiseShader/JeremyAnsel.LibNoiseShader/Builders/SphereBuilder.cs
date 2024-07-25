@@ -6,7 +6,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
 {
     public sealed class SphereBuilder : BuilderBase
     {
-        public SphereBuilder(IModule source, int seed)
+        public SphereBuilder(IModule? source, int seed)
             : base(source, seed)
         {
             this.SouthLatBound = -90.0f;
@@ -15,7 +15,7 @@ namespace JeremyAnsel.LibNoiseShader.Builders
             this.EastLonBound = 180.0f;
         }
 
-        public SphereBuilder(IModule source, int seed, float southLatBound, float northLatBound, float westLonBound, float eastLonBound)
+        public SphereBuilder(IModule? source, int seed, float southLatBound, float northLatBound, float westLonBound, float eastLonBound)
             : base(source, seed)
         {
             this.SouthLatBound = southLatBound;

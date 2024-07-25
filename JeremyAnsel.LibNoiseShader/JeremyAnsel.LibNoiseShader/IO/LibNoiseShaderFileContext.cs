@@ -15,7 +15,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
 
         private readonly Dictionary<IFileRenderer, int> _renderers = new();
 
-        internal int AddModule(IFileModule module)
+        internal int AddModule(IFileModule? module)
         {
             if (module == null)
             {
@@ -30,7 +30,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return _modules[module];
         }
 
-        internal int GetModuleIndex(IFileModule module)
+        internal int GetModuleIndex(IFileModule? module)
         {
             if (module == null)
             {
@@ -45,7 +45,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return value;
         }
 
-        internal IFileModule GetModule(int index)
+        internal IFileModule? GetModule(int index)
         {
             if (index == -1)
             {
@@ -60,7 +60,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return _modules.Keys.ElementAt(index);
         }
 
-        internal int AddBuilder(IFileBuilder builder)
+        internal int AddBuilder(IFileBuilder? builder)
         {
             if (builder == null)
             {
@@ -75,7 +75,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return _builders[builder];
         }
 
-        internal int GetBuilderIndex(IFileBuilder builder)
+        internal int GetBuilderIndex(IFileBuilder? builder)
         {
             if (builder == null)
             {
@@ -90,7 +90,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return value;
         }
 
-        internal IFileBuilder GetBuilder(int index)
+        internal IFileBuilder? GetBuilder(int index)
         {
             if (index == -1)
             {
@@ -105,7 +105,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return _builders.Keys.ElementAt(index);
         }
 
-        internal int AddRenderer(IFileRenderer renderer)
+        internal int AddRenderer(IFileRenderer? renderer)
         {
             if (renderer == null)
             {
@@ -120,7 +120,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return _renderers[renderer];
         }
 
-        internal int GetRendererIndex(IFileRenderer renderer)
+        internal int GetRendererIndex(IFileRenderer? renderer)
         {
             if (renderer == null)
             {
@@ -135,7 +135,7 @@ namespace JeremyAnsel.LibNoiseShader.IO
             return value;
         }
 
-        internal IFileRenderer GetRenderer(int index)
+        internal IFileRenderer? GetRenderer(int index)
         {
             if (index == -1)
             {

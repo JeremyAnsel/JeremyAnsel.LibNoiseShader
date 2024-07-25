@@ -5,7 +5,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 {
     public sealed class ExponentModule : ModuleBase
     {
-        public ExponentModule(IModule module0)
+        public ExponentModule(IModule? module0)
         {
             this.SetSourceModule(0, module0);
 
@@ -18,7 +18,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         public override float GetValue(float x, float y, float z)
         {
-            float value = this.GetSourceModule(0).GetValue(x, y, z);
+            float value = this.GetSourceModule(0)!.GetValue(x, y, z);
 
             return (float)Math.Pow(Math.Abs(value * 0.5f + 0.5f), this.ExponentValue) * 2.0f - 1.0f;
         }
@@ -31,7 +31,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
         public override void EmitHlsl(HlslContext context)
         {
             context.EmitHeader(this);
-            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
             context.EmitSettings(this);
             context.EmitFunction(this, false);
         }

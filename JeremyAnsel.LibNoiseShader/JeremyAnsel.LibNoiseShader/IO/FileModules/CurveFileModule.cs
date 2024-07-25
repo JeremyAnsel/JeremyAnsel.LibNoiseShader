@@ -7,7 +7,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileModules
     {
         public IDictionary<float, float> ControlPoints { get; } = new SortedList<float, float>();
 
-        public IFileModule Input1 { get; set; }
+        public IFileModule? Input1 { get; set; }
 
         public override void Read(BinaryReader reader, LibNoiseShaderFileContext context)
         {

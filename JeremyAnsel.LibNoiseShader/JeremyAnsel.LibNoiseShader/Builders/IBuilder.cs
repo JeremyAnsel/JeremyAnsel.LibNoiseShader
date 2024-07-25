@@ -4,15 +4,15 @@ namespace JeremyAnsel.LibNoiseShader.Builders
 {
     public interface IBuilder
     {
-        string Name { get; set; }
+        string? Name { get; set; }
 
         int Seed { get; set; }
 
         IModule GetSourceModule();
 
-        void GenerateModuleContext(HlslContext context);
+        void GenerateModuleContext(HlslContext? context);
 
-        void GenerateModuleContext(CSharpContext context);
+        void GenerateModuleContext(CSharpContext? context);
 
         float GetValue(float x, float y);
 

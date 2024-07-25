@@ -9,7 +9,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileModules
 
         public bool IsInverted { get; set; }
 
-        public IFileModule Input1 { get; set; }
+        public IFileModule? Input1 { get; set; }
 
         public override void Read(BinaryReader reader, LibNoiseShaderFileContext context)
         {

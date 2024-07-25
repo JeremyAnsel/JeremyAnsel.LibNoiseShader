@@ -29,7 +29,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
 
         private float matrixZ3;
 
-        public RotatePointModule(IModule module0)
+        public RotatePointModule(IModule? module0)
         {
             this.SetSourceModule(0, module0);
 
@@ -111,7 +111,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
             float ny = (this.matrixX2 * x) + (this.matrixY2 * y) + (this.matrixZ2 * z);
             float nz = (this.matrixX3 * x) + (this.matrixY3 * y) + (this.matrixZ3 * z);
 
-            return this.GetSourceModule(0).GetValue(nx, ny, nz);
+            return this.GetSourceModule(0)!.GetValue(nx, ny, nz);
         }
 
         public override int EmitHlslMaxDepth()
@@ -123,7 +123,7 @@ namespace JeremyAnsel.LibNoiseShader.Modules
         {
             context.EmitHeader(this);
             context.EmitCoords(this, 0, false);
-            this.GetSourceModule(0).EmitHlsl(context);
+            this.GetSourceModule(0)!.EmitHlsl(context);
             context.EmitSettings(this);
             context.EmitFunction(this, true);
         }

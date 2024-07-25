@@ -4,7 +4,7 @@ namespace JeremyAnsel.LibNoiseShader.Maps
 {
     public sealed class ValueMap
     {
-        public ValueMap(int width, int height, float[] data)
+        public ValueMap(int width, int height, float[]? data)
         {
             if (width <= 0)
             {

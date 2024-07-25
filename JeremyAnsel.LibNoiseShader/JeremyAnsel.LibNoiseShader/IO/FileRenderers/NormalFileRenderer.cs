@@ -5,7 +5,7 @@ namespace JeremyAnsel.LibNoiseShader.IO.FileRenderers
 {
     public sealed class NormalFileRenderer : FileRendererBase
     {
-        public IFileBuilder Source { get; set; }
+        public IFileBuilder? Source { get; set; }
 
         public override void Read(BinaryReader reader, LibNoiseShaderFileContext context)
         {
