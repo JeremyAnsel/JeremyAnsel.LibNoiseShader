@@ -20,13 +20,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Builders.BuilderBase
   nameWithType: BuilderBase
 - uid: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32)
-  name: BuilderBase(IModule, int)
+  name: BuilderBase(IModule?, int)
   href: api/JeremyAnsel.LibNoiseShader.Builders.BuilderBase.html#JeremyAnsel_LibNoiseShader_Builders_BuilderBase__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_System_Int32_
   commentId: M:JeremyAnsel.LibNoiseShader.Builders.BuilderBase.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32)
   name.vb: New(IModule, Integer)
-  fullName: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.BuilderBase(JeremyAnsel.LibNoiseShader.Modules.IModule, int)
+  fullName: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.BuilderBase(JeremyAnsel.LibNoiseShader.Modules.IModule?, int)
   fullName.vb: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.New(JeremyAnsel.LibNoiseShader.Modules.IModule, Integer)
-  nameWithType: BuilderBase.BuilderBase(IModule, int)
+  nameWithType: BuilderBase.BuilderBase(IModule?, int)
   nameWithType.vb: BuilderBase.New(IModule, Integer)
 - uid: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.#ctor*
   name: BuilderBase
@@ -39,17 +39,23 @@ references:
   nameWithType: BuilderBase.BuilderBase
   nameWithType.vb: BuilderBase.New
 - uid: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  name: GenerateModuleContext(CSharpContext)
+  name: GenerateModuleContext(CSharpContext?)
   href: api/JeremyAnsel.LibNoiseShader.Builders.BuilderBase.html#JeremyAnsel_LibNoiseShader_Builders_BuilderBase_GenerateModuleContext_JeremyAnsel_LibNoiseShader_CSharpContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Builders.BuilderBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  fullName: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  nameWithType: BuilderBase.GenerateModuleContext(CSharpContext)
+  name.vb: GenerateModuleContext(CSharpContext)
+  fullName: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
+  nameWithType: BuilderBase.GenerateModuleContext(CSharpContext?)
+  nameWithType.vb: BuilderBase.GenerateModuleContext(CSharpContext)
 - uid: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  name: GenerateModuleContext(HlslContext)
+  name: GenerateModuleContext(HlslContext?)
   href: api/JeremyAnsel.LibNoiseShader.Builders.BuilderBase.html#JeremyAnsel_LibNoiseShader_Builders_BuilderBase_GenerateModuleContext_JeremyAnsel_LibNoiseShader_HlslContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Builders.BuilderBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  fullName: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  nameWithType: BuilderBase.GenerateModuleContext(HlslContext)
+  name.vb: GenerateModuleContext(HlslContext)
+  fullName: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
+  nameWithType: BuilderBase.GenerateModuleContext(HlslContext?)
+  nameWithType.vb: BuilderBase.GenerateModuleContext(HlslContext)
 - uid: JeremyAnsel.LibNoiseShader.Builders.BuilderBase.GenerateModuleContext*
   name: GenerateModuleContext
   href: api/JeremyAnsel.LibNoiseShader.Builders.BuilderBase.html#JeremyAnsel_LibNoiseShader_Builders_BuilderBase_GenerateModuleContext_
@@ -184,22 +190,22 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder
   nameWithType: CylinderBuilder
 - uid: JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32)
-  name: CylinderBuilder(IModule, int)
+  name: CylinderBuilder(IModule?, int)
   href: api/JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.html#JeremyAnsel_LibNoiseShader_Builders_CylinderBuilder__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_System_Int32_
   commentId: M:JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32)
   name.vb: New(IModule, Integer)
-  fullName: JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.CylinderBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule, int)
+  fullName: JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.CylinderBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule?, int)
   fullName.vb: JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.New(JeremyAnsel.LibNoiseShader.Modules.IModule, Integer)
-  nameWithType: CylinderBuilder.CylinderBuilder(IModule, int)
+  nameWithType: CylinderBuilder.CylinderBuilder(IModule?, int)
   nameWithType.vb: CylinderBuilder.New(IModule, Integer)
 - uid: JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32,System.Single,System.Single,System.Single,System.Single)
-  name: CylinderBuilder(IModule, int, float, float, float, float)
+  name: CylinderBuilder(IModule?, int, float, float, float, float)
   href: api/JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.html#JeremyAnsel_LibNoiseShader_Builders_CylinderBuilder__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_System_Int32_System_Single_System_Single_System_Single_System_Single_
   commentId: M:JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32,System.Single,System.Single,System.Single,System.Single)
   name.vb: New(IModule, Integer, Single, Single, Single, Single)
-  fullName: JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.CylinderBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule, int, float, float, float, float)
+  fullName: JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.CylinderBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule?, int, float, float, float, float)
   fullName.vb: JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.New(JeremyAnsel.LibNoiseShader.Modules.IModule, Integer, Single, Single, Single, Single)
-  nameWithType: CylinderBuilder.CylinderBuilder(IModule, int, float, float, float, float)
+  nameWithType: CylinderBuilder.CylinderBuilder(IModule?, int, float, float, float, float)
   nameWithType.vb: CylinderBuilder.New(IModule, Integer, Single, Single, Single, Single)
 - uid: JeremyAnsel.LibNoiseShader.Builders.CylinderBuilder.#ctor*
   name: CylinderBuilder
@@ -312,17 +318,23 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Builders.IBuilder
   nameWithType: IBuilder
 - uid: JeremyAnsel.LibNoiseShader.Builders.IBuilder.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  name: GenerateModuleContext(CSharpContext)
+  name: GenerateModuleContext(CSharpContext?)
   href: api/JeremyAnsel.LibNoiseShader.Builders.IBuilder.html#JeremyAnsel_LibNoiseShader_Builders_IBuilder_GenerateModuleContext_JeremyAnsel_LibNoiseShader_CSharpContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Builders.IBuilder.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  fullName: JeremyAnsel.LibNoiseShader.Builders.IBuilder.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  nameWithType: IBuilder.GenerateModuleContext(CSharpContext)
+  name.vb: GenerateModuleContext(CSharpContext)
+  fullName: JeremyAnsel.LibNoiseShader.Builders.IBuilder.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Builders.IBuilder.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
+  nameWithType: IBuilder.GenerateModuleContext(CSharpContext?)
+  nameWithType.vb: IBuilder.GenerateModuleContext(CSharpContext)
 - uid: JeremyAnsel.LibNoiseShader.Builders.IBuilder.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  name: GenerateModuleContext(HlslContext)
+  name: GenerateModuleContext(HlslContext?)
   href: api/JeremyAnsel.LibNoiseShader.Builders.IBuilder.html#JeremyAnsel_LibNoiseShader_Builders_IBuilder_GenerateModuleContext_JeremyAnsel_LibNoiseShader_HlslContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Builders.IBuilder.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  fullName: JeremyAnsel.LibNoiseShader.Builders.IBuilder.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  nameWithType: IBuilder.GenerateModuleContext(HlslContext)
+  name.vb: GenerateModuleContext(HlslContext)
+  fullName: JeremyAnsel.LibNoiseShader.Builders.IBuilder.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Builders.IBuilder.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
+  nameWithType: IBuilder.GenerateModuleContext(HlslContext?)
+  nameWithType.vb: IBuilder.GenerateModuleContext(HlslContext)
 - uid: JeremyAnsel.LibNoiseShader.Builders.IBuilder.GenerateModuleContext*
   name: GenerateModuleContext
   href: api/JeremyAnsel.LibNoiseShader.Builders.IBuilder.html#JeremyAnsel_LibNoiseShader_Builders_IBuilder_GenerateModuleContext_
@@ -444,22 +456,22 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder
   nameWithType: PlaneBuilder
 - uid: JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32)
-  name: PlaneBuilder(IModule, int)
+  name: PlaneBuilder(IModule?, int)
   href: api/JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.html#JeremyAnsel_LibNoiseShader_Builders_PlaneBuilder__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_System_Int32_
   commentId: M:JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32)
   name.vb: New(IModule, Integer)
-  fullName: JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.PlaneBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule, int)
+  fullName: JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.PlaneBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule?, int)
   fullName.vb: JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.New(JeremyAnsel.LibNoiseShader.Modules.IModule, Integer)
-  nameWithType: PlaneBuilder.PlaneBuilder(IModule, int)
+  nameWithType: PlaneBuilder.PlaneBuilder(IModule?, int)
   nameWithType.vb: PlaneBuilder.New(IModule, Integer)
 - uid: JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32,System.Boolean,System.Single,System.Single,System.Single,System.Single)
-  name: PlaneBuilder(IModule, int, bool, float, float, float, float)
+  name: PlaneBuilder(IModule?, int, bool, float, float, float, float)
   href: api/JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.html#JeremyAnsel_LibNoiseShader_Builders_PlaneBuilder__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_System_Int32_System_Boolean_System_Single_System_Single_System_Single_System_Single_
   commentId: M:JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32,System.Boolean,System.Single,System.Single,System.Single,System.Single)
   name.vb: New(IModule, Integer, Boolean, Single, Single, Single, Single)
-  fullName: JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.PlaneBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule, int, bool, float, float, float, float)
+  fullName: JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.PlaneBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule?, int, bool, float, float, float, float)
   fullName.vb: JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.New(JeremyAnsel.LibNoiseShader.Modules.IModule, Integer, Boolean, Single, Single, Single, Single)
-  nameWithType: PlaneBuilder.PlaneBuilder(IModule, int, bool, float, float, float, float)
+  nameWithType: PlaneBuilder.PlaneBuilder(IModule?, int, bool, float, float, float, float)
   nameWithType.vb: PlaneBuilder.New(IModule, Integer, Boolean, Single, Single, Single, Single)
 - uid: JeremyAnsel.LibNoiseShader.Builders.PlaneBuilder.#ctor*
   name: PlaneBuilder
@@ -585,22 +597,22 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Builders.SphereBuilder
   nameWithType: SphereBuilder
 - uid: JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32)
-  name: SphereBuilder(IModule, int)
+  name: SphereBuilder(IModule?, int)
   href: api/JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.html#JeremyAnsel_LibNoiseShader_Builders_SphereBuilder__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_System_Int32_
   commentId: M:JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32)
   name.vb: New(IModule, Integer)
-  fullName: JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.SphereBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule, int)
+  fullName: JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.SphereBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule?, int)
   fullName.vb: JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.New(JeremyAnsel.LibNoiseShader.Modules.IModule, Integer)
-  nameWithType: SphereBuilder.SphereBuilder(IModule, int)
+  nameWithType: SphereBuilder.SphereBuilder(IModule?, int)
   nameWithType.vb: SphereBuilder.New(IModule, Integer)
 - uid: JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32,System.Single,System.Single,System.Single,System.Single)
-  name: SphereBuilder(IModule, int, float, float, float, float)
+  name: SphereBuilder(IModule?, int, float, float, float, float)
   href: api/JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.html#JeremyAnsel_LibNoiseShader_Builders_SphereBuilder__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_System_Int32_System_Single_System_Single_System_Single_System_Single_
   commentId: M:JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Int32,System.Single,System.Single,System.Single,System.Single)
   name.vb: New(IModule, Integer, Single, Single, Single, Single)
-  fullName: JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.SphereBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule, int, float, float, float, float)
+  fullName: JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.SphereBuilder(JeremyAnsel.LibNoiseShader.Modules.IModule?, int, float, float, float, float)
   fullName.vb: JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.New(JeremyAnsel.LibNoiseShader.Modules.IModule, Integer, Single, Single, Single, Single)
-  nameWithType: SphereBuilder.SphereBuilder(IModule, int, float, float, float, float)
+  nameWithType: SphereBuilder.SphereBuilder(IModule?, int, float, float, float, float)
   nameWithType.vb: SphereBuilder.New(IModule, Integer, Single, Single, Single, Single)
 - uid: JeremyAnsel.LibNoiseShader.Builders.SphereBuilder.#ctor*
   name: SphereBuilder
@@ -713,23 +725,32 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.CSharpContext
   nameWithType: CSharpContext
 - uid: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
-  name: GetFullBody(IBuilder)
+  name: GetFullBody(IBuilder?)
   href: api/JeremyAnsel.LibNoiseShader.CSharpContext.html#JeremyAnsel_LibNoiseShader_CSharpContext_GetFullBody_JeremyAnsel_LibNoiseShader_Builders_IBuilder_
   commentId: M:JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
-  fullName: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
-  nameWithType: CSharpContext.GetFullBody(IBuilder)
+  name.vb: GetFullBody(IBuilder)
+  fullName: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Builders.IBuilder?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
+  nameWithType: CSharpContext.GetFullBody(IBuilder?)
+  nameWithType.vb: CSharpContext.GetFullBody(IBuilder)
 - uid: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: GetFullBody(IModule)
+  name: GetFullBody(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.CSharpContext.html#JeremyAnsel_LibNoiseShader_CSharpContext_GetFullBody_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  fullName: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: CSharpContext.GetFullBody(IModule)
+  name.vb: GetFullBody(IModule)
+  fullName: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Modules.IModule?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  nameWithType: CSharpContext.GetFullBody(IModule?)
+  nameWithType.vb: CSharpContext.GetFullBody(IModule)
 - uid: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
-  name: GetFullBody(IRenderer)
+  name: GetFullBody(IRenderer?)
   href: api/JeremyAnsel.LibNoiseShader.CSharpContext.html#JeremyAnsel_LibNoiseShader_CSharpContext_GetFullBody_JeremyAnsel_LibNoiseShader_Renderers_IRenderer_
   commentId: M:JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
-  fullName: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
-  nameWithType: CSharpContext.GetFullBody(IRenderer)
+  name.vb: GetFullBody(IRenderer)
+  fullName: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Renderers.IRenderer?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody(JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
+  nameWithType: CSharpContext.GetFullBody(IRenderer?)
+  nameWithType.vb: CSharpContext.GetFullBody(IRenderer)
 - uid: JeremyAnsel.LibNoiseShader.CSharpContext.GetFullBody*
   name: GetFullBody
   href: api/JeremyAnsel.LibNoiseShader.CSharpContext.html#JeremyAnsel_LibNoiseShader_CSharpContext_GetFullBody_
@@ -808,13 +829,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Float3.Equals(JeremyAnsel.LibNoiseShader.Float3)
   nameWithType: Float3.Equals(Float3)
 - uid: JeremyAnsel.LibNoiseShader.Float3.Equals(System.Object)
-  name: Equals(object)
+  name: Equals(object?)
   href: api/JeremyAnsel.LibNoiseShader.Float3.html#JeremyAnsel_LibNoiseShader_Float3_Equals_System_Object_
   commentId: M:JeremyAnsel.LibNoiseShader.Float3.Equals(System.Object)
   name.vb: Equals(Object)
-  fullName: JeremyAnsel.LibNoiseShader.Float3.Equals(object)
+  fullName: JeremyAnsel.LibNoiseShader.Float3.Equals(object?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Float3.Equals(Object)
-  nameWithType: Float3.Equals(object)
+  nameWithType: Float3.Equals(object?)
   nameWithType.vb: Float3.Equals(Object)
 - uid: JeremyAnsel.LibNoiseShader.Float3.Equals*
   name: Equals
@@ -1158,13 +1179,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Float4.Equals(JeremyAnsel.LibNoiseShader.Float4)
   nameWithType: Float4.Equals(Float4)
 - uid: JeremyAnsel.LibNoiseShader.Float4.Equals(System.Object)
-  name: Equals(object)
+  name: Equals(object?)
   href: api/JeremyAnsel.LibNoiseShader.Float4.html#JeremyAnsel_LibNoiseShader_Float4_Equals_System_Object_
   commentId: M:JeremyAnsel.LibNoiseShader.Float4.Equals(System.Object)
   name.vb: Equals(Object)
-  fullName: JeremyAnsel.LibNoiseShader.Float4.Equals(object)
+  fullName: JeremyAnsel.LibNoiseShader.Float4.Equals(object?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Float4.Equals(Object)
-  nameWithType: Float4.Equals(object)
+  nameWithType: Float4.Equals(object?)
   nameWithType.vb: Float4.Equals(Object)
 - uid: JeremyAnsel.LibNoiseShader.Float4.Equals*
   name: Equals
@@ -1527,23 +1548,32 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.HlslContext.EmitSettings
   nameWithType: HlslContext.EmitSettings
 - uid: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
-  name: GetFullBody(IBuilder)
+  name: GetFullBody(IBuilder?)
   href: api/JeremyAnsel.LibNoiseShader.HlslContext.html#JeremyAnsel_LibNoiseShader_HlslContext_GetFullBody_JeremyAnsel_LibNoiseShader_Builders_IBuilder_
   commentId: M:JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
-  fullName: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
-  nameWithType: HlslContext.GetFullBody(IBuilder)
+  name.vb: GetFullBody(IBuilder)
+  fullName: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Builders.IBuilder?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
+  nameWithType: HlslContext.GetFullBody(IBuilder?)
+  nameWithType.vb: HlslContext.GetFullBody(IBuilder)
 - uid: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: GetFullBody(IModule)
+  name: GetFullBody(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.HlslContext.html#JeremyAnsel_LibNoiseShader_HlslContext_GetFullBody_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  fullName: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: HlslContext.GetFullBody(IModule)
+  name.vb: GetFullBody(IModule)
+  fullName: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Modules.IModule?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  nameWithType: HlslContext.GetFullBody(IModule?)
+  nameWithType.vb: HlslContext.GetFullBody(IModule)
 - uid: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
-  name: GetFullBody(IRenderer)
+  name: GetFullBody(IRenderer?)
   href: api/JeremyAnsel.LibNoiseShader.HlslContext.html#JeremyAnsel_LibNoiseShader_HlslContext_GetFullBody_JeremyAnsel_LibNoiseShader_Renderers_IRenderer_
   commentId: M:JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
-  fullName: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
-  nameWithType: HlslContext.GetFullBody(IRenderer)
+  name.vb: GetFullBody(IRenderer)
+  fullName: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Renderers.IRenderer?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody(JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
+  nameWithType: HlslContext.GetFullBody(IRenderer?)
+  nameWithType.vb: HlslContext.GetFullBody(IRenderer)
 - uid: JeremyAnsel.LibNoiseShader.HlslContext.GetFullBody*
   name: GetFullBody
   href: api/JeremyAnsel.LibNoiseShader.HlslContext.html#JeremyAnsel_LibNoiseShader_HlslContext_GetFullBody_
@@ -1572,13 +1602,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.HlslContext.GetTraverseValue
   nameWithType: HlslContext.GetTraverseValue
 - uid: JeremyAnsel.LibNoiseShader.HlslContext.GetTraverseValue``1(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Func{``0,System.Int32},System.Func{System.Int32,System.Int32,System.Int32})
-  name: GetTraverseValue<T>(IModule, Func<T, int>, Func<int, int, int>)
+  name: GetTraverseValue<T>(IModule?, Func<T, int>?, Func<int, int, int>?)
   href: api/JeremyAnsel.LibNoiseShader.HlslContext.html#JeremyAnsel_LibNoiseShader_HlslContext_GetTraverseValue__1_JeremyAnsel_LibNoiseShader_Modules_IModule_System_Func___0_System_Int32__System_Func_System_Int32_System_Int32_System_Int32__
   commentId: M:JeremyAnsel.LibNoiseShader.HlslContext.GetTraverseValue``1(JeremyAnsel.LibNoiseShader.Modules.IModule,System.Func{``0,System.Int32},System.Func{System.Int32,System.Int32,System.Int32})
   name.vb: GetTraverseValue(Of T)(IModule, Func(Of T, Integer), Func(Of Integer, Integer, Integer))
-  fullName: JeremyAnsel.LibNoiseShader.HlslContext.GetTraverseValue<T>(JeremyAnsel.LibNoiseShader.Modules.IModule, System.Func<T, int>, System.Func<int, int, int>)
+  fullName: JeremyAnsel.LibNoiseShader.HlslContext.GetTraverseValue<T>(JeremyAnsel.LibNoiseShader.Modules.IModule?, System.Func<T, int>?, System.Func<int, int, int>?)
   fullName.vb: JeremyAnsel.LibNoiseShader.HlslContext.GetTraverseValue(Of T)(JeremyAnsel.LibNoiseShader.Modules.IModule, System.Func(Of T, Integer), System.Func(Of Integer, Integer, Integer))
-  nameWithType: HlslContext.GetTraverseValue<T>(IModule, Func<T, int>, Func<int, int, int>)
+  nameWithType: HlslContext.GetTraverseValue<T>(IModule?, Func<T, int>?, Func<int, int, int>?)
   nameWithType.vb: HlslContext.GetTraverseValue(Of T)(IModule, Func(Of T, Integer), Func(Of Integer, Integer, Integer))
 - uid: JeremyAnsel.LibNoiseShader.HlslContext.Header
   name: Header
@@ -4922,11 +4952,14 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.HasPositions
   nameWithType: LibNoiseShaderFile.HasPositions
 - uid: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Load(System.IO.Stream)
-  name: Load(Stream)
+  name: Load(Stream?)
   href: api/JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.html#JeremyAnsel_LibNoiseShader_IO_LibNoiseShaderFile_Load_System_IO_Stream_
   commentId: M:JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Load(System.IO.Stream)
-  fullName: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Load(System.IO.Stream)
-  nameWithType: LibNoiseShaderFile.Load(Stream)
+  name.vb: Load(Stream)
+  fullName: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Load(System.IO.Stream?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Load(System.IO.Stream)
+  nameWithType: LibNoiseShaderFile.Load(Stream?)
+  nameWithType.vb: LibNoiseShaderFile.Load(Stream)
 - uid: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Load(System.String)
   name: Load(string)
   href: api/JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.html#JeremyAnsel_LibNoiseShader_IO_LibNoiseShaderFile_Load_System_String_
@@ -4996,11 +5029,14 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Version
   nameWithType: LibNoiseShaderFile.Version
 - uid: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Write(System.IO.Stream)
-  name: Write(Stream)
+  name: Write(Stream?)
   href: api/JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.html#JeremyAnsel_LibNoiseShader_IO_LibNoiseShaderFile_Write_System_IO_Stream_
   commentId: M:JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Write(System.IO.Stream)
-  fullName: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Write(System.IO.Stream)
-  nameWithType: LibNoiseShaderFile.Write(Stream)
+  name.vb: Write(Stream)
+  fullName: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Write(System.IO.Stream?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Write(System.IO.Stream)
+  nameWithType: LibNoiseShaderFile.Write(Stream?)
+  nameWithType.vb: LibNoiseShaderFile.Write(Stream)
 - uid: JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.Write(System.String)
   name: Write(string)
   href: api/JeremyAnsel.LibNoiseShader.IO.LibNoiseShaderFile.html#JeremyAnsel_LibNoiseShader_IO_LibNoiseShaderFile_Write_System_String_
@@ -5036,11 +5072,14 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext
   nameWithType: LibNoiseShaderFileLoadContext
 - uid: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadBuilder(JeremyAnsel.LibNoiseShader.IO.FileBuilders.IFileBuilder,JeremyAnsel.LibNoiseShader.Noise3D)
-  name: LoadBuilder(IFileBuilder, Noise3D)
+  name: LoadBuilder(IFileBuilder?, Noise3D?)
   href: api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.html#JeremyAnsel_LibNoiseShader_IO_Models_LibNoiseShaderFileLoadContext_LoadBuilder_JeremyAnsel_LibNoiseShader_IO_FileBuilders_IFileBuilder_JeremyAnsel_LibNoiseShader_Noise3D_
   commentId: M:JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadBuilder(JeremyAnsel.LibNoiseShader.IO.FileBuilders.IFileBuilder,JeremyAnsel.LibNoiseShader.Noise3D)
-  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadBuilder(JeremyAnsel.LibNoiseShader.IO.FileBuilders.IFileBuilder, JeremyAnsel.LibNoiseShader.Noise3D)
-  nameWithType: LibNoiseShaderFileLoadContext.LoadBuilder(IFileBuilder, Noise3D)
+  name.vb: LoadBuilder(IFileBuilder, Noise3D)
+  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadBuilder(JeremyAnsel.LibNoiseShader.IO.FileBuilders.IFileBuilder?, JeremyAnsel.LibNoiseShader.Noise3D?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadBuilder(JeremyAnsel.LibNoiseShader.IO.FileBuilders.IFileBuilder, JeremyAnsel.LibNoiseShader.Noise3D)
+  nameWithType: LibNoiseShaderFileLoadContext.LoadBuilder(IFileBuilder?, Noise3D?)
+  nameWithType.vb: LibNoiseShaderFileLoadContext.LoadBuilder(IFileBuilder, Noise3D)
 - uid: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadBuilder*
   name: LoadBuilder
   href: api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.html#JeremyAnsel_LibNoiseShader_IO_Models_LibNoiseShaderFileLoadContext_LoadBuilder_
@@ -5049,11 +5088,14 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadBuilder
   nameWithType: LibNoiseShaderFileLoadContext.LoadBuilder
 - uid: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadModule(JeremyAnsel.LibNoiseShader.IO.FileModules.IFileModule,JeremyAnsel.LibNoiseShader.Noise3D)
-  name: LoadModule(IFileModule, Noise3D)
+  name: LoadModule(IFileModule?, Noise3D?)
   href: api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.html#JeremyAnsel_LibNoiseShader_IO_Models_LibNoiseShaderFileLoadContext_LoadModule_JeremyAnsel_LibNoiseShader_IO_FileModules_IFileModule_JeremyAnsel_LibNoiseShader_Noise3D_
   commentId: M:JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadModule(JeremyAnsel.LibNoiseShader.IO.FileModules.IFileModule,JeremyAnsel.LibNoiseShader.Noise3D)
-  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadModule(JeremyAnsel.LibNoiseShader.IO.FileModules.IFileModule, JeremyAnsel.LibNoiseShader.Noise3D)
-  nameWithType: LibNoiseShaderFileLoadContext.LoadModule(IFileModule, Noise3D)
+  name.vb: LoadModule(IFileModule, Noise3D)
+  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadModule(JeremyAnsel.LibNoiseShader.IO.FileModules.IFileModule?, JeremyAnsel.LibNoiseShader.Noise3D?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadModule(JeremyAnsel.LibNoiseShader.IO.FileModules.IFileModule, JeremyAnsel.LibNoiseShader.Noise3D)
+  nameWithType: LibNoiseShaderFileLoadContext.LoadModule(IFileModule?, Noise3D?)
+  nameWithType.vb: LibNoiseShaderFileLoadContext.LoadModule(IFileModule, Noise3D)
 - uid: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadModule*
   name: LoadModule
   href: api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.html#JeremyAnsel_LibNoiseShader_IO_Models_LibNoiseShaderFileLoadContext_LoadModule_
@@ -5062,11 +5104,14 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadModule
   nameWithType: LibNoiseShaderFileLoadContext.LoadModule
 - uid: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadRenderer(JeremyAnsel.LibNoiseShader.IO.FileRenderers.IFileRenderer,JeremyAnsel.LibNoiseShader.Noise3D)
-  name: LoadRenderer(IFileRenderer, Noise3D)
+  name: LoadRenderer(IFileRenderer?, Noise3D?)
   href: api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.html#JeremyAnsel_LibNoiseShader_IO_Models_LibNoiseShaderFileLoadContext_LoadRenderer_JeremyAnsel_LibNoiseShader_IO_FileRenderers_IFileRenderer_JeremyAnsel_LibNoiseShader_Noise3D_
   commentId: M:JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadRenderer(JeremyAnsel.LibNoiseShader.IO.FileRenderers.IFileRenderer,JeremyAnsel.LibNoiseShader.Noise3D)
-  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadRenderer(JeremyAnsel.LibNoiseShader.IO.FileRenderers.IFileRenderer, JeremyAnsel.LibNoiseShader.Noise3D)
-  nameWithType: LibNoiseShaderFileLoadContext.LoadRenderer(IFileRenderer, Noise3D)
+  name.vb: LoadRenderer(IFileRenderer, Noise3D)
+  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadRenderer(JeremyAnsel.LibNoiseShader.IO.FileRenderers.IFileRenderer?, JeremyAnsel.LibNoiseShader.Noise3D?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadRenderer(JeremyAnsel.LibNoiseShader.IO.FileRenderers.IFileRenderer, JeremyAnsel.LibNoiseShader.Noise3D)
+  nameWithType: LibNoiseShaderFileLoadContext.LoadRenderer(IFileRenderer?, Noise3D?)
+  nameWithType.vb: LibNoiseShaderFileLoadContext.LoadRenderer(IFileRenderer, Noise3D)
 - uid: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.LoadRenderer*
   name: LoadRenderer
   href: api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileLoadContext.html#JeremyAnsel_LibNoiseShader_IO_Models_LibNoiseShaderFileLoadContext_LoadRenderer_
@@ -5081,23 +5126,32 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext
   nameWithType: LibNoiseShaderFileWriteContext
 - uid: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Builders.IBuilder,JeremyAnsel.LibNoiseShader.Noise3D)
-  name: BuildLibNoiseShaderFile(IBuilder, Noise3D)
+  name: BuildLibNoiseShaderFile(IBuilder?, Noise3D?)
   href: api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.html#JeremyAnsel_LibNoiseShader_IO_Models_LibNoiseShaderFileWriteContext_BuildLibNoiseShaderFile_JeremyAnsel_LibNoiseShader_Builders_IBuilder_JeremyAnsel_LibNoiseShader_Noise3D_
   commentId: M:JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Builders.IBuilder,JeremyAnsel.LibNoiseShader.Noise3D)
-  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Builders.IBuilder, JeremyAnsel.LibNoiseShader.Noise3D)
-  nameWithType: LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(IBuilder, Noise3D)
+  name.vb: BuildLibNoiseShaderFile(IBuilder, Noise3D)
+  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Builders.IBuilder?, JeremyAnsel.LibNoiseShader.Noise3D?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Builders.IBuilder, JeremyAnsel.LibNoiseShader.Noise3D)
+  nameWithType: LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(IBuilder?, Noise3D?)
+  nameWithType.vb: LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(IBuilder, Noise3D)
 - uid: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Noise3D)
-  name: BuildLibNoiseShaderFile(IModule, Noise3D)
+  name: BuildLibNoiseShaderFile(IModule?, Noise3D?)
   href: api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.html#JeremyAnsel_LibNoiseShader_IO_Models_LibNoiseShaderFileWriteContext_BuildLibNoiseShaderFile_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Noise3D_
   commentId: M:JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Noise3D)
-  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Noise3D)
-  nameWithType: LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(IModule, Noise3D)
+  name.vb: BuildLibNoiseShaderFile(IModule, Noise3D)
+  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Noise3D?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Noise3D)
+  nameWithType: LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(IModule?, Noise3D?)
+  nameWithType.vb: LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(IModule, Noise3D)
 - uid: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Renderers.IRenderer,JeremyAnsel.LibNoiseShader.Noise3D)
-  name: BuildLibNoiseShaderFile(IRenderer, Noise3D)
+  name: BuildLibNoiseShaderFile(IRenderer?, Noise3D?)
   href: api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.html#JeremyAnsel_LibNoiseShader_IO_Models_LibNoiseShaderFileWriteContext_BuildLibNoiseShaderFile_JeremyAnsel_LibNoiseShader_Renderers_IRenderer_JeremyAnsel_LibNoiseShader_Noise3D_
   commentId: M:JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Renderers.IRenderer,JeremyAnsel.LibNoiseShader.Noise3D)
-  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Renderers.IRenderer, JeremyAnsel.LibNoiseShader.Noise3D)
-  nameWithType: LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(IRenderer, Noise3D)
+  name.vb: BuildLibNoiseShaderFile(IRenderer, Noise3D)
+  fullName: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Renderers.IRenderer?, JeremyAnsel.LibNoiseShader.Noise3D?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(JeremyAnsel.LibNoiseShader.Renderers.IRenderer, JeremyAnsel.LibNoiseShader.Noise3D)
+  nameWithType: LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(IRenderer?, Noise3D?)
+  nameWithType.vb: LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile(IRenderer, Noise3D)
 - uid: JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.BuildLibNoiseShaderFile*
   name: BuildLibNoiseShaderFile
   href: api/JeremyAnsel.LibNoiseShader.IO.Models.LibNoiseShaderFileWriteContext.html#JeremyAnsel_LibNoiseShader_IO_Models_LibNoiseShaderFileWriteContext_BuildLibNoiseShaderFile_
@@ -5308,13 +5362,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Maps.ColorMap
   nameWithType: ColorMap
 - uid: JeremyAnsel.LibNoiseShader.Maps.ColorMap.#ctor(System.Int32,System.Int32,System.Byte[])
-  name: ColorMap(int, int, byte[])
+  name: ColorMap(int, int, byte[]?)
   href: api/JeremyAnsel.LibNoiseShader.Maps.ColorMap.html#JeremyAnsel_LibNoiseShader_Maps_ColorMap__ctor_System_Int32_System_Int32_System_Byte___
   commentId: M:JeremyAnsel.LibNoiseShader.Maps.ColorMap.#ctor(System.Int32,System.Int32,System.Byte[])
   name.vb: New(Integer, Integer, Byte())
-  fullName: JeremyAnsel.LibNoiseShader.Maps.ColorMap.ColorMap(int, int, byte[])
+  fullName: JeremyAnsel.LibNoiseShader.Maps.ColorMap.ColorMap(int, int, byte[]?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Maps.ColorMap.New(Integer, Integer, Byte())
-  nameWithType: ColorMap.ColorMap(int, int, byte[])
+  nameWithType: ColorMap.ColorMap(int, int, byte[]?)
   nameWithType.vb: ColorMap.New(Integer, Integer, Byte())
 - uid: JeremyAnsel.LibNoiseShader.Maps.ColorMap.#ctor*
   name: ColorMap
@@ -5388,13 +5442,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Maps.MapGenerator
   nameWithType: MapGenerator
 - uid: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnCpu(JeremyAnsel.LibNoiseShader.Renderers.IRenderer,System.Int32,System.Int32)
-  name: GenerateColorMapOnCpu(IRenderer, int, int)
+  name: GenerateColorMapOnCpu(IRenderer?, int, int)
   href: api/JeremyAnsel.LibNoiseShader.Maps.MapGenerator.html#JeremyAnsel_LibNoiseShader_Maps_MapGenerator_GenerateColorMapOnCpu_JeremyAnsel_LibNoiseShader_Renderers_IRenderer_System_Int32_System_Int32_
   commentId: M:JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnCpu(JeremyAnsel.LibNoiseShader.Renderers.IRenderer,System.Int32,System.Int32)
   name.vb: GenerateColorMapOnCpu(IRenderer, Integer, Integer)
-  fullName: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnCpu(JeremyAnsel.LibNoiseShader.Renderers.IRenderer, int, int)
+  fullName: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnCpu(JeremyAnsel.LibNoiseShader.Renderers.IRenderer?, int, int)
   fullName.vb: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnCpu(JeremyAnsel.LibNoiseShader.Renderers.IRenderer, Integer, Integer)
-  nameWithType: MapGenerator.GenerateColorMapOnCpu(IRenderer, int, int)
+  nameWithType: MapGenerator.GenerateColorMapOnCpu(IRenderer?, int, int)
   nameWithType.vb: MapGenerator.GenerateColorMapOnCpu(IRenderer, Integer, Integer)
 - uid: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnCpu*
   name: GenerateColorMapOnCpu
@@ -5404,13 +5458,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnCpu
   nameWithType: MapGenerator.GenerateColorMapOnCpu
 - uid: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnGpu(JeremyAnsel.LibNoiseShader.Noise3D,JeremyAnsel.LibNoiseShader.Renderers.IRenderer,System.Int32,System.Int32)
-  name: GenerateColorMapOnGpu(Noise3D, IRenderer, int, int)
+  name: GenerateColorMapOnGpu(Noise3D?, IRenderer?, int, int)
   href: api/JeremyAnsel.LibNoiseShader.Maps.MapGenerator.html#JeremyAnsel_LibNoiseShader_Maps_MapGenerator_GenerateColorMapOnGpu_JeremyAnsel_LibNoiseShader_Noise3D_JeremyAnsel_LibNoiseShader_Renderers_IRenderer_System_Int32_System_Int32_
   commentId: M:JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnGpu(JeremyAnsel.LibNoiseShader.Noise3D,JeremyAnsel.LibNoiseShader.Renderers.IRenderer,System.Int32,System.Int32)
   name.vb: GenerateColorMapOnGpu(Noise3D, IRenderer, Integer, Integer)
-  fullName: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnGpu(JeremyAnsel.LibNoiseShader.Noise3D, JeremyAnsel.LibNoiseShader.Renderers.IRenderer, int, int)
+  fullName: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnGpu(JeremyAnsel.LibNoiseShader.Noise3D?, JeremyAnsel.LibNoiseShader.Renderers.IRenderer?, int, int)
   fullName.vb: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnGpu(JeremyAnsel.LibNoiseShader.Noise3D, JeremyAnsel.LibNoiseShader.Renderers.IRenderer, Integer, Integer)
-  nameWithType: MapGenerator.GenerateColorMapOnGpu(Noise3D, IRenderer, int, int)
+  nameWithType: MapGenerator.GenerateColorMapOnGpu(Noise3D?, IRenderer?, int, int)
   nameWithType.vb: MapGenerator.GenerateColorMapOnGpu(Noise3D, IRenderer, Integer, Integer)
 - uid: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnGpu*
   name: GenerateColorMapOnGpu
@@ -5420,13 +5474,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateColorMapOnGpu
   nameWithType: MapGenerator.GenerateColorMapOnGpu
 - uid: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateValueMap(JeremyAnsel.LibNoiseShader.Builders.IBuilder,System.Int32,System.Int32)
-  name: GenerateValueMap(IBuilder, int, int)
+  name: GenerateValueMap(IBuilder?, int, int)
   href: api/JeremyAnsel.LibNoiseShader.Maps.MapGenerator.html#JeremyAnsel_LibNoiseShader_Maps_MapGenerator_GenerateValueMap_JeremyAnsel_LibNoiseShader_Builders_IBuilder_System_Int32_System_Int32_
   commentId: M:JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateValueMap(JeremyAnsel.LibNoiseShader.Builders.IBuilder,System.Int32,System.Int32)
   name.vb: GenerateValueMap(IBuilder, Integer, Integer)
-  fullName: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateValueMap(JeremyAnsel.LibNoiseShader.Builders.IBuilder, int, int)
+  fullName: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateValueMap(JeremyAnsel.LibNoiseShader.Builders.IBuilder?, int, int)
   fullName.vb: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateValueMap(JeremyAnsel.LibNoiseShader.Builders.IBuilder, Integer, Integer)
-  nameWithType: MapGenerator.GenerateValueMap(IBuilder, int, int)
+  nameWithType: MapGenerator.GenerateValueMap(IBuilder?, int, int)
   nameWithType.vb: MapGenerator.GenerateValueMap(IBuilder, Integer, Integer)
 - uid: JeremyAnsel.LibNoiseShader.Maps.MapGenerator.GenerateValueMap*
   name: GenerateValueMap
@@ -5442,13 +5496,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Maps.ValueMap
   nameWithType: ValueMap
 - uid: JeremyAnsel.LibNoiseShader.Maps.ValueMap.#ctor(System.Int32,System.Int32,System.Single[])
-  name: ValueMap(int, int, float[])
+  name: ValueMap(int, int, float[]?)
   href: api/JeremyAnsel.LibNoiseShader.Maps.ValueMap.html#JeremyAnsel_LibNoiseShader_Maps_ValueMap__ctor_System_Int32_System_Int32_System_Single___
   commentId: M:JeremyAnsel.LibNoiseShader.Maps.ValueMap.#ctor(System.Int32,System.Int32,System.Single[])
   name.vb: New(Integer, Integer, Single())
-  fullName: JeremyAnsel.LibNoiseShader.Maps.ValueMap.ValueMap(int, int, float[])
+  fullName: JeremyAnsel.LibNoiseShader.Maps.ValueMap.ValueMap(int, int, float[]?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Maps.ValueMap.New(Integer, Integer, Single())
-  nameWithType: ValueMap.ValueMap(int, int, float[])
+  nameWithType: ValueMap.ValueMap(int, int, float[]?)
   nameWithType.vb: ValueMap.New(Integer, Integer, Single())
 - uid: JeremyAnsel.LibNoiseShader.Maps.ValueMap.#ctor*
   name: ValueMap
@@ -5623,13 +5677,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.AbsModule
   nameWithType: AbsModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.AbsModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: AbsModule(IModule)
+  name: AbsModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.AbsModule.html#JeremyAnsel_LibNoiseShader_Modules_AbsModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.AbsModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.AbsModule.AbsModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.AbsModule.AbsModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.AbsModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: AbsModule.AbsModule(IModule)
+  nameWithType: AbsModule.AbsModule(IModule?)
   nameWithType.vb: AbsModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.AbsModule.#ctor*
   name: AbsModule
@@ -5813,13 +5867,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.AddModule
   nameWithType: AddModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.AddModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: AddModule(IModule, IModule)
+  name: AddModule(IModule?, IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.AddModule.html#JeremyAnsel_LibNoiseShader_Modules_AddModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.AddModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule, IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.AddModule.AddModule(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.AddModule.AddModule(JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.AddModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: AddModule.AddModule(IModule, IModule)
+  nameWithType: AddModule.AddModule(IModule?, IModule?)
   nameWithType.vb: AddModule.New(IModule, IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.AddModule.#ctor*
   name: AddModule
@@ -6003,13 +6057,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.BillowModule
   nameWithType: BillowModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.BillowModule.#ctor(JeremyAnsel.LibNoiseShader.Noise3D)
-  name: BillowModule(Noise3D)
+  name: BillowModule(Noise3D?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.BillowModule.html#JeremyAnsel_LibNoiseShader_Modules_BillowModule__ctor_JeremyAnsel_LibNoiseShader_Noise3D_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.BillowModule.#ctor(JeremyAnsel.LibNoiseShader.Noise3D)
   name.vb: New(Noise3D)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.BillowModule.BillowModule(JeremyAnsel.LibNoiseShader.Noise3D)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.BillowModule.BillowModule(JeremyAnsel.LibNoiseShader.Noise3D?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.BillowModule.New(JeremyAnsel.LibNoiseShader.Noise3D)
-  nameWithType: BillowModule.BillowModule(Noise3D)
+  nameWithType: BillowModule.BillowModule(Noise3D?)
   nameWithType.vb: BillowModule.New(Noise3D)
 - uid: JeremyAnsel.LibNoiseShader.Modules.BillowModule.#ctor*
   name: BillowModule
@@ -6270,13 +6324,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.BlendModule
   nameWithType: BlendModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.BlendModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: BlendModule(IModule, IModule, IModule)
+  name: BlendModule(IModule?, IModule?, IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.BlendModule.html#JeremyAnsel_LibNoiseShader_Modules_BlendModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.BlendModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule, IModule, IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.BlendModule.BlendModule(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.BlendModule.BlendModule(JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.BlendModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: BlendModule.BlendModule(IModule, IModule, IModule)
+  nameWithType: BlendModule.BlendModule(IModule?, IModule?, IModule?)
   nameWithType.vb: BlendModule.New(IModule, IModule, IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.BlendModule.#ctor*
   name: BlendModule
@@ -6460,13 +6514,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.CacheModule
   nameWithType: CacheModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.CacheModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: CacheModule(IModule)
+  name: CacheModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.CacheModule.html#JeremyAnsel_LibNoiseShader_Modules_CacheModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.CacheModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.CacheModule.CacheModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.CacheModule.CacheModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.CacheModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: CacheModule.CacheModule(IModule)
+  nameWithType: CacheModule.CacheModule(IModule?)
   nameWithType.vb: CacheModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.CacheModule.#ctor*
   name: CacheModule
@@ -6840,13 +6894,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.ClampModule
   nameWithType: ClampModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.ClampModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: ClampModule(IModule)
+  name: ClampModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.ClampModule.html#JeremyAnsel_LibNoiseShader_Modules_ClampModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.ClampModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.ClampModule.ClampModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.ClampModule.ClampModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.ClampModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: ClampModule.ClampModule(IModule)
+  nameWithType: ClampModule.ClampModule(IModule?)
   nameWithType.vb: ClampModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.ClampModule.#ctor*
   name: ClampModule
@@ -7275,13 +7329,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.CurveModule
   nameWithType: CurveModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.CurveModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: CurveModule(IModule)
+  name: CurveModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.CurveModule.html#JeremyAnsel_LibNoiseShader_Modules_CurveModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.CurveModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.CurveModule.CurveModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.CurveModule.CurveModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.CurveModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: CurveModule.CurveModule(IModule)
+  nameWithType: CurveModule.CurveModule(IModule?)
   nameWithType.vb: CurveModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.CurveModule.#ctor*
   name: CurveModule
@@ -7710,13 +7764,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.DisplaceModule
   nameWithType: DisplaceModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.DisplaceModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: DisplaceModule(IModule, IModule, IModule, IModule)
+  name: DisplaceModule(IModule?, IModule?, IModule?, IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.DisplaceModule.html#JeremyAnsel_LibNoiseShader_Modules_DisplaceModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.DisplaceModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule, IModule, IModule, IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.DisplaceModule.DisplaceModule(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.DisplaceModule.DisplaceModule(JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.DisplaceModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: DisplaceModule.DisplaceModule(IModule, IModule, IModule, IModule)
+  nameWithType: DisplaceModule.DisplaceModule(IModule?, IModule?, IModule?, IModule?)
   nameWithType.vb: DisplaceModule.New(IModule, IModule, IModule, IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.DisplaceModule.#ctor*
   name: DisplaceModule
@@ -7900,13 +7954,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.ExponentModule
   nameWithType: ExponentModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.ExponentModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: ExponentModule(IModule)
+  name: ExponentModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.ExponentModule.html#JeremyAnsel_LibNoiseShader_Modules_ExponentModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.ExponentModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.ExponentModule.ExponentModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.ExponentModule.ExponentModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.ExponentModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: ExponentModule.ExponentModule(IModule)
+  nameWithType: ExponentModule.ExponentModule(IModule?)
   nameWithType.vb: ExponentModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.ExponentModule.#ctor*
   name: ExponentModule
@@ -8197,17 +8251,23 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.IModule.EmitHlslSettings
   nameWithType: IModule.EmitHlslSettings
 - uid: JeremyAnsel.LibNoiseShader.Modules.IModule.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  name: GenerateModuleContext(CSharpContext)
+  name: GenerateModuleContext(CSharpContext?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.IModule.html#JeremyAnsel_LibNoiseShader_Modules_IModule_GenerateModuleContext_JeremyAnsel_LibNoiseShader_CSharpContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.IModule.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.IModule.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  nameWithType: IModule.GenerateModuleContext(CSharpContext)
+  name.vb: GenerateModuleContext(CSharpContext)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.IModule.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Modules.IModule.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
+  nameWithType: IModule.GenerateModuleContext(CSharpContext?)
+  nameWithType.vb: IModule.GenerateModuleContext(CSharpContext)
 - uid: JeremyAnsel.LibNoiseShader.Modules.IModule.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  name: GenerateModuleContext(HlslContext)
+  name: GenerateModuleContext(HlslContext?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.IModule.html#JeremyAnsel_LibNoiseShader_Modules_IModule_GenerateModuleContext_JeremyAnsel_LibNoiseShader_HlslContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.IModule.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.IModule.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  nameWithType: IModule.GenerateModuleContext(HlslContext)
+  name.vb: GenerateModuleContext(HlslContext)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.IModule.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Modules.IModule.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
+  nameWithType: IModule.GenerateModuleContext(HlslContext?)
+  nameWithType.vb: IModule.GenerateModuleContext(HlslContext)
 - uid: JeremyAnsel.LibNoiseShader.Modules.IModule.GenerateModuleContext*
   name: GenerateModuleContext
   href: api/JeremyAnsel.LibNoiseShader.Modules.IModule.html#JeremyAnsel_LibNoiseShader_Modules_IModule_GenerateModuleContext_
@@ -8380,13 +8440,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.InvertModule
   nameWithType: InvertModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.InvertModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: InvertModule(IModule)
+  name: InvertModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.InvertModule.html#JeremyAnsel_LibNoiseShader_Modules_InvertModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.InvertModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.InvertModule.InvertModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.InvertModule.InvertModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.InvertModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: InvertModule.InvertModule(IModule)
+  nameWithType: InvertModule.InvertModule(IModule?)
   nameWithType.vb: InvertModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.InvertModule.#ctor*
   name: InvertModule
@@ -8570,13 +8630,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.LineModule
   nameWithType: LineModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.LineModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: LineModule(IModule)
+  name: LineModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.LineModule.html#JeremyAnsel_LibNoiseShader_Modules_LineModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.LineModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.LineModule.LineModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.LineModule.LineModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.LineModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: LineModule.LineModule(IModule)
+  nameWithType: LineModule.LineModule(IModule?)
   nameWithType.vb: LineModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.LineModule.#ctor*
   name: LineModule
@@ -8883,13 +8943,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.MaxModule
   nameWithType: MaxModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.MaxModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: MaxModule(IModule, IModule)
+  name: MaxModule(IModule?, IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.MaxModule.html#JeremyAnsel_LibNoiseShader_Modules_MaxModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.MaxModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule, IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.MaxModule.MaxModule(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.MaxModule.MaxModule(JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.MaxModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: MaxModule.MaxModule(IModule, IModule)
+  nameWithType: MaxModule.MaxModule(IModule?, IModule?)
   nameWithType.vb: MaxModule.New(IModule, IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.MaxModule.#ctor*
   name: MaxModule
@@ -9073,13 +9133,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.MinModule
   nameWithType: MinModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.MinModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: MinModule(IModule, IModule)
+  name: MinModule(IModule?, IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.MinModule.html#JeremyAnsel_LibNoiseShader_Modules_MinModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.MinModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule, IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.MinModule.MinModule(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.MinModule.MinModule(JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.MinModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: MinModule.MinModule(IModule, IModule)
+  nameWithType: MinModule.MinModule(IModule?, IModule?)
   nameWithType.vb: MinModule.New(IModule, IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.MinModule.#ctor*
   name: MinModule
@@ -9357,17 +9417,23 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.EmitHlslSettings
   nameWithType: ModuleBase.EmitHlslSettings
 - uid: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  name: GenerateModuleContext(CSharpContext)
+  name: GenerateModuleContext(CSharpContext?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.ModuleBase.html#JeremyAnsel_LibNoiseShader_Modules_ModuleBase_GenerateModuleContext_JeremyAnsel_LibNoiseShader_CSharpContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.ModuleBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  nameWithType: ModuleBase.GenerateModuleContext(CSharpContext)
+  name.vb: GenerateModuleContext(CSharpContext)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
+  nameWithType: ModuleBase.GenerateModuleContext(CSharpContext?)
+  nameWithType.vb: ModuleBase.GenerateModuleContext(CSharpContext)
 - uid: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  name: GenerateModuleContext(HlslContext)
+  name: GenerateModuleContext(HlslContext?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.ModuleBase.html#JeremyAnsel_LibNoiseShader_Modules_ModuleBase_GenerateModuleContext_JeremyAnsel_LibNoiseShader_HlslContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.ModuleBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  nameWithType: ModuleBase.GenerateModuleContext(HlslContext)
+  name.vb: GenerateModuleContext(HlslContext)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
+  nameWithType: ModuleBase.GenerateModuleContext(HlslContext?)
+  nameWithType.vb: ModuleBase.GenerateModuleContext(HlslContext)
 - uid: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.GenerateModuleContext*
   name: GenerateModuleContext
   href: api/JeremyAnsel.LibNoiseShader.Modules.ModuleBase.html#JeremyAnsel_LibNoiseShader_Modules_ModuleBase_GenerateModuleContext_
@@ -9534,13 +9600,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.RequiredSourceModuleCount
   nameWithType: ModuleBase.RequiredSourceModuleCount
 - uid: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.SetSourceModule(System.Int32,JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: SetSourceModule(int, IModule)
+  name: SetSourceModule(int, IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.ModuleBase.html#JeremyAnsel_LibNoiseShader_Modules_ModuleBase_SetSourceModule_System_Int32_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.ModuleBase.SetSourceModule(System.Int32,JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: SetSourceModule(Integer, IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.SetSourceModule(int, JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.SetSourceModule(int, JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.SetSourceModule(Integer, JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: ModuleBase.SetSourceModule(int, IModule)
+  nameWithType: ModuleBase.SetSourceModule(int, IModule?)
   nameWithType.vb: ModuleBase.SetSourceModule(Integer, IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.ModuleBase.SetSourceModule*
   name: SetSourceModule
@@ -9556,13 +9622,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.MultiplyModule
   nameWithType: MultiplyModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.MultiplyModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: MultiplyModule(IModule, IModule)
+  name: MultiplyModule(IModule?, IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.MultiplyModule.html#JeremyAnsel_LibNoiseShader_Modules_MultiplyModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.MultiplyModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule, IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.MultiplyModule.MultiplyModule(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.MultiplyModule.MultiplyModule(JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.MultiplyModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: MultiplyModule.MultiplyModule(IModule, IModule)
+  nameWithType: MultiplyModule.MultiplyModule(IModule?, IModule?)
   nameWithType.vb: MultiplyModule.New(IModule, IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.MultiplyModule.#ctor*
   name: MultiplyModule
@@ -9746,13 +9812,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.PerlinModule
   nameWithType: PerlinModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.PerlinModule.#ctor(JeremyAnsel.LibNoiseShader.Noise3D)
-  name: PerlinModule(Noise3D)
+  name: PerlinModule(Noise3D?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.PerlinModule.html#JeremyAnsel_LibNoiseShader_Modules_PerlinModule__ctor_JeremyAnsel_LibNoiseShader_Noise3D_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.PerlinModule.#ctor(JeremyAnsel.LibNoiseShader.Noise3D)
   name.vb: New(Noise3D)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.PerlinModule.PerlinModule(JeremyAnsel.LibNoiseShader.Noise3D)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.PerlinModule.PerlinModule(JeremyAnsel.LibNoiseShader.Noise3D?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.PerlinModule.New(JeremyAnsel.LibNoiseShader.Noise3D)
-  nameWithType: PerlinModule.PerlinModule(Noise3D)
+  nameWithType: PerlinModule.PerlinModule(Noise3D?)
   nameWithType.vb: PerlinModule.New(Noise3D)
 - uid: JeremyAnsel.LibNoiseShader.Modules.PerlinModule.#ctor*
   name: PerlinModule
@@ -10013,13 +10079,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.PowerModule
   nameWithType: PowerModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.PowerModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: PowerModule(IModule, IModule)
+  name: PowerModule(IModule?, IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.PowerModule.html#JeremyAnsel_LibNoiseShader_Modules_PowerModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.PowerModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule, IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.PowerModule.PowerModule(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.PowerModule.PowerModule(JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.PowerModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: PowerModule.PowerModule(IModule, IModule)
+  nameWithType: PowerModule.PowerModule(IModule?, IModule?)
   nameWithType.vb: PowerModule.New(IModule, IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.PowerModule.#ctor*
   name: PowerModule
@@ -10203,13 +10269,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.RidgedMultiModule
   nameWithType: RidgedMultiModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.RidgedMultiModule.#ctor(JeremyAnsel.LibNoiseShader.Noise3D)
-  name: RidgedMultiModule(Noise3D)
+  name: RidgedMultiModule(Noise3D?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.RidgedMultiModule.html#JeremyAnsel_LibNoiseShader_Modules_RidgedMultiModule__ctor_JeremyAnsel_LibNoiseShader_Noise3D_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.RidgedMultiModule.#ctor(JeremyAnsel.LibNoiseShader.Noise3D)
   name.vb: New(Noise3D)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.RidgedMultiModule.RidgedMultiModule(JeremyAnsel.LibNoiseShader.Noise3D)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.RidgedMultiModule.RidgedMultiModule(JeremyAnsel.LibNoiseShader.Noise3D?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.RidgedMultiModule.New(JeremyAnsel.LibNoiseShader.Noise3D)
-  nameWithType: RidgedMultiModule.RidgedMultiModule(Noise3D)
+  nameWithType: RidgedMultiModule.RidgedMultiModule(Noise3D?)
   nameWithType.vb: RidgedMultiModule.New(Noise3D)
 - uid: JeremyAnsel.LibNoiseShader.Modules.RidgedMultiModule.#ctor*
   name: RidgedMultiModule
@@ -10496,13 +10562,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.RotatePointModule
   nameWithType: RotatePointModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.RotatePointModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: RotatePointModule(IModule)
+  name: RotatePointModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.RotatePointModule.html#JeremyAnsel_LibNoiseShader_Modules_RotatePointModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.RotatePointModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.RotatePointModule.RotatePointModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.RotatePointModule.RotatePointModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.RotatePointModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: RotatePointModule.RotatePointModule(IModule)
+  nameWithType: RotatePointModule.RotatePointModule(IModule?)
   nameWithType.vb: RotatePointModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.RotatePointModule.#ctor*
   name: RotatePointModule
@@ -10741,13 +10807,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.ScaleBiasModule
   nameWithType: ScaleBiasModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.ScaleBiasModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: ScaleBiasModule(IModule)
+  name: ScaleBiasModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.ScaleBiasModule.html#JeremyAnsel_LibNoiseShader_Modules_ScaleBiasModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.ScaleBiasModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.ScaleBiasModule.ScaleBiasModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.ScaleBiasModule.ScaleBiasModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.ScaleBiasModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: ScaleBiasModule.ScaleBiasModule(IModule)
+  nameWithType: ScaleBiasModule.ScaleBiasModule(IModule?)
   nameWithType.vb: ScaleBiasModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.ScaleBiasModule.#ctor*
   name: ScaleBiasModule
@@ -10957,13 +11023,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.ScalePointModule
   nameWithType: ScalePointModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.ScalePointModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: ScalePointModule(IModule)
+  name: ScalePointModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.ScalePointModule.html#JeremyAnsel_LibNoiseShader_Modules_ScalePointModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.ScalePointModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.ScalePointModule.ScalePointModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.ScalePointModule.ScalePointModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.ScalePointModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: ScalePointModule.ScalePointModule(IModule)
+  nameWithType: ScalePointModule.ScalePointModule(IModule?)
   nameWithType.vb: ScalePointModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.ScalePointModule.#ctor*
   name: ScalePointModule
@@ -11202,13 +11268,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.SelectorModule
   nameWithType: SelectorModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.SelectorModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: SelectorModule(IModule, IModule, IModule)
+  name: SelectorModule(IModule?, IModule?, IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.SelectorModule.html#JeremyAnsel_LibNoiseShader_Modules_SelectorModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.SelectorModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule,JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule, IModule, IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.SelectorModule.SelectorModule(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.SelectorModule.SelectorModule(JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?, JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.SelectorModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule, JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: SelectorModule.SelectorModule(IModule, IModule, IModule)
+  nameWithType: SelectorModule.SelectorModule(IModule?, IModule?, IModule?)
   nameWithType.vb: SelectorModule.New(IModule, IModule, IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.SelectorModule.#ctor*
   name: SelectorModule
@@ -11650,13 +11716,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.TerraceModule
   nameWithType: TerraceModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.TerraceModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: TerraceModule(IModule)
+  name: TerraceModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.TerraceModule.html#JeremyAnsel_LibNoiseShader_Modules_TerraceModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.TerraceModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.TerraceModule.TerraceModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.TerraceModule.TerraceModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.TerraceModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: TerraceModule.TerraceModule(IModule)
+  nameWithType: TerraceModule.TerraceModule(IModule?)
   nameWithType.vb: TerraceModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.TerraceModule.#ctor*
   name: TerraceModule
@@ -11917,13 +11983,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.TranslatePointModule
   nameWithType: TranslatePointModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.TranslatePointModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: TranslatePointModule(IModule)
+  name: TranslatePointModule(IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.TranslatePointModule.html#JeremyAnsel_LibNoiseShader_Modules_TranslatePointModule__ctor_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.TranslatePointModule.#ctor(JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.TranslatePointModule.TranslatePointModule(JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.TranslatePointModule.TranslatePointModule(JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.TranslatePointModule.New(JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: TranslatePointModule.TranslatePointModule(IModule)
+  nameWithType: TranslatePointModule.TranslatePointModule(IModule?)
   nameWithType.vb: TranslatePointModule.New(IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.TranslatePointModule.#ctor*
   name: TranslatePointModule
@@ -12162,13 +12228,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.TurbulenceModule
   nameWithType: TurbulenceModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.TurbulenceModule.#ctor(JeremyAnsel.LibNoiseShader.Noise3D,JeremyAnsel.LibNoiseShader.Modules.IModule)
-  name: TurbulenceModule(Noise3D, IModule)
+  name: TurbulenceModule(Noise3D?, IModule?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.TurbulenceModule.html#JeremyAnsel_LibNoiseShader_Modules_TurbulenceModule__ctor_JeremyAnsel_LibNoiseShader_Noise3D_JeremyAnsel_LibNoiseShader_Modules_IModule_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.TurbulenceModule.#ctor(JeremyAnsel.LibNoiseShader.Noise3D,JeremyAnsel.LibNoiseShader.Modules.IModule)
   name.vb: New(Noise3D, IModule)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.TurbulenceModule.TurbulenceModule(JeremyAnsel.LibNoiseShader.Noise3D, JeremyAnsel.LibNoiseShader.Modules.IModule)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.TurbulenceModule.TurbulenceModule(JeremyAnsel.LibNoiseShader.Noise3D?, JeremyAnsel.LibNoiseShader.Modules.IModule?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.TurbulenceModule.New(JeremyAnsel.LibNoiseShader.Noise3D, JeremyAnsel.LibNoiseShader.Modules.IModule)
-  nameWithType: TurbulenceModule.TurbulenceModule(Noise3D, IModule)
+  nameWithType: TurbulenceModule.TurbulenceModule(Noise3D?, IModule?)
   nameWithType.vb: TurbulenceModule.New(Noise3D, IModule)
 - uid: JeremyAnsel.LibNoiseShader.Modules.TurbulenceModule.#ctor*
   name: TurbulenceModule
@@ -12404,13 +12470,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Modules.VoronoiModule
   nameWithType: VoronoiModule
 - uid: JeremyAnsel.LibNoiseShader.Modules.VoronoiModule.#ctor(JeremyAnsel.LibNoiseShader.Noise3D)
-  name: VoronoiModule(Noise3D)
+  name: VoronoiModule(Noise3D?)
   href: api/JeremyAnsel.LibNoiseShader.Modules.VoronoiModule.html#JeremyAnsel_LibNoiseShader_Modules_VoronoiModule__ctor_JeremyAnsel_LibNoiseShader_Noise3D_
   commentId: M:JeremyAnsel.LibNoiseShader.Modules.VoronoiModule.#ctor(JeremyAnsel.LibNoiseShader.Noise3D)
   name.vb: New(Noise3D)
-  fullName: JeremyAnsel.LibNoiseShader.Modules.VoronoiModule.VoronoiModule(JeremyAnsel.LibNoiseShader.Noise3D)
+  fullName: JeremyAnsel.LibNoiseShader.Modules.VoronoiModule.VoronoiModule(JeremyAnsel.LibNoiseShader.Noise3D?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Modules.VoronoiModule.New(JeremyAnsel.LibNoiseShader.Noise3D)
-  nameWithType: VoronoiModule.VoronoiModule(Noise3D)
+  nameWithType: VoronoiModule.VoronoiModule(Noise3D?)
   nameWithType.vb: VoronoiModule.New(Noise3D)
 - uid: JeremyAnsel.LibNoiseShader.Modules.VoronoiModule.#ctor*
   name: VoronoiModule
@@ -12754,13 +12820,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Renderers.BlendRenderer
   nameWithType: BlendRenderer
 - uid: JeremyAnsel.LibNoiseShader.Renderers.BlendRenderer.#ctor(JeremyAnsel.LibNoiseShader.Renderers.IRenderer,JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
-  name: BlendRenderer(IRenderer, IRenderer)
+  name: BlendRenderer(IRenderer?, IRenderer?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.BlendRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_BlendRenderer__ctor_JeremyAnsel_LibNoiseShader_Renderers_IRenderer_JeremyAnsel_LibNoiseShader_Renderers_IRenderer_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.BlendRenderer.#ctor(JeremyAnsel.LibNoiseShader.Renderers.IRenderer,JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
   name.vb: New(IRenderer, IRenderer)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.BlendRenderer.BlendRenderer(JeremyAnsel.LibNoiseShader.Renderers.IRenderer, JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.BlendRenderer.BlendRenderer(JeremyAnsel.LibNoiseShader.Renderers.IRenderer?, JeremyAnsel.LibNoiseShader.Renderers.IRenderer?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.BlendRenderer.New(JeremyAnsel.LibNoiseShader.Renderers.IRenderer, JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
-  nameWithType: BlendRenderer.BlendRenderer(IRenderer, IRenderer)
+  nameWithType: BlendRenderer.BlendRenderer(IRenderer?, IRenderer?)
   nameWithType.vb: BlendRenderer.New(IRenderer, IRenderer)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.BlendRenderer.#ctor*
   name: BlendRenderer
@@ -12850,17 +12916,23 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Renderers.IRenderer
   nameWithType: IRenderer
 - uid: JeremyAnsel.LibNoiseShader.Renderers.IRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  name: GenerateModuleContext(CSharpContext)
+  name: GenerateModuleContext(CSharpContext?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.IRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_IRenderer_GenerateModuleContext_JeremyAnsel_LibNoiseShader_CSharpContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.IRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.IRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  nameWithType: IRenderer.GenerateModuleContext(CSharpContext)
+  name.vb: GenerateModuleContext(CSharpContext)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.IRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.IRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
+  nameWithType: IRenderer.GenerateModuleContext(CSharpContext?)
+  nameWithType.vb: IRenderer.GenerateModuleContext(CSharpContext)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.IRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  name: GenerateModuleContext(HlslContext)
+  name: GenerateModuleContext(HlslContext?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.IRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_IRenderer_GenerateModuleContext_JeremyAnsel_LibNoiseShader_HlslContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.IRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.IRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  nameWithType: IRenderer.GenerateModuleContext(HlslContext)
+  name.vb: GenerateModuleContext(HlslContext)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.IRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.IRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
+  nameWithType: IRenderer.GenerateModuleContext(HlslContext?)
+  nameWithType.vb: IRenderer.GenerateModuleContext(HlslContext)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.IRenderer.GenerateModuleContext*
   name: GenerateModuleContext
   href: api/JeremyAnsel.LibNoiseShader.Renderers.IRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_IRenderer_GenerateModuleContext_
@@ -13001,40 +13073,40 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer
   nameWithType: ImageRenderer
 - uid: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
-  name: ImageRenderer(IBuilder)
+  name: ImageRenderer(IBuilder?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_ImageRenderer__ctor_JeremyAnsel_LibNoiseShader_Builders_IBuilder_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
   name.vb: New(IBuilder)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.ImageRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.ImageRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.New(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
-  nameWithType: ImageRenderer.ImageRenderer(IBuilder)
+  nameWithType: ImageRenderer.ImageRenderer(IBuilder?)
   nameWithType.vb: ImageRenderer.New(IBuilder)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder,System.Boolean)
-  name: ImageRenderer(IBuilder, bool)
+  name: ImageRenderer(IBuilder?, bool)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_ImageRenderer__ctor_JeremyAnsel_LibNoiseShader_Builders_IBuilder_System_Boolean_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder,System.Boolean)
   name.vb: New(IBuilder, Boolean)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.ImageRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder, bool)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.ImageRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder?, bool)
   fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.New(JeremyAnsel.LibNoiseShader.Builders.IBuilder, Boolean)
-  nameWithType: ImageRenderer.ImageRenderer(IBuilder, bool)
+  nameWithType: ImageRenderer.ImageRenderer(IBuilder?, bool)
   nameWithType.vb: ImageRenderer.New(IBuilder, Boolean)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder,System.Boolean,System.Boolean)
-  name: ImageRenderer(IBuilder, bool, bool)
+  name: ImageRenderer(IBuilder?, bool, bool)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_ImageRenderer__ctor_JeremyAnsel_LibNoiseShader_Builders_IBuilder_System_Boolean_System_Boolean_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder,System.Boolean,System.Boolean)
   name.vb: New(IBuilder, Boolean, Boolean)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.ImageRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder, bool, bool)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.ImageRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder?, bool, bool)
   fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.New(JeremyAnsel.LibNoiseShader.Builders.IBuilder, Boolean, Boolean)
-  nameWithType: ImageRenderer.ImageRenderer(IBuilder, bool, bool)
+  nameWithType: ImageRenderer.ImageRenderer(IBuilder?, bool, bool)
   nameWithType.vb: ImageRenderer.New(IBuilder, Boolean, Boolean)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder,System.Boolean,System.Single,System.Single,System.Drawing.Color,System.Single,System.Single,System.Single)
-  name: ImageRenderer(IBuilder, bool, float, float, Color, float, float, float)
+  name: ImageRenderer(IBuilder?, bool, float, float, Color, float, float, float)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_ImageRenderer__ctor_JeremyAnsel_LibNoiseShader_Builders_IBuilder_System_Boolean_System_Single_System_Single_System_Drawing_Color_System_Single_System_Single_System_Single_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder,System.Boolean,System.Single,System.Single,System.Drawing.Color,System.Single,System.Single,System.Single)
   name.vb: New(IBuilder, Boolean, Single, Single, Color, Single, Single, Single)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.ImageRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder, bool, float, float, System.Drawing.Color, float, float, float)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.ImageRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder?, bool, float, float, System.Drawing.Color, float, float, float)
   fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.New(JeremyAnsel.LibNoiseShader.Builders.IBuilder, Boolean, Single, Single, System.Drawing.Color, Single, Single, Single)
-  nameWithType: ImageRenderer.ImageRenderer(IBuilder, bool, float, float, Color, float, float, float)
+  nameWithType: ImageRenderer.ImageRenderer(IBuilder?, bool, float, float, Color, float, float, float)
   nameWithType.vb: ImageRenderer.New(IBuilder, Boolean, Single, Single, Color, Single, Single, Single)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.#ctor*
   name: ImageRenderer
@@ -13102,17 +13174,23 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.ClearGradient
   nameWithType: ImageRenderer.ClearGradient
 - uid: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  name: GenerateModuleContext(CSharpContext)
+  name: GenerateModuleContext(CSharpContext?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_ImageRenderer_GenerateModuleContext_JeremyAnsel_LibNoiseShader_CSharpContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  nameWithType: ImageRenderer.GenerateModuleContext(CSharpContext)
+  name.vb: GenerateModuleContext(CSharpContext)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
+  nameWithType: ImageRenderer.GenerateModuleContext(CSharpContext?)
+  nameWithType.vb: ImageRenderer.GenerateModuleContext(CSharpContext)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  name: GenerateModuleContext(HlslContext)
+  name: GenerateModuleContext(HlslContext?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_ImageRenderer_GenerateModuleContext_JeremyAnsel_LibNoiseShader_HlslContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  nameWithType: ImageRenderer.GenerateModuleContext(HlslContext)
+  name.vb: GenerateModuleContext(HlslContext)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
+  nameWithType: ImageRenderer.GenerateModuleContext(HlslContext?)
+  nameWithType.vb: ImageRenderer.GenerateModuleContext(HlslContext)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.GenerateModuleContext*
   name: GenerateModuleContext
   href: api/JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_ImageRenderer_GenerateModuleContext_
@@ -13332,13 +13410,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.RequiredSourceRendererCount
   nameWithType: ImageRenderer.RequiredSourceRendererCount
 - uid: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.SetGradientPoints(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Single,System.Drawing.Color}})
-  name: SetGradientPoints(IEnumerable<KeyValuePair<float, Color>>)
+  name: SetGradientPoints(IEnumerable<KeyValuePair<float, Color>>?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_ImageRenderer_SetGradientPoints_System_Collections_Generic_IEnumerable_System_Collections_Generic_KeyValuePair_System_Single_System_Drawing_Color___
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.SetGradientPoints(System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.Single,System.Drawing.Color}})
   name.vb: SetGradientPoints(IEnumerable(Of KeyValuePair(Of Single, Color)))
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.SetGradientPoints(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<float, System.Drawing.Color>>)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.SetGradientPoints(System.Collections.Generic.IEnumerable<System.Collections.Generic.KeyValuePair<float, System.Drawing.Color>>?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.SetGradientPoints(System.Collections.Generic.IEnumerable(Of System.Collections.Generic.KeyValuePair(Of Single, System.Drawing.Color)))
-  nameWithType: ImageRenderer.SetGradientPoints(IEnumerable<KeyValuePair<float, Color>>)
+  nameWithType: ImageRenderer.SetGradientPoints(IEnumerable<KeyValuePair<float, Color>>?)
   nameWithType.vb: ImageRenderer.SetGradientPoints(IEnumerable(Of KeyValuePair(Of Single, Color)))
 - uid: JeremyAnsel.LibNoiseShader.Renderers.ImageRenderer.SetGradientPoints*
   name: SetGradientPoints
@@ -13370,22 +13448,22 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer
   nameWithType: NormalRenderer
 - uid: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
-  name: NormalRenderer(IBuilder)
+  name: NormalRenderer(IBuilder?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_NormalRenderer__ctor_JeremyAnsel_LibNoiseShader_Builders_IBuilder_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
   name.vb: New(IBuilder)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.NormalRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.NormalRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.New(JeremyAnsel.LibNoiseShader.Builders.IBuilder)
-  nameWithType: NormalRenderer.NormalRenderer(IBuilder)
+  nameWithType: NormalRenderer.NormalRenderer(IBuilder?)
   nameWithType.vb: NormalRenderer.New(IBuilder)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder,System.Single,System.Boolean)
-  name: NormalRenderer(IBuilder, float, bool)
+  name: NormalRenderer(IBuilder?, float, bool)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_NormalRenderer__ctor_JeremyAnsel_LibNoiseShader_Builders_IBuilder_System_Single_System_Boolean_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.#ctor(JeremyAnsel.LibNoiseShader.Builders.IBuilder,System.Single,System.Boolean)
   name.vb: New(IBuilder, Single, Boolean)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.NormalRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder, float, bool)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.NormalRenderer(JeremyAnsel.LibNoiseShader.Builders.IBuilder?, float, bool)
   fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.New(JeremyAnsel.LibNoiseShader.Builders.IBuilder, Single, Boolean)
-  nameWithType: NormalRenderer.NormalRenderer(IBuilder, float, bool)
+  nameWithType: NormalRenderer.NormalRenderer(IBuilder?, float, bool)
   nameWithType.vb: NormalRenderer.New(IBuilder, Single, Boolean)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.#ctor*
   name: NormalRenderer
@@ -13411,17 +13489,23 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.BumpHeight
   nameWithType: NormalRenderer.BumpHeight
 - uid: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  name: GenerateModuleContext(CSharpContext)
+  name: GenerateModuleContext(CSharpContext?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_NormalRenderer_GenerateModuleContext_JeremyAnsel_LibNoiseShader_CSharpContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  nameWithType: NormalRenderer.GenerateModuleContext(CSharpContext)
+  name.vb: GenerateModuleContext(CSharpContext)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
+  nameWithType: NormalRenderer.GenerateModuleContext(CSharpContext?)
+  nameWithType.vb: NormalRenderer.GenerateModuleContext(CSharpContext)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  name: GenerateModuleContext(HlslContext)
+  name: GenerateModuleContext(HlslContext?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_NormalRenderer_GenerateModuleContext_JeremyAnsel_LibNoiseShader_HlslContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  nameWithType: NormalRenderer.GenerateModuleContext(HlslContext)
+  name.vb: GenerateModuleContext(HlslContext)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
+  nameWithType: NormalRenderer.GenerateModuleContext(HlslContext?)
+  nameWithType.vb: NormalRenderer.GenerateModuleContext(HlslContext)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.GenerateModuleContext*
   name: GenerateModuleContext
   href: api/JeremyAnsel.LibNoiseShader.Renderers.NormalRenderer.html#JeremyAnsel_LibNoiseShader_Renderers_NormalRenderer_GenerateModuleContext_
@@ -13552,17 +13636,23 @@ references:
   nameWithType: RendererBase.RendererBase
   nameWithType.vb: RendererBase.New
 - uid: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  name: GenerateModuleContext(CSharpContext)
+  name: GenerateModuleContext(CSharpContext?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.RendererBase.html#JeremyAnsel_LibNoiseShader_Renderers_RendererBase_GenerateModuleContext_JeremyAnsel_LibNoiseShader_CSharpContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.RendererBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
-  nameWithType: RendererBase.GenerateModuleContext(CSharpContext)
+  name.vb: GenerateModuleContext(CSharpContext)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.CSharpContext)
+  nameWithType: RendererBase.GenerateModuleContext(CSharpContext?)
+  nameWithType.vb: RendererBase.GenerateModuleContext(CSharpContext)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  name: GenerateModuleContext(HlslContext)
+  name: GenerateModuleContext(HlslContext?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.RendererBase.html#JeremyAnsel_LibNoiseShader_Renderers_RendererBase_GenerateModuleContext_JeremyAnsel_LibNoiseShader_HlslContext_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.RendererBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
-  nameWithType: RendererBase.GenerateModuleContext(HlslContext)
+  name.vb: GenerateModuleContext(HlslContext)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext?)
+  fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.GenerateModuleContext(JeremyAnsel.LibNoiseShader.HlslContext)
+  nameWithType: RendererBase.GenerateModuleContext(HlslContext?)
+  nameWithType.vb: RendererBase.GenerateModuleContext(HlslContext)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.GenerateModuleContext*
   name: GenerateModuleContext
   href: api/JeremyAnsel.LibNoiseShader.Renderers.RendererBase.html#JeremyAnsel_LibNoiseShader_Renderers_RendererBase_GenerateModuleContext_
@@ -13697,13 +13787,13 @@ references:
   fullName: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.SetSeed
   nameWithType: RendererBase.SetSeed
 - uid: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.SetSourceRenderer(System.Int32,JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
-  name: SetSourceRenderer(int, IRenderer)
+  name: SetSourceRenderer(int, IRenderer?)
   href: api/JeremyAnsel.LibNoiseShader.Renderers.RendererBase.html#JeremyAnsel_LibNoiseShader_Renderers_RendererBase_SetSourceRenderer_System_Int32_JeremyAnsel_LibNoiseShader_Renderers_IRenderer_
   commentId: M:JeremyAnsel.LibNoiseShader.Renderers.RendererBase.SetSourceRenderer(System.Int32,JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
   name.vb: SetSourceRenderer(Integer, IRenderer)
-  fullName: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.SetSourceRenderer(int, JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
+  fullName: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.SetSourceRenderer(int, JeremyAnsel.LibNoiseShader.Renderers.IRenderer?)
   fullName.vb: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.SetSourceRenderer(Integer, JeremyAnsel.LibNoiseShader.Renderers.IRenderer)
-  nameWithType: RendererBase.SetSourceRenderer(int, IRenderer)
+  nameWithType: RendererBase.SetSourceRenderer(int, IRenderer?)
   nameWithType.vb: RendererBase.SetSourceRenderer(Integer, IRenderer)
 - uid: JeremyAnsel.LibNoiseShader.Renderers.RendererBase.SetSourceRenderer*
   name: SetSourceRenderer
