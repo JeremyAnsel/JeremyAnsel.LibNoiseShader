@@ -1,8 +1,6 @@
-﻿using System;
-using System.Drawing;
-using System.Drawing.Imaging;
+﻿using JeremyAnsel.DirectX.WinCodec;
+using System;
 using System.IO;
-using System.Runtime.InteropServices;
 
 namespace JeremyAnsel.LibNoiseShader.Maps
 {
@@ -48,24 +46,35 @@ namespace JeremyAnsel.LibNoiseShader.Maps
                 throw new ArgumentNullException(nameof(filename));
             }
 
-            ImageFormat format = Path.GetExtension(filename).ToLower() switch
-            {
-                ".bmp" => ImageFormat.Bmp,
-                ".png" => ImageFormat.Png,
-                ".jpg" => ImageFormat.Jpeg,
-                _ => throw new NotSupportedException(),
-            };
-            var handle = GCHandle.Alloc(Data, GCHandleType.Pinned);
+            WicPixelFormatGuid format = WicGuids.GUID_WICPixelFormat32bppBGRA;
 
-            try
+            var container = System.IO.Path.GetExtension(filename).ToUpperInvariant() switch
             {
-                using var bitmap = new Bitmap(Width, Height, Width * 4, PixelFormat.Format32bppArgb, handle.AddrOfPinnedObject());
-                bitmap.Save(filename, format);
-            }
-            finally
-            {
-                handle.Free();
-            }
+                ".BMP" => WicGuids.GUID_ContainerFormatBmp,
+                ".PNG" => WicGuids.GUID_ContainerFormatPng,
+                ".JPG" or ".JPEG" => WicGuids.GUID_ContainerFormatJpeg,
+                _ => throw new InvalidOperationException(),
+            };
+
+            using var factory = WicImagingFactory.Create();
+            using var encoder = factory.CreateEncoder(container);
+            using var stream = new FileStream(filename, FileMode.Create, FileAccess.Write);
+            encoder.Initialize(stream, WicBitmapEncoderCacheOption.WICBitmapEncoderNoCache);
+            using var frame = encoder.CreateNewFrame();
+            frame.Initialize();
+            frame.SetSize((uint)Width, (uint)Height);
+            frame.SetPixelFormat(ref format);
+
+            using var bitmap = factory.CreateBitmapFromMemory(
+                (uint)Width,
+                (uint)Height,
+                WicGuids.GUID_WICPixelFormat32bppBGRA,
+                (uint)(Width * 4),
+                Data);
+            using var bitmap2 = WicImagingFactory.ConvertBitmapSource(format, bitmap)!;
+            frame.WriteSource(bitmap2, null);
+            frame.Commit();
+            encoder.Commit();
         }
     }
 }

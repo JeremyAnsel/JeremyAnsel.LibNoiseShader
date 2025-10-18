@@ -66,10 +66,10 @@ PixelShaderInput main(uint id : SV_VertexID)
                 "main",
                 D3DTargets.VS_4_0,
                 compileOptions,
-                out byte[] vertexShaderBytecode,
-                out string _);
+                out byte[]? vertexShaderBytecode,
+                out string? _);
 
-            this.vertexShader = this.deviceResources.D3DDevice.CreateVertexShader(vertexShaderBytecode, null);
+            this.vertexShader = this.deviceResources.D3DDevice!.CreateVertexShader(vertexShaderBytecode, null);
 
             string pixelShaderHlsl = this.renderer.GetFullHlsl() + @"
 struct PixelShaderInput
@@ -95,8 +95,8 @@ float4 main(PixelShaderInput input) : SV_TARGET
                 "main",
                 D3DTargets.PS_4_0,
                 compileOptions,
-                out byte[] pixelShaderBytecode,
-                out string _);
+                out byte[]? pixelShaderBytecode,
+                out string? _);
 
             this.pixelShader = this.deviceResources.D3DDevice.CreatePixelShader(pixelShaderBytecode, null);
         }
@@ -121,7 +121,7 @@ float4 main(PixelShaderInput input) : SV_TARGET
 
         public void Render()
         {
-            var context = this.deviceResources!.D3DContext;
+            var context = this.deviceResources!.D3DContext!;
 
             context.OutputMergerSetRenderTargets(new[] { this.deviceResources.D3DRenderTargetView }, null);
             //context.ClearRenderTargetView(this.deviceResources.D3DRenderTargetView, XMKnownColor.Black);

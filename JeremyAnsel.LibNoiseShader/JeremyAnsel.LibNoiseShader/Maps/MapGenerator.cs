@@ -131,7 +131,7 @@ namespace JeremyAnsel.LibNoiseShader.Maps
                 component.Render();
                 deviceResources.Present();
 
-                buffer = deviceResources.GetBackBufferContent();
+                buffer = deviceResources.GetBackBufferContent()!;
             }
             finally
             {

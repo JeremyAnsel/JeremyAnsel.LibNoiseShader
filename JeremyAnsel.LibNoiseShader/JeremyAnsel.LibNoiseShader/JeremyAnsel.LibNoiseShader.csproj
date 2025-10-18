@@ -36,12 +36,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="PolySharp" Version="1.14.1">
+    <PackageReference Include="PolySharp" Version="1.15.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="JeremyAnsel.DirectX.D3DCompiler" Version="3.0.33" />
-    <PackageReference Include="JeremyAnsel.DirectX.GameWindow" Version="3.0.50" />
+    <PackageReference Include="JeremyAnsel.DirectX.D3DCompiler" Version="3.0.47" />
+    <PackageReference Include="JeremyAnsel.DirectX.GameWindow" Version="3.0.61" />
     <PackageReference Condition="'$(CI)' == 'True'" Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
